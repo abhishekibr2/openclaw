@@ -1,0 +1,95 @@
+{
+  "f2944d720de53da4c6997238c8d7f17fd388dabcce89f6f91a5e628875018f39": {
+    "deviceId": "f2944d720de53da4c6997238c8d7f17fd388dabcce89f6f91a5e628875018f39",
+    "publicKey": "vnCO3w-6zZ6T7T4wtrgdvT-gZIyvAwveO1ArWLiaVSc",
+    "platform": "linux",
+    "clientId": "openclaw-probe",
+    "clientMode": "probe",
+    "role": "operator",
+    "roles": [
+      "operator"
+    ],
+    "scopes": [
+      "operator.admin",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "tokens": {
+      "operator": {
+        "token": "8f7e56fb3aa44c37b6fa8d9ecf4656f7",
+        "role": "operator",
+        "scopes": [
+          "operator.admin",
+          "operator.approvals",
+          "operator.pairing"
+        ],
+        "createdAtMs": 1770115092891,
+        "lastUsedAtMs": 1770274744656
+      }
+    },
+    "createdAtMs": 1770115092891,
+    "approvedAtMs": 1770115092891
+  },
+  "533d5b7d8c54c6c9148d1e25cf02f2518147345c50e599ae9438a730ac15b4da": {
+    "deviceId": "533d5b7d8c54c6c9148d1e25cf02f2518147345c50e599ae9438a730ac15b4da",
+    "publicKey": "jjhmy4UMFrQ7Y5C41gvH3emSB0LKYdY_lM78ja9yv4o",
+    "platform": "Linux x86_64",
+    "clientId": "openclaw-control-ui",
+    "clientMode": "webchat",
+    "role": "operator",
+    "roles": [
+      "operator"
+    ],
+    "scopes": [
+      "operator.admin",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "tokens": {
+      "operator": {
+        "token": "0a17944e27ca4c3293187d13d599e8e5",
+        "role": "operator",
+        "scopes": [
+          "operator.admin",
+          "operator.approvals",
+          "operator.pairing"
+        ],
+        "createdAtMs": 1770115098091,
+        "lastUsedAtMs": 1770211791019
+      }
+    },
+    "createdAtMs": 1770115098091,
+    "approvedAtMs": 1770115098091
+  },
+  "b110be06e4b9c0820f64943c024177b0cfc899e29af0bc119f54795f9e799bb2": {
+    "deviceId": "b110be06e4b9c0820f64943c024177b0cfc899e29af0bc119f54795f9e799bb2",
+    "publicKey": "5yQkq7UsxR0rhO-mIlbA47Od5vUD0cHVGbQHY5ZSFGI",
+    "platform": "Linux x86_64",
+    "clientId": "openclaw-control-ui",
+    "clientMode": "webchat",
+    "role": "operator",
+    "roles": [
+      "operator"
+    ],
+    "scopes": [
+      "operator.admin",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "tokens": {
+      "operator": {
+        "token": "ee783b43261343bab2a81607621091be",
+        "role": "operator",
+        "scopes": [
+          "operator.admin",
+          "operator.approvals",
+          "operator.pairing"
+        ],
+        "createdAtMs": 1770274747506,
+        "lastUsedAtMs": 1770276999861
+      }
+    },
+    "createdAtMs": 1770274747506,
+    "approvedAtMs": 1770274747506
+  }
+}

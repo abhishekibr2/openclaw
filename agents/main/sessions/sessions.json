@@ -1,7 +1,7 @@
 {
   "agent:main:main": {
     "sessionId": "fff647b0-64cb-4c02-89a0-544f7c28008d",
-    "updatedAt": 1770278621436,
+    "updatedAt": 1770282814157,
     "systemSent": true,
     "abortedLastRun": false,
     "chatType": "direct",
@@ -60,15 +60,15 @@
     "authProfileOverride": "qwen-portal:default",
     "authProfileOverrideSource": "auto",
     "authProfileOverrideCompactionCount": 0,
-    "inputTokens": 15102,
-    "outputTokens": 47,
-    "totalTokens": 15614,
+    "inputTokens": 172,
+    "outputTokens": 177,
+    "totalTokens": 15852,
     "modelProvider": "qwen-portal",
     "model": "coder-model",
     "contextTokens": 128000,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1770278610813,
+      "generatedAt": 1770282680370,
       "sessionId": "fff647b0-64cb-4c02-89a0-544f7c28008d",
       "sessionKey": "agent:main:main",
       "provider": "qwen-portal",
@@ -80,9 +80,9 @@
         "sandboxed": false
       },
       "systemPrompt": {
-        "chars": 23849,
+        "chars": 23839,
         "projectContextChars": 14167,
-        "nonProjectContextChars": 9682
+        "nonProjectContextChars": 9672
       },
       "injectedWorkspaceFiles": [
         {

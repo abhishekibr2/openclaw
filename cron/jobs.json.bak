@@ -1,4 +1,27 @@
 {
   "version": 1,
-  "jobs": []
+  "jobs": [
+    {
+      "id": "d4da4001-45d7-42d7-9bd6-49c9bfc0443c",
+      "agentId": "main",
+      "name": "Git Backup",
+      "enabled": true,
+      "createdAtMs": 1770282935400,
+      "updatedAtMs": 1770282935400,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 1800000
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "next-heartbeat",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run the git backup script at /home/ibr-ai-agent/.openclaw/ using the git_backup_agent.js file",
+        "timeoutSeconds": 120
+      },
+      "state": {
+        "nextRunAtMs": 1770284735400
+      }
+    }
+  ]
 }

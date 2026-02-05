@@ -3,8 +3,8 @@
     "deviceId": "f2944d720de53da4c6997238c8d7f17fd388dabcce89f6f91a5e628875018f39",
     "publicKey": "vnCO3w-6zZ6T7T4wtrgdvT-gZIyvAwveO1ArWLiaVSc",
     "platform": "linux",
-    "clientId": "openclaw-probe",
-    "clientMode": "probe",
+    "clientId": "gateway-client",
+    "clientMode": "backend",
     "role": "operator",
     "roles": [
       "operator"
@@ -24,11 +24,12 @@
           "operator.pairing"
         ],
         "createdAtMs": 1770115092891,
-        "lastUsedAtMs": 1770274744656
+        "lastUsedAtMs": 1770282935397
       }
     },
     "createdAtMs": 1770115092891,
-    "approvedAtMs": 1770115092891
+    "approvedAtMs": 1770115092891,
+    "displayName": "agent"
   },
   "533d5b7d8c54c6c9148d1e25cf02f2518147345c50e599ae9438a730ac15b4da": {
     "deviceId": "533d5b7d8c54c6c9148d1e25cf02f2518147345c50e599ae9438a730ac15b4da",

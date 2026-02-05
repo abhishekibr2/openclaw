@@ -1,20 +1,28 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.2.1",
-    "lastTouchedAt": "2026-02-05T09:33:38.195Z"
+    "lastTouchedAt": "2026-02-03T12:17:16.259Z"
   },
   "wizard": {
-    "lastRunAt": "2026-02-05T06:58:57.521Z",
+    "lastRunAt": "2026-02-03T12:17:16.257Z",
     "lastRunVersion": "2026.2.1",
-    "lastRunCommand": "onboard",
+    "lastRunCommand": "doctor",
     "lastRunMode": "local"
   },
-  "browser": {
-    "enabled": true,
+  "auth": {
+    "profiles": {
+      "qwen-portal:default": {
+        "provider": "qwen-portal",
+        "mode": "oauth"
+      }
+    }
+  },
+    "browser": {
     "executablePath": "/usr/bin/google-chrome",
     "noSandbox": true,
     "attachOnly": false,
     "defaultProfile": "openclaw",
+    "enabled": true,
     "profiles": {
       "openclaw": {
         "cdpPort": 18800,
@@ -25,14 +33,6 @@
         "cdpUrl": "http://127.0.0.1:18792",
         "driver": "extension",
         "color": "#00AA00"
-      }
-    }
-  },
-  "auth": {
-    "profiles": {
-      "qwen-portal:default": {
-        "provider": "qwen-portal",
-        "mode": "oauth"
       }
     }
   },
@@ -99,18 +99,7 @@
       "subagents": {
         "maxConcurrent": 8
       }
-    },
-    "list": [
-      {
-        "id": "main"
-      },
-      {
-        "id": "githubsync",
-        "name": "githubsync",
-        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-githubsync",
-        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/githubsync/agent"
-      }
-    ]
+    }
   },
   "messages": {
     "ackReactionScope": "group-mentions"
@@ -131,11 +120,6 @@
     "tailscale": {
       "mode": "off",
       "resetOnExit": false
-    }
-  },
-  "skills": {
-    "install": {
-      "nodeManager": "npm"
     }
   },
   "plugins": {

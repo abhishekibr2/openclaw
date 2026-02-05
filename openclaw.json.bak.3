@@ -1,45 +1,38 @@
 {
-  "messages": {
-    "ackReactionScope": "group-mentions"
+  "meta": {
+    "lastTouchedVersion": "2026.2.1",
+    "lastTouchedAt": "2026-02-05T06:58:39.779Z"
   },
-  "agents": {
-    "defaults": {
-      "maxConcurrent": 4,
-      "subagents": {
-        "maxConcurrent": 8
+  "wizard": {
+    "lastRunAt": "2026-02-03T12:17:16.257Z",
+    "lastRunVersion": "2026.2.1",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "browser": {
+    "enabled": true,
+    "executablePath": "/usr/bin/google-chrome",
+    "noSandbox": true,
+    "attachOnly": false,
+    "defaultProfile": "openclaw",
+    "profiles": {
+      "openclaw": {
+        "cdpPort": 18800,
+        "driver": "openclaw",
+        "color": "#0088FF"
       },
-      "compaction": {
-        "mode": "safeguard"
-      },
-      "workspace": "/home/ibr-ai-agent/.openclaw/workspace",
-      "models": {
-        "qwen-portal/coder-model": {
-          "alias": "qwen"
-        },
-        "qwen-portal/vision-model": {}
-      },
-      "model": {
-        "primary": "qwen-portal/coder-model"
+      "my-chrome": {
+        "cdpUrl": "http://127.0.0.1:18792",
+        "driver": "extension",
+        "color": "#00AA00"
       }
     }
   },
-  "gateway": {
-    "mode": "local",
-    "auth": {
-      "mode": "token",
-      "token": "fdb818eb4ee5674a2ceeb3c9ec09b7e6fbadaf09eb89c97d"
-    },
-    "port": 18789,
-    "bind": "loopback",
-    "tailscale": {
-      "mode": "off",
-      "resetOnExit": false
-    }
-  },
-  "plugins": {
-    "entries": {
-      "qwen-portal-auth": {
-        "enabled": true
+  "auth": {
+    "profiles": {
+      "qwen-portal:default": {
+        "provider": "qwen-portal",
+        "mode": "oauth"
       }
     }
   },
@@ -87,16 +80,53 @@
       }
     }
   },
-  "auth": {
-    "profiles": {
-      "qwen-portal:default": {
-        "provider": "qwen-portal",
-        "mode": "oauth"
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "qwen-portal/coder-model"
+      },
+      "models": {
+        "qwen-portal/coder-model": {
+          "alias": "qwen"
+        },
+        "qwen-portal/vision-model": {}
+      },
+      "workspace": "/home/ibr-ai-agent/.openclaw/workspace",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
       }
     }
   },
-  "meta": {
-    "lastTouchedVersion": "2026.2.1",
-    "lastTouchedAt": "2026-02-03T10:37:53.657Z"
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "fdb818eb4ee5674a2ceeb3c9ec09b7e6fbadaf09eb89c97d"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    }
+  },
+  "plugins": {
+    "entries": {
+      "qwen-portal-auth": {
+        "enabled": true
+      }
+    }
   }
 }

@@ -1,12 +1,12 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.2.1",
-    "lastTouchedAt": "2026-02-05T06:58:39.779Z"
+    "lastTouchedAt": "2026-02-05T09:34:53.868Z"
   },
   "wizard": {
-    "lastRunAt": "2026-02-03T12:17:16.257Z",
+    "lastRunAt": "2026-02-05T06:58:57.521Z",
     "lastRunVersion": "2026.2.1",
-    "lastRunCommand": "doctor",
+    "lastRunCommand": "onboard",
     "lastRunMode": "local"
   },
   "browser": {
@@ -99,7 +99,18 @@
       "subagents": {
         "maxConcurrent": 8
       }
-    }
+    },
+    "list": [
+      {
+        "id": "main"
+      },
+      {
+        "id": "githubsync",
+        "name": "githubsync",
+        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-githubsync",
+        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/githubsync/agent"
+      }
+    ]
   },
   "messages": {
     "ackReactionScope": "group-mentions"
@@ -122,7 +133,15 @@
       "resetOnExit": false
     }
   },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    }
+  },
   "plugins": {
+    "allow": [
+      ""
+    ],
     "entries": {
       "qwen-portal-auth": {
         "enabled": true

@@ -2,12 +2,13 @@
   "version": 1,
   "jobs": [
     {
-      "id": "d4da4001-45d7-42d7-9bd6-49c9bfc0443c",
-      "agentId": "main",
-      "name": "Git Backup",
+      "id": "dfc66569-ec5c-484b-a4bb-e19af444b09e",
+      "agentId": "githubsync",
+      "name": "github sync",
+      "description": "Syncs the ai agent base to github",
       "enabled": true,
-      "createdAtMs": 1770282935400,
-      "updatedAtMs": 1770282935400,
+      "createdAtMs": 1770284861685,
+      "updatedAtMs": 1770284861685,
       "schedule": {
         "kind": "every",
         "everyMs": 1800000
@@ -16,11 +17,11 @@
       "wakeMode": "next-heartbeat",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run the git backup script at /home/ibr-ai-agent/.openclaw/ using the git_backup_agent.js file",
-        "timeoutSeconds": 120
+        "message": "Use the githubsync skill to sync the codebase to github.",
+        "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1770284735400
+        "nextRunAtMs": 1770286661685
       }
     }
   ]

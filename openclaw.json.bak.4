@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.2.1",
-    "lastTouchedAt": "2026-02-03T12:17:16.259Z"
+    "lastTouchedAt": "2026-02-05T06:58:39.779Z"
   },
   "wizard": {
     "lastRunAt": "2026-02-03T12:17:16.257Z",
@@ -9,20 +9,12 @@
     "lastRunCommand": "doctor",
     "lastRunMode": "local"
   },
-  "auth": {
-    "profiles": {
-      "qwen-portal:default": {
-        "provider": "qwen-portal",
-        "mode": "oauth"
-      }
-    }
-  },
-    "browser": {
+  "browser": {
+    "enabled": true,
     "executablePath": "/usr/bin/google-chrome",
     "noSandbox": true,
     "attachOnly": false,
     "defaultProfile": "openclaw",
-    "enabled": true,
     "profiles": {
       "openclaw": {
         "cdpPort": 18800,
@@ -33,6 +25,14 @@
         "cdpUrl": "http://127.0.0.1:18792",
         "driver": "extension",
         "color": "#00AA00"
+      }
+    }
+  },
+  "auth": {
+    "profiles": {
+      "qwen-portal:default": {
+        "provider": "qwen-portal",
+        "mode": "oauth"
       }
     }
   },

@@ -9,7 +9,7 @@
         "channel": "whatsapp"
       },
       "requesterDisplayKey": "agent:githubsync:cron:dfc66569-ec5c-484b-a4bb-e19af444b09e",
-      "task": "Use the githubsync skill to sync the codebase to github",
+      "task": "Use the githubsync skill to sync the codebase to github , you should not suppose to run the commands , you just need to use githubsync and just run the js file..",
       "cleanup": "keep",
       "label": "github-sync",
       "createdAt": 1770285446102,

@@ -58,6 +58,10 @@
       ],
       "version": 0
     },
+    "modelProvider": "qwen-portal",
+    "inputTokens": 16084,
+    "outputTokens": 130,
+    "totalTokens": 16340,
     "deliveryContext": {
       "channel": "whatsapp"
     }

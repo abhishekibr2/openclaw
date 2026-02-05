@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.2.1",
-    "lastTouchedAt": "2026-02-05T09:34:54.907Z"
+    "lastTouchedAt": "2026-02-05T10:46:41.000Z"
   },
   "wizard": {
     "lastRunAt": "2026-02-05T06:58:57.521Z",
@@ -109,6 +109,19 @@
         "name": "githubsync",
         "workspace": "/home/ibr-ai-agent/.openclaw/workspace-githubsync",
         "agentDir": "/home/ibr-ai-agent/.openclaw/agents/githubsync/agent"
+      },
+      {
+        "id": "supervisour",
+        "name": "supervisour",
+        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-supervisour",
+        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/supervisour/agent",
+        "model": "qwen-portal/coder-model"
+      },
+      {
+        "id": "dispatcher",
+        "name": "dispatcher",
+        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-dispatcher",
+        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/dispatcher/agent"
       }
     ]
   },

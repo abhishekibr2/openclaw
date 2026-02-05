@@ -1,7 +1,7 @@
 {
   "agent:githubsync:cron:dfc66569-ec5c-484b-a4bb-e19af444b09e": {
-    "sessionId": "dfc96314-e012-4b89-a3f4-ab588954bc2c",
-    "updatedAt": 1770287323792,
+    "sessionId": "3bfb62df-1211-4d97-854b-4308e729ccf4",
+    "updatedAt": 1770288618074,
     "systemSent": true,
     "model": "coder-model",
     "contextTokens": 128000,
@@ -58,10 +58,6 @@
       ],
       "version": 0
     },
-    "modelProvider": "qwen-portal",
-    "inputTokens": 1835,
-    "outputTokens": 126,
-    "totalTokens": 16363,
     "deliveryContext": {
       "channel": "whatsapp"
     }

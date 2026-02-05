@@ -4,9 +4,9 @@
     "qwen-portal:default": {
       "type": "oauth",
       "provider": "qwen-portal",
-      "access": "W67vdxmJta3C-FOFmEfp_Rc3UaRKjRGzozBq841SwiKBxPJwLK_u-tP83FLDexJ9EHgd2lGo7qefeP2L5Ndk8g",
-      "refresh": "0GmgkFuTdVHltrTRMq5jzKUTfR2S7NEi9QCw8gUli3SmPiWY58FHB2tBJ3bNy2blPNKtfZC6zPIvuSQSYI_yKQ",
-      "expires": 1770318405052
+      "access": "Va-IKFtGxHrwE6vuqNYiWTy8Ltukdvyg3mUiYB1t8ksRB1N66GQSe2mUse6yJ8lzJc3sxeufYctRFaaOxEI2pA",
+      "refresh": "8t4CufH6tVmwcBaRYhOUQpu7tAL_U_BLk7-2XiFT6EcEcik8mN_65DQIcGu07w5feryB4TL4LZkYziQWdGQYOQ",
+      "expires": 1770296701172
     }
   },
   "lastGood": {

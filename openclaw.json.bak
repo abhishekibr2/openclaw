@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.2.1",
-    "lastTouchedAt": "2026-02-05T10:46:41.000Z"
+    "lastTouchedAt": "2026-02-05T13:01:23.829Z"
   },
   "wizard": {
     "lastRunAt": "2026-02-05T06:58:57.521Z",
@@ -122,6 +122,18 @@
         "name": "dispatcher",
         "workspace": "/home/ibr-ai-agent/.openclaw/workspace-dispatcher",
         "agentDir": "/home/ibr-ai-agent/.openclaw/agents/dispatcher/agent"
+      },
+      {
+        "id": "executor",
+        "name": "executor",
+        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-executor",
+        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/executor/agent"
+      },
+      {
+        "id": "reporter",
+        "name": "reporter",
+        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-reporter",
+        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/reporter/agent"
       }
     ]
   },

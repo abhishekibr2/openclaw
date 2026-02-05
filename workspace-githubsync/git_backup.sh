@@ -12,6 +12,9 @@ fi
 if [[ -n $(git status --porcelain) ]]; then
     echo "Changes detected, performing backup commit..."
     
+    # Remove any nested .git directories (convert submodules to regular directories)
+    find . -mindepth 2 -name ".git" -type d ! -path "./.git/*" -exec rm -rf {} + 2>/dev/null
+    
     # Add all changes (including new files and deletions)
     git add -A
     

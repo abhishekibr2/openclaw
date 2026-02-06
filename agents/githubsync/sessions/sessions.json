@@ -1,7 +1,7 @@
 {
   "agent:githubsync:cron:dfc66569-ec5c-484b-a4bb-e19af444b09e": {
-    "sessionId": "c2cc5dfb-9feb-4b7d-9a98-e72a3742f808",
-    "updatedAt": 1770367129500,
+    "sessionId": "39a89aa4-81db-4df3-b20e-e4eb7275725d",
+    "updatedAt": 1770368965011,
     "systemSent": true,
     "model": "coder-model",
     "contextTokens": 128000,
@@ -58,17 +58,13 @@
       ],
       "version": 0
     },
-    "modelProvider": "qwen-portal",
-    "inputTokens": 15231,
-    "outputTokens": 117,
-    "totalTokens": 15743,
     "deliveryContext": {
       "channel": "whatsapp"
     }
   },
   "agent:githubsync:subagent:e59cce0c-3d74-4e8a-8697-40211e20b82f": {
     "sessionId": "a0e098ab-9a05-45ea-b6f8-b432fab27428",
-    "updatedAt": 1770367159502,
+    "updatedAt": 1770367185597,
     "deliveryContext": {
       "channel": "whatsapp"
     },
@@ -126,6 +122,13 @@
         }
       ],
       "version": 0
-    }
+    },
+    "modelProvider": "qwen-portal",
+    "model": "coder-model",
+    "contextTokens": 128000,
+    "abortedLastRun": false,
+    "inputTokens": 104,
+    "outputTokens": 145,
+    "totalTokens": 12072
   }
 }

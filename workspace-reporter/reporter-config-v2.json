@@ -1,0 +1,57 @@
+{
+  "reporter": {
+    "name": "Scout",
+    "agentId": "reporter",
+    "primaryFunction": "Generate reports and summaries for multi-agent system",
+    "templates": {
+      "daily": "daily-report/report-template.md",
+      "weekly": "weekly-report/weekly-template.md",
+      "task": "task-report/multi-agent-status-2026-02-10.md"
+    },
+    "reportingSchedule": {
+      "daily": "09:00 IST",
+      "weekly": "Monday 10:00 IST",
+      "onDemand": true
+    },
+    "distribution": {
+      "recipients": ["supervisour", "main", "dispatcher"],
+      "channels": ["agent-messaging", "telegram-if-configured"],
+      "autoDistribute": false,
+      "note": "Per Supervisor: Maintain in workspace for reference; future reports to Dispatcher for system health tracking"
+    },
+    "metricsTracking": {
+      "metricsToTrack": [
+        "taskCompletionRate",
+        "averageExecutionTime",
+        "systemUptime",
+        "communicationReliability",
+        "agentCollaborationScore",
+        "toolExecutionSuccessRate",
+        "externalServiceAvailability",
+        "agentResponseTimes",
+        "documentationCompleteness",
+        "taskCompletionFrequency"
+      ],
+      "baselineFile": "metrics/baseline-metrics-2026-02-10.json",
+      "updateFrequency": "With each task completion"
+    },
+    "dataSources": [
+      "agentCommunicationLogs",
+      "supabaseTaskDatabase",
+      "systemMonitoring",
+      "agentMemoryFiles",
+      "toolExecutionLogs",
+      "sessionHistoryData"
+    ],
+    "roleEnhancements": [
+      "Monitor task completion frequency",
+      "Document system performance metrics",
+      "Identify bottlenecks or improvements",
+      "Generate periodic health reports"
+    ],
+    "created": "2026-02-10T12:45:00IST",
+    "lastUpdated": "2026-02-10T12:55:00IST",
+    "status": "active",
+    "version": "2.0"
+  }
+}

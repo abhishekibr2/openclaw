@@ -1,7 +1,7 @@
 {
   "agent:githubsync:main": {
     "sessionId": "88cb32e0-d89e-4e98-aee7-fb848bbd6593",
-    "updatedAt": 1770710310535,
+    "updatedAt": 1770710606901,
     "deliveryContext": {
       "channel": "whatsapp"
     },
@@ -84,6 +84,13 @@
         }
       ],
       "version": 0
-    }
+    },
+    "modelProvider": "openrouter",
+    "model": "deepseek/deepseek-v3.2",
+    "contextTokens": 163840,
+    "abortedLastRun": false,
+    "inputTokens": 38095,
+    "outputTokens": 1384,
+    "totalTokens": 38095
   }
 }

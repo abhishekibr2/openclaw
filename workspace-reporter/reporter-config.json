@@ -1,0 +1,38 @@
+{
+  "reporter": {
+    "name": "Scout",
+    "agentId": "reporter",
+    "primaryFunction": "Generate reports and summaries for multi-agent system",
+    "templates": {
+      "daily": "daily-report/report-template.md",
+      "weekly": "weekly-report/weekly-template.md",
+      "task": "task-report/multi-agent-status-2026-02-10.md"
+    },
+    "reportingSchedule": {
+      "daily": "09:00 IST",
+      "weekly": "Monday 10:00 IST",
+      "onDemand": true
+    },
+    "distribution": {
+      "recipients": ["supervisour", "main"],
+      "channels": ["agent-messaging", "telegram-if-configured"],
+      "autoDistribute": false
+    },
+    "metricsToTrack": [
+      "taskCompletionRate",
+      "averageExecutionTime",
+      "systemUptime",
+      "communicationReliability",
+      "agentCollaborationScore"
+    ],
+    "dataSources": [
+      "agentCommunicationLogs",
+      "supabaseTaskDatabase",
+      "systemMonitoring",
+      "agentMemoryFiles"
+    ],
+    "created": "2026-02-10T12:45:00IST",
+    "lastUpdated": "2026-02-10T12:45:00IST",
+    "status": "active"
+  }
+}

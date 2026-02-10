@@ -1,10 +1,10 @@
 # Git Backup Agent Instructions
 
-When you receive a request to run the git backup script at /home/ibr-ai-agent/.openclaw/ using the git_backup_agent.js file, follow these steps:
+When you receive a request to run the git backup script at /home/abhishek-sharma/.openclaw/ using the git_backup_agent.js file, follow these steps:
 
-1. Execute the git_backup_agent.js file located at /home/ibr-ai-agent/.openclaw/workspace/git_backup_agent.js
+1. Execute the git_backup_agent.js file located at /home/abhishek-sharma/.openclaw/workspace/git_backup_agent.js
 2. This script will:
-   - Navigate to the /home/ibr-ai-agent/.openclaw/ directory
+   - Navigate to the /home/abhishek-sharma/.openclaw/ directory
    - Check if there are any uncommitted changes using `git status --porcelain`
    - If there are changes:
      * Run `git add .`

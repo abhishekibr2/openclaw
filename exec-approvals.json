@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "socket": {
+    "path": "/home/abhishek-sharma/.openclaw/exec-approvals.sock",
+    "token": "IxMatAb7tt0tYPe9Y6AJRtg1YhvNJWEZ"
+  },
+  "defaults": {},
+  "agents": {}
+}

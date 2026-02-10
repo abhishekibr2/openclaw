@@ -1,11 +1,11 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.2.1",
-    "lastTouchedAt": "2026-02-05T13:04:19.524Z"
+    "lastTouchedVersion": "2026.1.29",
+    "lastTouchedAt": "2026-02-07T14:44:25.633Z"
   },
   "wizard": {
-    "lastRunAt": "2026-02-05T06:58:57.521Z",
-    "lastRunVersion": "2026.2.1",
+    "lastRunAt": "2026-02-07T13:53:01.079Z",
+    "lastRunVersion": "2026.1.29",
     "lastRunCommand": "onboard",
     "lastRunMode": "local"
   },
@@ -33,6 +33,10 @@
       "qwen-portal:default": {
         "provider": "qwen-portal",
         "mode": "oauth"
+      },
+      "openrouter:default": {
+        "provider": "openrouter",
+        "mode": "api_key"
       }
     }
   },
@@ -83,15 +87,19 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "qwen-portal/coder-model"
+        "primary": "openrouter/deepseek/deepseek-v3.2"
       },
       "models": {
         "qwen-portal/coder-model": {
           "alias": "qwen"
         },
-        "qwen-portal/vision-model": {}
+        "qwen-portal/vision-model": {},
+        "openrouter/auto": {
+          "alias": "OpenRouter"
+        },
+        "openrouter/deepseek/deepseek-v3.2": {}
       },
-      "workspace": "/home/ibr-ai-agent/.openclaw/workspace",
+      "workspace": "/home/abhishek-sharma/.openclaw/workspace",
       "compaction": {
         "mode": "safeguard"
       },
@@ -105,43 +113,57 @@
         "id": "main"
       },
       {
-        "id": "githubsync",
-        "name": "githubsync",
-        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-githubsync",
-        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/githubsync/agent"
-      },
-      {
         "id": "supervisour",
         "name": "supervisour",
-        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-supervisour",
-        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/supervisour/agent",
-        "model": "qwen-portal/coder-model"
+        "workspace": "/home/abhishek-sharma/.openclaw/workspace-supervisour",
+        "agentDir": "/home/abhishek-sharma/.openclaw/agents/supervisour/agent",
+        "model": "openrouter/deepseek/deepseek-v3.2"
       },
       {
         "id": "dispatcher",
         "name": "dispatcher",
-        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-dispatcher",
-        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/dispatcher/agent"
+        "workspace": "/home/abhishek-sharma/.openclaw/workspace-dispatcher",
+        "agentDir": "/home/abhishek-sharma/.openclaw/agents/dispatcher/agent"
       },
       {
         "id": "executor",
         "name": "executor",
-        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-executor",
-        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/executor/agent"
+        "workspace": "/home/abhishek-sharma/.openclaw/workspace-executor",
+        "agentDir": "/home/abhishek-sharma/.openclaw/agents/executor/agent"
       },
       {
         "id": "reporter",
         "name": "reporter",
-        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-reporter",
-        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/reporter/agent"
+        "workspace": "/home/abhishek-sharma/.openclaw/workspace-reporter",
+        "agentDir": "/home/abhishek-sharma/.openclaw/agents/reporter/agent"
+      },
+      {
+        "id": "githubsync",
+        "name": "githubsync",
+        "workspace": "/home/abhishek-sharma/.openclaw/workspace-githubsync",
+        "agentDir": "/home/abhishek-sharma/.openclaw/agents/githubsync/agent"
       },
       {
         "id": "notification",
         "name": "notification",
-        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-notification",
-        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/notification/agent"
+        "workspace": "/home/abhishek-sharma/.openclaw/workspace-notification",
+        "agentDir": "/home/abhishek-sharma/.openclaw/agents/notification/agent"
       }
     ]
+  },
+  "tools": {
+    "agentToAgent": {
+      "enabled": true,
+      "allow": [
+        "main",
+        "supervisour",
+        "dispatcher",
+        "executor",
+        "reporter",
+        "githubsync",
+        "notification"
+      ]
+    }
   },
   "messages": {
     "ackReactionScope": "group-mentions"
@@ -150,6 +172,15 @@
     "native": "auto",
     "nativeSkills": "auto",
     "restart": true
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "8405762156:AAFHNmFnATS6wcAkbcY6wfKYZlAhDbiFPys",
+      "groupPolicy": "allowlist",
+      "streamMode": "partial"
+    }
   },
   "gateway": {
     "port": 18789,
@@ -172,10 +203,14 @@
   "plugins": {
     "allow": [
       "",
-      "qwen-portal-auth"
+      "qwen-portal-auth",
+      "telegram"
     ],
     "entries": {
       "qwen-portal-auth": {
+        "enabled": true
+      },
+      "telegram": {
         "enabled": true
       }
     }

@@ -1,4 +1,31 @@
 {
   "version": 1,
-  "jobs": []
+  "jobs": [
+    {
+      "id": "af92eef5-2713-4f5a-b4dd-beb2b49fcb23",
+      "agentId": "dispatcher",
+      "name": "Dispatcher",
+      "description": "This cron wakes up the dispatcher agent.",
+      "enabled": true,
+      "createdAtMs": 1770460379745,
+      "updatedAtMs": 1770472946869,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 108000000
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "next-heartbeat",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Fetch the task for me , and if there are any , handover to supervisour.",
+        "channel": "last"
+      },
+      "state": {
+        "nextRunAtMs": 1770817114956,
+        "lastRunAtMs": 1770472946870,
+        "lastStatus": "ok",
+        "lastDurationMs": 600398
+      }
+    }
+  ]
 }

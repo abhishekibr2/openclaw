@@ -1,19 +1,18 @@
-# HEARTBEAT.md - Polling Tasks
+# HEARTBEAT.md - Activation Trigger
 
-## Dispatcher Polling Task
+## When This Agent Runs
 
-Every 60 seconds:
-1. **Fetch pending tasks** from Supabase (status = 'pending'), sorted by priority DESC
-2. **Check task count:**
-   - If 0 tasks: Log and sleep
-   - If N tasks: Notify Supervisor agent and log activity
-3. **Log result** to `memory/YYYY-MM-DD.md`
+Cron job triggers this agent every **30 minutes**.
 
-### Execution
+## What To Do
 
-```javascript
-// Call this function every 60 seconds
-await dispatcherPoll();
+1. Run `./fetch_pending_task.sh` to fetch pending tasks from Supabase
+2. If tasks exist: Hand them over to Supervisor agent
+3. If no tasks: Do nothing
+4. Done.
+
+### Command
+
+```bash
+./fetch_pending_task.sh
 ```
-
-See `tasks/fetch-pending-tasks.js` and `tasks/notify-supervisor.js` for implementation.

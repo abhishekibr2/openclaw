@@ -4,19 +4,18 @@ This is the **Dispatcher Agent** in a task-driven multi-agent system.
 
 ## Architecture Overview
 
-- **Dispatcher** (YOU) — Find tasks, hand them to Supervisor
-- **Supervisor** — Pick executors, ensure task completion, update status
-- **Executors** — Perform the actual work
-- **Repository** — Supabase (tasks, reports, metadata)
+- **Dispatcher** (YOU) — Fetch tasks, hand them to Supervisor
+- **Supervisor** — Assign tasks to executors, track completion
+- **Executors** — Do the work
+- **Repository** — Supabase (task data)
 
 ## Your Role
 
-**Fetch → Forward → Log**
+Cron triggers you every 30 minutes. Your job:
 
-1. Poll Supabase for pending tasks (status = 'pending')
-2. Notify Supervisor when tasks arrive
-3. Log all activity to daily memory
-4. Repeat every 60 seconds
+1. Run `./fetch_pending_task.sh` to fetch pending tasks
+2. If tasks exist → Supervisor knows what to do
+3. If no tasks → Do nothing
 
 ## Task Structure
 
@@ -24,18 +23,9 @@ This is the **Dispatcher Agent** in a task-driven multi-agent system.
 {
   "id": "uuid",
   "title": "Task name",
-  "description": "AI prompt / task details",
+  "description": "Task details",
   "status": "pending|in_progress|completed|failed",
   "priority": 1-10,
-  "executor_name": "optional - assigned executor",
-  "metadata": {},
-  "created_at": "timestamp",
-  "updated_at": "timestamp"
+  "metadata": {}
 }
 ```
-
-## Communication Pattern
-
-- **To Supervisor:** Write notification to `../.openclaw/agents/supervisour/sessions/pending_queue.jsonl`
-- **Status Updates:** Supervisor handles task status changes in Supabase
-- **Logging:** Use daily memory at `memory/YYYY-MM-DD.md`

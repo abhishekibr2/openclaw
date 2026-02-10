@@ -1,4 +1,4 @@
-{"type":"session","version":3,"id":"72c500ff-293d-4bb2-bf25-bdbb8f4a27aa","timestamp":"2026-02-05T09:57:26.223Z","cwd":"/home/ibr-ai-agent/.openclaw/workspace-githubsync"}
+{"type":"session","version":3,"id":"72c500ff-293d-4bb2-bf25-bdbb8f4a27aa","timestamp":"2026-02-05T09:57:26.223Z","cwd":"/home/abhishek-sharma/.openclaw/workspace-githubsync"}
 {"type":"model_change","id":"c3c3270f","parentId":null,"timestamp":"2026-02-05T09:57:26.223Z","provider":"qwen-portal","modelId":"coder-model"}
 {"type":"thinking_level_change","id":"90756ee1","parentId":"c3c3270f","timestamp":"2026-02-05T09:57:26.223Z","thinkingLevel":"off"}
 {"type":"custom","customType":"model-snapshot","data":{"timestamp":1770285446224,"provider":"qwen-portal","modelApi":"openai-completions","modelId":"coder-model"},"id":"ffb1dea5","parentId":"90756ee1","timestamp":"2026-02-05T09:57:26.224Z"}

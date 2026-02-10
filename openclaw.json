@@ -117,7 +117,12 @@
         "id": "supervisour",
         "name": "supervisour",
         "workspace": "/home/abhishek-sharma/.openclaw/workspace-supervisour",
-        "agentDir": "/home/abhishek-sharma/.openclaw/agents/supervisour/agent"
+        "agentDir": "/home/abhishek-sharma/.openclaw/agents/supervisour/agent",
+        "subagents": {
+          "allowAgents": [
+            "*"
+          ]
+        }
       },
       {
         "id": "dispatcher",

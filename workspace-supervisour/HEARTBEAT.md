@@ -24,46 +24,79 @@ Dispatcher sends ONE task to this agent when tasks are available in Supabase.
      - Sub-task 3: Extract karma count
      - Sub-task 4: Report the result
 
-4. **Delegate to Executor — WAIT FOR RESPONSE:**
-   - Send FIRST sub-task to Executor via `sessions_send`
-   - **STOP and WAIT** for Executor's response
-   - Executor may respond with:
-     - ✅ **"Sub-task completed: [result]"** → Proceed to next sub-task
-     - ❓ **"Question: [clarification needed]"** → Answer their question, resend instructions
-     - 🚨 **"Obstacle: Login required"** → Delegate to Notification, wait for user credentials
-     - ❌ **"Error: [error message]"** → Analyze, retry, or escalate
-   - **DO NOT** send next sub-task until Executor confirms completion of current one
-   - Repeat for each sub-task **sequentially**
+4. **Delegate to Executor using sessions_spawn:**
+   - **Use `sessions_spawn` (RECOMMENDED)** for task delegation:
+     ```
+     sessions_spawn(
+       task: "Navigate to reddit.com and check if logged in",
+       agentId: "executor",
+       label: "Check Reddit login status",
+       runTimeoutSeconds: 300  // 5 minutes max
+     )
+     ```
+   - Returns immediately: `{ status: "accepted", runId, childSessionKey }`
+   - Executor runs task in isolated context
+   - When done, Executor announces result back to you
+   - You'll see announcement with: Status, Result, Notes
+   - Proceed based on result:
+     - ✅ **Success** → Spawn next sub-task
+     - ❓ **Question from Executor** → Respond via sessions_send or spawn with clarification
+     - 🚨 **Obstacle** → Spawn Notification agent
+     - ❌ **Error** → Analyze, retry, or escalate
+   - **DO NOT** spawn next sub-task until previous one completes
 
-5. **Handle obstacles — WAIT FOR RESPONSES:**
+5. **Handle obstacles using sessions_spawn:**
    - **Login required:**
-     1. Send to Notification: "Notify user: Login required for Reddit"
-     2. **WAIT** for Notification to confirm message sent
-     3. **WAIT** for user to provide credentials (this may take time)
-     4. Once credentials received, send back to Executor with credentials
-     5. **WAIT** for Executor to confirm login and proceed
+     ```
+     sessions_spawn(
+       task: "Notify user via Telegram: Login required for Reddit. Please provide credentials.",
+       agentId: "notification",
+       label: "Alert: login required",
+       runTimeoutSeconds: 60
+     )
+     ```
+     - Wait for announcement (message delivered)
+     - **WAIT** for user to provide credentials
+     - Once credentials received, spawn Executor again with credentials
    
    - **Captcha detected:**
-     1. Send to Notification: "Notify user: Captcha required for Reddit"
-     2. **WAIT** for Notification to confirm
-     3. Mark task as failed (captcha requires manual intervention)
+     ```
+     sessions_spawn(
+       task: "Notify user via Telegram: Captcha detected. Manual intervention required.",
+       agentId: "notification",
+       label: "Alert: captcha",
+       runTimeoutSeconds: 60
+     )
+     ```
+     - Mark task as failed (captcha requires manual intervention)
    
    - **Error occurred:**
-     1. Ask Executor for more details if unclear
-     2. **WAIT** for response
-     3. Decide: retry, notify user, or abort
-     4. **WAIT** for confirmation before proceeding
+     - Analyze the error from announcement
+     - Decide: retry (spawn again), notify user, or abort
 
-6. **Use other agents — WAIT FOR RESPONSES:**
+6. **Use other agents via sessions_spawn:**
    - **Reporter:** 
-     1. Send: "Generate daily report for 2026-02-10"
-     2. **WAIT** for Reporter to send back the report
-     3. Then decide what to do with it (send to user via Notification, or store)
+     ```
+     sessions_spawn(
+       task: "Generate daily report for 2026-02-10",
+       agentId: "reporter",
+       label: "Daily report",
+       runTimeoutSeconds: 180
+     )
+     ```
+     - Wait for announcement with report
+     - Decide what to do with report (send to user, store, etc.)
    
    - **Notification:**
-     1. Send: "Notify user: [message]"
-     2. **WAIT** for Notification to confirm: "Message delivered via Telegram"
-     3. Then proceed
+     ```
+     sessions_spawn(
+       task: "Notify user via Telegram: Your Reddit karma is 1,234",
+       agentId: "notification",
+       label: "Send karma result",
+       runTimeoutSeconds: 60
+     )
+     ```
+     - Wait for announcement (message delivered)
 
 7. **Mark task complete** — Once **ALL** sub-tasks successfully executed and confirmed:
    ```bash
@@ -85,30 +118,101 @@ Dispatcher sends ONE task to this agent when tasks are available in Supabase.
 - **Progress tracking** — Know where you are in the task flow at all times
 - **Completion focus** — Keep working until the task is fully complete
 
-## Example Flow
+## Example Flow (Using sessions_spawn)
 
 **Task:** "Check self karma on Reddit"
 
-1. YOU → Executor: "Navigate to reddit.com and login if needed"
-2. **WAIT**
-3. Executor → YOU: "Obstacle: Login required"
-4. YOU → Notification: "Notify user: Reddit login required"
-5. **WAIT**
-6. Notification → YOU: "Message delivered via Telegram"
-7. **WAIT** for user to provide credentials (may be in separate interaction)
-8. USER provides credentials
-9. YOU → Executor: "Login to Reddit with [credentials]"
-10. **WAIT**
-11. Executor → YOU: "Logged in successfully"
-12. YOU → Executor: "Navigate to profile page"
-13. **WAIT**
-14. Executor → YOU: "On profile page"
-15. YOU → Executor: "Extract karma count"
-16. **WAIT**
-17. Executor → YOU: "Karma count: 1,234"
-18. YOU → Notification: "Notify user: Your Reddit karma is 1,234"
-19. **WAIT**
-20. Notification → YOU: "Message delivered"
-21. YOU: `./update-task.sh <taskId> completed "Karma retrieved: 1,234"`
+1. **Spawn Executor** for first sub-task:
+   ```
+   sessions_spawn(
+     task: "Navigate to reddit.com and check if logged in",
+     agentId: "executor",
+     label: "Check Reddit login",
+     runTimeoutSeconds: 300
+   )
+   ```
+   Returns: `{ status: "accepted", runId: "...", childSessionKey: "..." }`
 
-Remember: You orchestrate, but you WAIT for each agent to respond before moving forward. This is a conversation, not a broadcast.
+2. **Wait for announcement** from Executor:
+   ```
+   [Announcement from executor]
+   Status: error
+   Result: Obstacle - Login required
+   Notes: Reddit requires authentication
+   ```
+
+3. **Spawn Notification** to alert user:
+   ```
+   sessions_spawn(
+     task: "Notify user via Telegram: Reddit login required. Please provide credentials.",
+     agentId: "notification",
+     label: "Alert: login required",
+     runTimeoutSeconds: 60
+   )
+   ```
+
+4. **Wait for announcement** from Notification:
+   ```
+   [Announcement from notification]
+   Status: success
+   Result: Message delivered via Telegram to user 1384407297
+   ```
+
+5. **WAIT** for user to provide credentials (may take time)
+
+6. USER provides credentials via Telegram
+
+7. **Spawn Executor** to login:
+   ```
+   sessions_spawn(
+     task: "Login to Reddit with username: [user] password: [pass], then navigate to profile",
+     agentId: "executor",
+     label: "Login and go to profile",
+     runTimeoutSeconds: 300
+   )
+   ```
+
+8. **Wait for announcement**:
+   ```
+   [Announcement from executor]
+   Status: success
+   Result: Logged in successfully and on profile page
+   ```
+
+9. **Spawn Executor** to extract karma:
+   ```
+   sessions_spawn(
+     task: "Extract karma count from profile page",
+     agentId: "executor",
+     label: "Get karma count",
+     runTimeoutSeconds: 120
+   )
+   ```
+
+10. **Wait for announcement**:
+    ```
+    [Announcement from executor]
+    Status: success
+    Result: Karma count: 1,234
+    ```
+
+11. **Spawn Notification** to inform user:
+    ```
+    sessions_spawn(
+      task: "Notify user via Telegram: Your Reddit karma is 1,234",
+      agentId: "notification",
+      label: "Send karma result",
+      runTimeoutSeconds: 60
+    )
+    ```
+
+12. **Wait for announcement**, then mark complete:
+    ```bash
+    ./update-task.sh <taskId> completed "Karma retrieved: 1,234"
+    ```
+
+**Key Pattern:**
+- Spawn sub-agent → Get immediate acceptance
+- Wait for announcement → Get result
+- Proceed based on announcement status
+- No blocking, no timeouts, clean isolation

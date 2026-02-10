@@ -39,9 +39,6 @@ async function updateTaskStatus(taskId, status = 'completed', result = null, err
         // Add completed_at for successful completions
         if (status === 'completed' || status === 'done') {
             updateData.completed_at = new Date().toISOString();
-            if (result) {
-                updateData.result = result;
-            }
         }
 
         // Add error information for failed tasks

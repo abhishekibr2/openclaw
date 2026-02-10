@@ -194,145 +194,201 @@ Notification → YOU: "Message sent to user via Telegram"
 
 ## Communication Tools
 
-### 1. List Available Sessions
-```
-sessions_list()
-```
-Shows all active agent sessions. **Only interact with: executor, reporter, notification**
+### ⭐ Primary Tool: Spawn Sub-Agent (RECOMMENDED)
 
-### 2. Send Message to Agent
+**Use `sessions_spawn` for delegating tasks to sub-agents:**
+
 ```
-sessions_send(
-  sessionKey: "agent:<target-agent-id>:main",
-  message: "Your message here",
-  timeoutSeconds: 30
+sessions_spawn(
+  task: "Your clear task instruction here",
+  agentId: "executor",  // or "reporter" or "notification"
+  label: "Brief description for logs",
+  runTimeoutSeconds: 300  // 5 minutes max
 )
 ```
 
-**Parameters:**
-- `sessionKey`: Format is `agent:<agentId>:main` (e.g., `agent:executor:main`)
-- `message`: Clear, actionable message
-- `timeoutSeconds`: 
-  - `0` = fire-and-forget (no response expected)
-  - `> 0` = wait for response (max 60 seconds recommended)
+**Why this is better:**
+- ✅ **Non-blocking** - Returns immediately with `{ status: "accepted", runId, childSessionKey }`
+- ✅ **Isolated execution** - Sub-agent has clean context
+- ✅ **Auto-announcement** - Result delivered back to you automatically
+- ✅ **Timeout protection** - Task auto-aborts after 5 mins if stuck
+- ✅ **No waiting loops** - Just spawn and the result comes back when ready
 
-**Returns:** `{ runId, status, reply }` if timeout > 0
-
-### 3. View Conversation History
+**Example - Delegating to Executor:**
 ```
-sessions_history(
-  sessionKey: "agent:<target-agent-id>:main",
-  maxTurns: 10
-)
-```
-
-## When to Communicate
-
-**DO communicate when:**
-- You need another agent's specialized capability
-- A task requires handoff to another agent
-- You need to coordinate timing or dependencies
-- You're waiting for results from another agent's work
-- You need to notify or alert another agent
-
-**DON'T communicate when:**
-- You can complete the task yourself
-- The information is already in your context
-- It's a simple status check (use logging instead)
-
-## Communication Best Practices
-
-1. **Be specific**: Include all necessary context in your message
-   - ❌ "Process this task"
-   - ✅ "Execute deployment for feature X, branch: feat/login, env: staging"
-
-2. **Use appropriate timeouts**:
-   - Quick queries: 10-15 seconds
-   - Task delegation: 30-60 seconds
-   - Fire-and-forget notifications: 0 seconds
-
-3. **Handle responses**: Always check the `status` field in replies
-
-4. **Avoid loops**: After receiving a reply, only continue the conversation if necessary. Use `REPLY_SKIP` in your response to end the exchange.
-
-5. **Session key format**: Always use `agent:<agentId>:main` format exactly
-
-## Example Workflows
-
-### Delegating a Task
-```
-# Send task to executor and wait for confirmation
-result = sessions_send(
-  sessionKey: "agent:executor:main",
-  message: "Execute task: Deploy API v2.1 to production. Verify health checks after deployment.",
-  timeoutSeconds: 45
+# Spawn executor to do a task
+result = sessions_spawn(
+  task: "Navigate to reddit.com, login if needed, then go to your profile and extract karma count",
+  agentId: "executor",
+  label: "Reddit karma check",
+  runTimeoutSeconds: 300
 )
 
-if result.status == "ok":
-  # Notify reporter about the deployment
-  sessions_send(
-    sessionKey: "agent:reporter:main",
-    message: "Deployment initiated for API v2.1. RunId: " + result.runId,
-    timeoutSeconds: 0
-  )
+# Returns immediately: { status: "accepted", runId: "...", childSessionKey: "..." }
+# You can continue with other work or wait for announcement
+
+# When Executor finishes, you'll receive announcement in your chat with:
+# - Status: success/error/timeout
+# - Result: The executor's response
+# - Notes: Any additional info
 ```
 
-### Coordinating Between Agents
+**Example - Delegating to Notification:**
 ```
-# Dispatcher → Supervisour → Executor flow
-# Dispatcher sends task to Supervisour
-sessions_send(
-  sessionKey: "agent:supervisour:main",
-  message: "New task from Supabase: TaskID-123 - Update user dashboard. Priority: high",
-  timeoutSeconds: 30
+sessions_spawn(
+  task: "Notify user via Telegram: Login required for Reddit. Please provide credentials.",
+  agentId: "notification",
+  label: "Alert user: login required",
+  runTimeoutSeconds: 60
 )
+# Notification will deliver message and report back
+```
 
-# Supervisour receives, evaluates, then delegates
+**Example - Delegating to Reporter:**
+```
+sessions_spawn(
+  task: "Generate daily report for 2026-02-10",
+  agentId: "reporter",
+  label: "Daily report generation",
+  runTimeoutSeconds: 180
+)
+# Reporter will generate report and send it back
+```
+
+**Handling Announcements:**
+- When sub-agent finishes, you'll receive an announcement in your chat
+- The announcement includes: Status, Result, Notes, stats (runtime, tokens)
+- You can reply to the announcement or use `ANNOUNCE_SKIP` to stay silent
+- Then proceed with next step based on the result
+
+### Alternative: Direct Message (Use Sparingly)
+
+**Only use `sessions_send` for quick questions/clarifications:**
+
+```
 sessions_send(
   sessionKey: "agent:executor:main",
-  message: "Execute TaskID-123: Update user dashboard. Assigned by supervisour.",
+  message: "Quick question: Are you currently logged into Reddit?",
+  timeoutSeconds: 15
+)
+```
+
+**Use this ONLY when:**
+- You need a quick yes/no answer
+- You're asking for clarification
+- The interaction is < 15 seconds
+
+**For actual task delegation, always use `sessions_spawn`**
+
+
+---
+
+## ⚠️ CRITICAL REMINDER: Use sessions_spawn for Task Delegation
+
+**DO NOT use `sessions_send` for delegating tasks to Executor/Reporter/Notification!**
+
+**ONLY use `sessions_spawn` for:**
+- ✅ Delegating tasks to Executor
+- ✅ Requesting reports from Reporter  
+- ✅ Sending notifications via Notification
+- ✅ Any work that takes > 15 seconds
+
+**Example (CORRECT):**
+```
+sessions_spawn(
+  task: "Navigate to reddit.com and extract karma count",
+  agentId: "executor",
+  label: "Reddit karma extraction",
+  runTimeoutSeconds: 300
+)
+```
+
+**Example (WRONG - DON'T DO THIS):**
+```
+❌ sessions_send(
+  sessionKey: "agent:executor:main",
+  message: "Navigate to reddit.com and extract karma count",
   timeoutSeconds: 60
 )
 ```
 
-### Getting Status Updates
+**Why sessions_spawn is better:**
+- Non-blocking (you don't wait)
+- Isolated context (clean slate for sub-agent)
+- Auto-announcement (result comes back automatically)
+- Timeout protection (auto-abort after 5 mins)
+- Better error handling (clear status indication)
+
+**When to use sessions_send (RARE):**
+- Only for quick questions/clarifications (< 15 seconds)
+- Example: "Are you currently logged into Reddit?" 
+- Example: "What's the status of the last task?"
+
+**Default to sessions_spawn. When in doubt, use sessions_spawn.**
+
+---
+
+## Announcement Handling
+
+When you spawn a sub-agent, you'll receive announcements when they complete:
+
+**Announcement format:**
 ```
-# Check what another agent is currently doing
-history = sessions_history(
-  sessionKey: "agent:githubsync:main",
-  maxTurns: 5
+[Announcement from executor]
+Status: success|error|timeout
+Result: [The actual result or error message]
+Notes: [Additional context]
+Stats: Runtime 45s, 2.3K tokens, session: agent:executor:subagent:uuid
+```
+
+**How to handle:**
+1. Wait for announcement in your chat
+2. Check `Status` field:
+   - `success` → Proceed with next step
+   - `error` → Handle error (retry, notify user, abort)
+   - `timeout` → Task took too long, decide what to do
+3. Use `Result` for actual data/output
+4. Reply to announcement or use `ANNOUNCE_SKIP` to stay silent
+5. Spawn next sub-agent based on result
+
+**Example:**
+```
+# After spawning executor
+[Announcement from executor]
+Status: success
+Result: Karma count: 1,234
+
+# Now spawn notification
+sessions_spawn(
+  task: "Notify user via Telegram: Your Reddit karma is 1,234",
+  agentId: "notification",
+  label: "Send karma result",
+  runTimeoutSeconds: 60
 )
-# Review their recent activity before proceeding
 ```
 
-## Agent-Specific Routing
-
-**When you should contact each agent:**
-
-- **supervisour**: Task assignment, coordination decisions, priority conflicts
-- **dispatcher**: Task scheduling, Supabase sync status, heartbeat configuration
-- **executor**: Action execution, deployment, file operations, script running
-- **reporter**: Status reports, summaries, documentation generation
-- **githubsync**: GitHub operations, PR creation, code syncing, repository management
-- **notification**: Alerts, user notifications, Telegram messages
-- **main**: General queries, fallback for unspecified tasks
-
-## Reply Loop Control
-
-After sending a message with `timeoutSeconds > 0`, you may receive a reply. You can:
-- **Continue the conversation**: Respond normally (up to 5 back-and-forth turns)
-- **End the conversation**: Include `REPLY_SKIP` in your response to stop the loop
-
-Example:
-```
-"Task completed successfully. REPLY_SKIP"
-```
+---
 
 ## Troubleshooting
 
-- **"Session not found"**: Verify the agent exists in openclaw.json and is running
-- **"Timeout"**: Target agent may be busy or unresponsive; try increasing timeoutSeconds
-- **No response**: Check if you used `timeoutSeconds: 0` (fire-and-forget mode)
-- **Wrong session key format**: Must be `agent:<agentId>:main` exactly
+**"I'm not getting announcements back":**
+- Make sure you're using `sessions_spawn`, not `sessions_send`
+- Check if sub-agent timed out (> 5 mins)
+- Verify agentId is correct: "executor", "reporter", or "notification"
+
+**"Sub-agent timed out":**
+- Task took > 5 minutes (runTimeoutSeconds: 300)
+- Spawn again with more context or break into smaller sub-tasks
+- Consider if task is too complex for automation
+
+**"How do I ask Executor a follow-up question?":**
+- Use `sessions_send` only for quick clarifications
+- Or spawn with more specific task instructions
+
+**"Can I spawn multiple sub-agents at once?":**
+- Yes, but handle announcements sequentially
+- Better: Spawn one, wait for announcement, then spawn next
+- This ensures proper task flow and error handling
+
 
 ---

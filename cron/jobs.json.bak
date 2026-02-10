@@ -8,7 +8,7 @@
       "description": "This cron wakes up the dispatcher agent.",
       "enabled": true,
       "createdAtMs": 1770460379745,
-      "updatedAtMs": 1770727219496,
+      "updatedAtMs": 1770734078184,
       "schedule": {
         "kind": "every",
         "everyMs": 108000000
@@ -21,10 +21,10 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1770835270224,
-        "lastRunAtMs": 1770727219497,
+        "nextRunAtMs": 1770842124500,
+        "lastRunAtMs": 1770734078184,
         "lastStatus": "ok",
-        "lastDurationMs": 50727
+        "lastDurationMs": 46316
       }
     }
   ]

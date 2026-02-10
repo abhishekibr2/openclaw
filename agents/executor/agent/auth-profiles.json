@@ -1,33 +1,20 @@
 {
   "version": 1,
   "profiles": {
-    "qwen-portal:default": {
-      "type": "oauth",
-      "provider": "qwen-portal",
-      "access": "yQWixYYmt81Yqtxg1IjvEsj9P_EI4H31cGjc9BWP7MLjW498k-EkAju4WzIOZQOwfut7IoUoeaLAvf5VWz4wMw",
-      "refresh": "2F0uc7n8gDu7G1NvCa650OTINdPP1Fw47khLTE5CmpGaGxKSRV6VrSSrX5KP00dm7Tc-8FrfnpWcLOH0B6Mu5w",
-      "expires": 1770734581051
-    },
     "openrouter:default": {
       "type": "api_key",
       "provider": "openrouter",
-      "key": "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"
+      "key": "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"
     }
   },
   "lastGood": {
-    "qwen-portal": "qwen-portal:default",
     "openrouter": "openrouter:default"
   },
   "usageStats": {
-    "qwen-portal:default": {
-      "lastUsed": 1770471873455,
-      "errorCount": 0,
-      "lastFailureAt": 1770471873452
-    },
     "openrouter:default": {
-      "lastUsed": 1770712454927,
+      "lastUsed": 1770727472401,
       "errorCount": 0,
-      "lastFailureAt": 1770712454924
+      "lastFailureAt": 1770722853539
     }
   }
 }

@@ -1,10 +1,10 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.1.29",
-    "lastTouchedAt": "2026-02-10T08:43:08.080Z"
+    "lastTouchedAt": "2026-02-10T11:58:44.294Z"
   },
   "wizard": {
-    "lastRunAt": "2026-02-10T08:43:08.077Z",
+    "lastRunAt": "2026-02-10T11:58:44.290Z",
     "lastRunVersion": "2026.1.29",
     "lastRunCommand": "onboard",
     "lastRunMode": "local"
@@ -87,7 +87,7 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "qwen-portal/coder-model"
+        "primary": "openrouter/google/gemini-3-flash-preview"
       },
       "models": {
         "qwen-portal/coder-model": {
@@ -97,7 +97,8 @@
         "openrouter/auto": {
           "alias": "OpenRouter"
         },
-        "openrouter/deepseek/deepseek-v3.2": {}
+        "openrouter/deepseek/deepseek-v3.2": {},
+        "openrouter/google/gemini-3-flash-preview": {}
       },
       "workspace": "/home/abhishek-sharma/.openclaw/workspace",
       "compaction": {
@@ -116,8 +117,7 @@
         "id": "supervisour",
         "name": "supervisour",
         "workspace": "/home/abhishek-sharma/.openclaw/workspace-supervisour",
-        "agentDir": "/home/abhishek-sharma/.openclaw/agents/supervisour/agent",
-        "model": "openrouter/deepseek/deepseek-v3.2"
+        "agentDir": "/home/abhishek-sharma/.openclaw/agents/supervisour/agent"
       },
       {
         "id": "dispatcher",

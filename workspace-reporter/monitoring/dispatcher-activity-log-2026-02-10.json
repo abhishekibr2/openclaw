@@ -30,6 +30,25 @@
       "totalLifecycle": "< 2 minutes",
       "status": "completed",
       "notes": "First successful task cycle. Executor proactive. System resilient despite initial connectivity issues."
+    },
+    {
+      "taskId": "dc2f2010-100b-4faf-a7dd-035b62b16614",
+      "taskType": "Check Reddit Profile Status",
+      "discoveryTime": "2026-02-10T13:10:00IST",
+      "assignmentTime": "2026-02-10T13:10:00IST",
+      "planningStartTime": "2026-02-10T13:10:00IST",
+      "executionStartTime": "2026-02-10T15:12:23IST",
+      "completionTime": "TBD",
+      "totalLifecycle": "TBD",
+      "status": "in-progress",
+      "notes": "NEW TASK INITIATED - Enhanced workflow active with step-by-step guidance, pre-execution planning, metrics tracking. Task involves: Supervisor, Executor. Tool usage: browser, navigation, extraction, file creation. Executor has started execution by navigating to Reddit profile.",
+      "metricsTracked": {
+        "startToFirstResponse": "2 minutes",
+        "planningPhaseDuration": "2 minutes",
+        "executionPhaseStarted": "Yes",
+        "toolsUsedSoFar": ["browser(navigate)", "sessions_send"],
+        "agentsCommunicated": ["supervisor", "executor", "notification"]
+      }
     }
   ],
   
@@ -48,5 +67,21 @@
     "assignmentToExecutionStart": "< 2 minutes",
     "averageTaskCompletionTime": "Task-dependent",
     "systemUptime": "> 95%"
+  },
+  
+  "enhancedWorkflowTracking": {
+    "newTaskTracked": "dc2f2010-100b-4faf-a7dd-035b62b16614",
+    "workflowType": "Enhanced mentoring protocol with step-by-step guidance",
+    "agentsInvolved": ["Supervisor", "Executor"],
+    "metricsBeingTracked": [
+      "Start time: Task initiation timestamp",
+      "Communication: Time to first response from Executor", 
+      "Planning: Time for pre-execution questions/responses",
+      "Execution: Time for each step (browser, navigation, extraction, file creation)",
+      "Completion: Total task duration",
+      "Tool usage: Specific tools used for each step"
+    ],
+    "baselineComparison": "Compare against Telegram task metrics",
+    "reportingPlan": "Include in next periodic report with performance analysis"
   }
 }

@@ -64,7 +64,7 @@ node supabase/update-task-status.js <taskId> [status] [message]
 
 ## Environment Variables
 
-The script uses environment variables from `/home/abhishek-sharma/.openclaw/.env`:
+The script uses environment variables from `/home/ibr-ai-agent/.openclaw/.env`:
 
 - `SUPABASE_URL` — Your Supabase project URL
 - `SUPABASE_ANON_KEY` — Your Supabase anonymous key

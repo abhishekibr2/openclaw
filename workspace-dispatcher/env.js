@@ -4,7 +4,7 @@
  */
 
 require('dotenv').config({
-    path: '/home/abhishek-sharma/.openclaw/.env',
+    path: '/home/ibr-ai-agent/.openclaw/.env',
 });
 
 // Hard fail early (this saves hours of debugging)

@@ -100,7 +100,7 @@
         "openrouter/deepseek/deepseek-v3.2": {},
         "openrouter/google/gemini-3-flash-preview": {}
       },
-      "workspace": "/home/abhishek-sharma/.openclaw/workspace",
+      "workspace": "/home/ibr-ai-agent/.openclaw/workspace",
       "compaction": {
         "mode": "safeguard"
       },
@@ -116,8 +116,8 @@
       {
         "id": "supervisour",
         "name": "supervisour",
-        "workspace": "/home/abhishek-sharma/.openclaw/workspace-supervisour",
-        "agentDir": "/home/abhishek-sharma/.openclaw/agents/supervisour/agent",
+        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-supervisour",
+        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/supervisour/agent",
         "subagents": {
           "allowAgents": [
             "*"
@@ -127,32 +127,32 @@
       {
         "id": "dispatcher",
         "name": "dispatcher",
-        "workspace": "/home/abhishek-sharma/.openclaw/workspace-dispatcher",
-        "agentDir": "/home/abhishek-sharma/.openclaw/agents/dispatcher/agent"
+        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-dispatcher",
+        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/dispatcher/agent"
       },
       {
         "id": "executor",
         "name": "executor",
-        "workspace": "/home/abhishek-sharma/.openclaw/workspace-executor",
-        "agentDir": "/home/abhishek-sharma/.openclaw/agents/executor/agent"
+        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-executor",
+        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/executor/agent"
       },
       {
         "id": "reporter",
         "name": "reporter",
-        "workspace": "/home/abhishek-sharma/.openclaw/workspace-reporter",
-        "agentDir": "/home/abhishek-sharma/.openclaw/agents/reporter/agent"
+        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-reporter",
+        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/reporter/agent"
       },
       {
         "id": "githubsync",
         "name": "githubsync",
-        "workspace": "/home/abhishek-sharma/.openclaw/workspace-githubsync",
-        "agentDir": "/home/abhishek-sharma/.openclaw/agents/githubsync/agent"
+        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-githubsync",
+        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/githubsync/agent"
       },
       {
         "id": "notification",
         "name": "notification",
-        "workspace": "/home/abhishek-sharma/.openclaw/workspace-notification",
-        "agentDir": "/home/abhishek-sharma/.openclaw/agents/notification/agent"
+        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-notification",
+        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/notification/agent"
       }
     ]
   },

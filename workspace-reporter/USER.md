@@ -55,11 +55,11 @@ You are the **documentation specialist**. You:
 ## Data Sources
 
 **Executor memory logs:**
-- `/home/abhishek-sharma/.openclaw/workspace-executor/memory/YYYY-MM-DD.md`
+- `/home/ibr-ai-agent/.openclaw/workspace-executor/memory/YYYY-MM-DD.md`
 - Task execution details
 
 **Notification logs:**
-- `/home/abhishek-sharma/.openclaw/workspace-notification/memory/YYYY-MM-DD.md`
+- `/home/ibr-ai-agent/.openclaw/workspace-notification/memory/YYYY-MM-DD.md`
 - Messages sent to user
 
 **Supabase task table:**

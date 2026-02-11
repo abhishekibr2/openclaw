@@ -7,7 +7,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Memory directory
-const MEMORY_DIR = '/home/abhishek-sharma/.openclaw/workspace-dispatcher/memory';
+const MEMORY_DIR = '/home/ibr-ai-agent/.openclaw/workspace-dispatcher/memory';
 
 /**
  * Get today's memory file path

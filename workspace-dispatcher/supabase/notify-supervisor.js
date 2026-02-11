@@ -7,7 +7,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Path to supervisor's pending queue
-const SUPERVISOR_QUEUE_PATH = '/home/abhishek-sharma/.openclaw/agents/supervisour/sessions/pending_queue.jsonl';
+const SUPERVISOR_QUEUE_PATH = '/home/ibr-ai-agent/.openclaw/agents/supervisour/sessions/pending_queue.jsonl';
 
 /**
  * Notify supervisor of pending tasks

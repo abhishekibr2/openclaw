@@ -55,13 +55,13 @@ workspace-dispatcher/
 ### 1. Install Dependencies
 
 ```bash
-cd /home/abhishek-sharma/.openclaw/workspace-dispatcher
+cd /home/ibr-ai-agent/.openclaw/workspace-dispatcher
 npm install
 ```
 
 ### 2. Verify .env
 
-Ensure `/home/abhishek-sharma/.openclaw/.env` contains:
+Ensure `/home/ibr-ai-agent/.openclaw/.env` contains:
 ```
 SUPABASE_URL=your_supabase_url
 SUPABASE_ANON_KEY=your_supabase_anon_key

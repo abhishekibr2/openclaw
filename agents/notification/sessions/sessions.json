@@ -1,0 +1,15 @@
+{
+  "agent:notification:main": {
+    "origin": {
+      "label": "telegram:1384407297",
+      "provider": "telegram",
+      "surface": "telegram",
+      "chatType": "direct",
+      "from": "telegram:1384407297",
+      "to": "telegram:1384407297"
+    },
+    "sessionId": "28577520-9b43-4b59-95c7-ec7861e790f2",
+    "updatedAt": 1770796538987,
+    "sessionFile": "/home/ibr-ai-agent/.openclaw/agents/notification/sessions/28577520-9b43-4b59-95c7-ec7861e790f2.jsonl"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.1.29",
-    "lastTouchedAt": "2026-02-10T11:58:44.294Z"
+    "lastTouchedVersion": "2026.2.1",
+    "lastTouchedAt": "2026-02-11T07:03:41.725Z"
   },
   "wizard": {
     "lastRunAt": "2026-02-10T11:58:44.290Z",
@@ -153,6 +153,12 @@
         "name": "notification",
         "workspace": "/home/ibr-ai-agent/.openclaw/workspace-notification",
         "agentDir": "/home/ibr-ai-agent/.openclaw/agents/notification/agent"
+      },
+      {
+        "id": "architect",
+        "name": "architect",
+        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-architect",
+        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/architect/agent"
       }
     ]
   },

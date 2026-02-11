@@ -2,27 +2,39 @@
 
 ## When This Agent Runs
 
-Triggered by **Supervisor agent** when a report is needed.
+Use this workflow whenever a report is requested (by the **user** or by the **Supervisor**).
 
 ## What To Do
 
-1. **Receive report request** — Get report type and scope from Supervisor
-2. **Gather data**:
+1. **Receive report request** — Get report type (task/daily/weekly/monthly/metrics) and scope (task ID, date, week, month, etc.) from the requester
+2. **Determine time range** (for daily/weekly/monthly reports):
+   - Daily: start/end of the requested day
+   - Weekly: start/end of the requested week
+   - Monthly: start/end of the requested month
+3. **Gather data**:
    - Read Executor's memory logs (task executions)
    - Read Notification logs (messages sent)
-   - Query Supabase for task statuses
+   - Fetch completed/done tasks from Supabase for the range using:
+     - `./fetch_done_tasks.sh <startIso> <endIso>`
    - Review memory files from agents
-3. **Analyze data**:
+4. **Analyze data**:
    - Calculate success/failure rates
    - Identify patterns and obstacles
    - Measure execution times
    - Note key achievements
-4. **Generate report** — Create structured documentation:
+5. **Generate report** — Create structured documentation:
    - Task Summary Report
    - Daily Report
-   - Weekly Summary
+   - Weekly/Monthly Summary
    - Performance Metrics
-5. **Deliver report** — Send to Supervisor (who may forward to Notification for user delivery)
+6. **Persist report**:
+   - Save markdown to the appropriate file:
+     - `task-report/[task-id].md`
+     - `daily-report/YYYY-MM-DD.md`
+     - `weekly-report/YYYY-WW.md` (or similar monthly file)
+   - Insert a row into Supabase `reports` using:
+     - `./insert_report.sh <reportType> "<content>" [metadataJson]`
+7. **Deliver report** — Reply with the report content to whoever requested it (user or Supervisor)
 
 ## Report Templates
 
@@ -78,6 +90,7 @@ Save reports to:
 - `daily-report/YYYY-MM-DD.md` — Daily summaries
 - `weekly-report/YYYY-WW.md` — Weekly summaries
 - `metrics/performance.json` — Performance metrics
+- Supabase `reports` table — via `./insert_report.sh`
 
 ---
 

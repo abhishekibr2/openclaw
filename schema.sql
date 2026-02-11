@@ -18,8 +18,6 @@ CREATE TABLE tasks (
 -- Reports table
 CREATE TABLE reports (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    task_id UUID REFERENCES tasks(id) ON DELETE CASCADE,
-    executor_name VARCHAR(255), -- optional: track which executor created this report
     content TEXT NOT NULL,
     report_type VARCHAR(100), -- e.g., 'success', 'error', 'progress'
     metadata JSONB, -- additional report data

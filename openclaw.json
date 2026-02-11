@@ -190,7 +190,7 @@
       "dmPolicy": "pairing",
       "botToken": "8405762156:AAFHNmFnATS6wcAkbcY6wfKYZlAhDbiFPys",
       "groupPolicy": "allowlist",
-      "streamMode": "partial"
+      "streamMode": "block"
     }
   },
   "gateway": {

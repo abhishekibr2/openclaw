@@ -7,6 +7,7 @@
  */
 
 const { supabase } = require('./supabase-client');
+require('../env'); // ← MUST BE FIRST
 
 /**
  * Fetch tasks with status in ['completed', 'done'] whose completed_at

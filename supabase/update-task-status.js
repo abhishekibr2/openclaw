@@ -3,17 +3,9 @@
  * Updates a specific task from 'pending' to 'done'
  */
 
-const { createClient } = require('@supabase/supabase-js');
-require('dotenv').config({ path: '/home/ibr-ai-agent/.openclaw/.env' });
+require('../env'); // ← MUST BE FIRST
 
-const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_ANON_KEY;
-
-if (!supabaseUrl || !supabaseKey) {
-  throw new Error('Missing SUPABASE_URL or SUPABASE_ANON_KEY in .env file');
-}
-
-const supabase = createClient(supabaseUrl, supabaseKey);
+const { supabase } = require('./supabase-client');
 
 /**
  * Update task status to 'done'

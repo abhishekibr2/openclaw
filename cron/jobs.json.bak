@@ -8,7 +8,7 @@
       "description": "Syncs the ai agent base to github",
       "enabled": true,
       "createdAtMs": 1770460379745,
-      "updatedAtMs": 1770809864335,
+      "updatedAtMs": 1770811682251,
       "schedule": {
         "kind": "every",
         "everyMs": 1800000
@@ -21,10 +21,10 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1770811682249,
-        "lastRunAtMs": 1770809864335,
+        "nextRunAtMs": 1770815259056,
+        "lastRunAtMs": 1770811682251,
         "lastStatus": "ok",
-        "lastDurationMs": 17908
+        "lastDurationMs": 34001
       }
     }
   ]

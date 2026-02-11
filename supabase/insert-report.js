@@ -6,6 +6,7 @@
  */
 
 const { supabase } = require('./supabase-client');
+require('../env'); // ← MUST BE FIRST
 
 /**
  * Insert a report.

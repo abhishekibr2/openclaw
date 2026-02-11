@@ -1,4 +1,5 @@
 const { createClient } = require('@supabase/supabase-js');
+require('../env'); // ← MUST BE FIRST
 const fetch = require('node-fetch');
 global.fetch = fetch;
 

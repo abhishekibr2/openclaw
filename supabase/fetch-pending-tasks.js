@@ -2,9 +2,9 @@
  * Fetch Pending Tasks from Supabase
  */
 
-require('../env'); // ← MUST BE FIRST
 
 const { supabase } = require('./supabase-client');
+require('../env'); // ← MUST BE FIRST
 
 async function fetchPendingTasks() {
 

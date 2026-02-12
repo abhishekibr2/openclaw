@@ -100,11 +100,11 @@ Dispatcher sends ONE task to this agent when tasks are available in Supabase.
 
 7. **Mark task complete** — Once **ALL** sub-tasks successfully executed and confirmed:
    ```bash
-   ./update-task.sh <taskId> completed "Task finished successfully: [summary]"
+   ./update-task.sh <taskId> <previousRun + 1> completed "Task finished successfully: [summary]"
    ```
    Or if failed:
    ```bash
-   ./update-task.sh <taskId> failed "Error message here"
+   ./update-task.sh <taskId> <previousRun + 1> failed "Error message here"
    ```
 
 ## Key Behaviors
@@ -208,7 +208,7 @@ Dispatcher sends ONE task to this agent when tasks are available in Supabase.
 
 12. **Wait for announcement**, then mark complete:
     ```bash
-    ./update-task.sh <taskId> completed "Karma retrieved: 1,234"
+    ./update-task.sh <taskId> <previousRun + 1> completed "Karma retrieved: 1,234"
     ```
 
 **Key Pattern:**

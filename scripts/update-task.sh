@@ -8,18 +8,17 @@ NODE_SCRIPT="$SCRIPT_DIR/supabase/update-task-status.js"
 
 # Check if task ID provided
 if [ -z "$1" ]; then
-  echo "Usage: ./update-task.sh <taskId> [status] [message]"
+  echo "Usage: ./update-task.sh <taskId> [runs_today] [status] [message]"
   echo ""
   echo "Arguments:"
   echo "  taskId   - Task ID to update (required)"
+  echo "  runs_today - Number of runs today, use the previous runs_today + 1 (required)"
   echo "  status   - New status: completed, or failed (default: completed)"
   echo "  message  - Result message for completed, or error for failed"
-  echo "  runs_today - Number of runs today"
   echo ""
   echo "Examples:"
-  echo "  ./update-task.sh 27fd3f9b-... completed \"Task finished successfully\" 1"
-  echo "  ./update-task.sh 27fd3f9b-... failed \"Login required\" "
-  echo "  ./update-task.sh 27fd3f9b-... completed \"Task finished successfully\" 1"
+  echo "  ./update-task.sh 27fd3f9b-... 1 completed \"Task finished successfully\""
+  echo "  ./update-task.sh 27fd3f9b-... 1 failed \"Login required\""
   exit 1
 fi
 

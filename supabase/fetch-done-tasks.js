@@ -10,7 +10,7 @@ const { supabase } = require('./supabase-client');
 require('../env'); // ← MUST BE FIRST
 
 /**
- * Fetch tasks with status in ['completed', 'done'] whose completed_at
+ * Fetch tasks with status in ['completed'] whose completed_at
  * timestamp falls within [startTimeIso, endTimeIso].
  *
  * @param {string} startTimeIso - Inclusive ISO timestamp (e.g. '2026-02-10T00:00:00.000Z')
@@ -26,7 +26,7 @@ async function fetchDoneTasksInRange(startTimeIso, endTimeIso) {
     const { data, error } = await supabase
       .from('tasks')
       .select('*')
-      .in('status', ['completed', 'done'])
+      .in('status', ['completed'])
       .gte('completed_at', startTimeIso)
       .lte('completed_at', endTimeIso)
       .order('completed_at', { ascending: true });

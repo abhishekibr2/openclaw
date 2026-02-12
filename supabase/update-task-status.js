@@ -1,6 +1,6 @@
 /**
  * Update task status in Supabase
- * Updates a specific task from 'pending' to 'done'
+ * Updates a specific task from 'pending' to 'completed'
  */
 
 require('../env'); // ← MUST BE FIRST
@@ -8,7 +8,7 @@ require('../env'); // ← MUST BE FIRST
 const { supabase } = require('./supabase-client');
 
 /**
- * Update task status to 'done'
+ * Update task status to 'completed'
  * @param {string} taskId - The ID of the task to update
  * @param {string} executorName - Name of executor (optional)
  * @param {number} runs_today - Number of runs today (optional)
@@ -17,7 +17,7 @@ const { supabase } = require('./supabase-client');
 async function updateTaskStatus(taskId, executorName = 'executor', runs_today) {
   try {
     const updateData = {
-      status: 'done',
+      status: 'completed',
       executor_name: executorName,
       updated_at: new Date().toISOString(),
       completed_at: new Date().toISOString(),

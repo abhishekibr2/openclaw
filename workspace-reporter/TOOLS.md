@@ -19,7 +19,7 @@ These bash scripts live in this workspace and are the canonical way for you to i
     - `./fetch_done_tasks.sh "2026-02-10T00:00:00.000Z" "2026-02-10T23:59:59.999Z"`
 - Behavior:
   - Changes into `workspace-reporter/supabase/`
-  - Calls the Node helper to fetch tasks with `status` in `['completed', 'done']` and `completed_at` between `<startIso>` and `<endIso>`
+  - Calls the Node helper to fetch tasks with `status` in `['completed']` and `completed_at` between `<startIso>` and `<endIso>`
   - Prints the tasks as pretty JSON to stdout
 
 Use this when you need a ground-truth list of completed tasks for daily/weekly/monthly reports.

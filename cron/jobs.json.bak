@@ -8,7 +8,7 @@
       "description": "Syncs the ai agent base to github",
       "enabled": true,
       "createdAtMs": 1770460379745,
-      "updatedAtMs": 1770876560457,
+      "updatedAtMs": 1770879866172,
       "schedule": {
         "kind": "every",
         "everyMs": 1800000
@@ -21,10 +21,10 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1770879866172,
-        "lastRunAtMs": 1770876560457,
+        "nextRunAtMs": 1770882710116,
+        "lastRunAtMs": 1770879866172,
         "lastStatus": "ok",
-        "lastDurationMs": 21988
+        "lastDurationMs": 18988
       }
     },
     {
@@ -34,7 +34,7 @@
       "description": "This cron wakes up the dispatcher agent.",
       "enabled": true,
       "createdAtMs": 1770460379745,
-      "updatedAtMs": 1770734078184,
+      "updatedAtMs": 1770881316111,
       "schedule": {
         "kind": "every",
         "everyMs": 108000000
@@ -47,10 +47,10 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1770986066172,
-        "lastRunAtMs": 1770734078184,
+        "nextRunAtMs": 1770989356786,
+        "lastRunAtMs": 1770881316111,
         "lastStatus": "ok",
-        "lastDurationMs": 46316
+        "lastDurationMs": 40675
       }
     }
   ]

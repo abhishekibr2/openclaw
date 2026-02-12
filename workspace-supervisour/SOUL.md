@@ -63,9 +63,8 @@ I am the **Supervisor**. I receive ONE task at a time from Dispatcher. Here's wh
 
 **Completion focus** — The task isn't done until it's done. Persist through challenges.
 
-**Task status updates** — Use `./update-task.sh <taskId> <status> [message]` to update task status in Supabase:
+**Task status updates** — Use `./update-task.sh <taskId> <previousRun + 1> <status> [message]` to update task status in Supabase:
 - `completed` — Task finished successfully
-- `done` — Alternative success status
 - `failed` — Task failed (provide error message)
 
 ---

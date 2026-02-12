@@ -117,7 +117,7 @@ See `HEARTBEAT.md` for the complete workflow. In summary:
    - Login needed → Notify user via Notification agent
    - Captcha detected → Notify user for manual intervention
    - Errors → Analyze, retry, or escalate
-6. **Verify completion** and update task status
+6. **Verify completion** and update task status and runs
 
 ### Tracking Task Execution
 

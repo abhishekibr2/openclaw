@@ -29,7 +29,7 @@
 2. **Task Details:** ID 27fd3f9b-36f7-42a2-835f-8183f6b20ebf, Telegram message to user 1384407297
 3. **Execution:** Executor used message tool with Telegram channel
 4. **Message:** "Hello how are you ?"
-5. **Completion:** Status updated to 'done' in Supabase
+5. **Completion:** Status updated to 'completed' in Supabase
 6. **Reporting:** Detailed execution report provided
 7. **Documentation:** All agents logged activity
 

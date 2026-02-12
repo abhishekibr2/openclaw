@@ -11,15 +11,17 @@ const { supabase } = require('./supabase-client');
  * Update task status to 'done'
  * @param {string} taskId - The ID of the task to update
  * @param {string} executorName - Name of executor (optional)
+ * @param {number} runs_today - Number of runs today (optional)
  * @returns {Promise<Object>} Updated task data
  */
-async function updateTaskStatus(taskId, executorName = 'executor') {
+async function updateTaskStatus(taskId, executorName = 'executor', runs_today) {
   try {
     const updateData = {
       status: 'done',
       executor_name: executorName,
       updated_at: new Date().toISOString(),
-      completed_at: new Date().toISOString()
+      completed_at: new Date().toISOString(),
+      runs_today: runs_today
     };
 
     const { data, error } = await supabase
@@ -48,14 +50,21 @@ async function updateTaskStatus(taskId, executorName = 'executor') {
 if (require.main === module) {
   const taskId = process.argv[2];
   const executorName = process.argv[3] || 'executor';
+  const runs_today = process.argv[4] || 0;
   
   if (!taskId) {
-    console.error('Usage: node update-task-status.js <taskId> [executorName]');
-    console.error('Example: node update-task-status.js 27fd3f9b-36f7-42a2-835f-8183f6b20ebf executor');
+    console.error('Usage: node update-task-status.js <taskId> [executorName] [runs_today]');
+    console.error('Example: node update-task-status.js 27fd3f9b-36f7-42a2-835f-8183f6b20ebf executor 1');
+    process.exit(1);
+  }
+
+  if (!runs_today) {
+    console.error('Usage: node update-task-status.js <taskId> [executorName] [runs_today]');
+    console.error('Example: node update-task-status.js 27fd3f9b-36f7-42a2-835f-8183f6b20ebf executor 1');
     process.exit(1);
   }
   
-  updateTaskStatus(taskId, executorName)
+  updateTaskStatus(taskId, executorName, runs_today)
     .then(updatedTask => {
       console.log('Task updated successfully:', JSON.stringify(updatedTask, null, 2));
     })

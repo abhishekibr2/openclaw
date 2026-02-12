@@ -20,7 +20,16 @@ async function fetchPendingTasks() {
       throw new Error(`Failed to fetch pending tasks: ${error.message}`);
     }
 
-    return data || [];
+    // Filter tasks based on runs_today and runs_per_day
+    const validTasks = (data || []).filter(task => {
+      const runsToday = task.runs_today || 0;
+      // If runs_per_day is not set, we assume it's allowed to run, 
+      // otherwise enforce runs_today < runs_per_day
+      if (task.runs_per_day === null || task.runs_per_day === undefined) return true;
+      return runsToday < task.runs_per_day;
+    });
+
+    return validTasks;
   } catch (err) {
     console.error('Error fetching pending tasks:', err);
     throw err;

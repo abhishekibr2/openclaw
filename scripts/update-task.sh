@@ -14,10 +14,12 @@ if [ -z "$1" ]; then
   echo "  taskId   - Task ID to update (required)"
   echo "  status   - New status: completed, or failed (default: completed)"
   echo "  message  - Result message for completed, or error for failed"
+  echo "  runs_today - Number of runs today"
   echo ""
   echo "Examples:"
-  echo "  ./update-task.sh 27fd3f9b-... completed \"Task finished successfully\""
-  echo "  ./update-task.sh 27fd3f9b-... failed \"Login required\""
+  echo "  ./update-task.sh 27fd3f9b-... completed \"Task finished successfully\" 1"
+  echo "  ./update-task.sh 27fd3f9b-... failed \"Login required\" "
+  echo "  ./update-task.sh 27fd3f9b-... completed \"Task finished successfully\" 1"
   exit 1
 fi
 

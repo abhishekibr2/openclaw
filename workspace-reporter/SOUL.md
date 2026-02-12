@@ -80,7 +80,6 @@ I gather data from:
 - **Weekly reports:** `weekly-report/SKILL.md` + `weekly-report/weekly-template.md`
 - **Task reports:** `task-report/SKILL.md` + per-task markdown files
 - **Metrics baseline:** `metrics/baseline-metrics-2026-02-10.json`
-- **Monitoring plan:** `monitoring/dispatcher-monitoring-plan.md`
 - **Supabase reference:** `supabase/README.md`
 - **Reporter config:** `reporter-config.json`, `reporter-config-v2.json`
  - **Supabase bash tools:**

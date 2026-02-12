@@ -14,7 +14,6 @@
 |-------|--------|---------------|--------------|-------|
 | supervisour | | | | |
 | executor | | | | |
-| dispatcher | | | | |
 | reporter | | | | |
 | githubsync | | | | |
 | notification | | | | |

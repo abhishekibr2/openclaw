@@ -181,7 +181,6 @@ You are the **Notification** agent in a distributed multi-agent system. You deli
 | `supervisour` | Requests notifications from you | **Report delivery status back** |
 
 **DO NOT** communicate with:
-- ❌ `dispatcher` — Not part of your workflow
 - ❌ `executor` — Supervisor coordinates with them
 - ❌ `reporter` — Supervisor coordinates with them
 - ❌ `main` — Main agent is separate
@@ -273,13 +272,7 @@ if result.status == "ok":
 
 ### Coordinating Between Agents
 ```
-# Dispatcher → Supervisour → Executor flow
-# Dispatcher sends task to Supervisour
-sessions_send(
-  sessionKey: "agent:supervisour:main",
-  message: "New task from Supabase: TaskID-123 - Update user dashboard. Priority: high",
-  timeoutSeconds: 30
-)
+# Supervisour → Executor flow
 
 # Supervisour receives, evaluates, then delegates
 sessions_send(
@@ -304,7 +297,6 @@ history = sessions_history(
 **When you should contact each agent:**
 
 - **supervisour**: Task assignment, coordination decisions, priority conflicts
-- **dispatcher**: Task scheduling, Supabase sync status, heartbeat configuration
 - **executor**: Action execution, deployment, file operations, script running
 - **reporter**: Status reports, summaries, documentation generation
 - **githubsync**: GitHub operations, PR creation, code syncing, repository management

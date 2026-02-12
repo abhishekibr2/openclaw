@@ -29,9 +29,9 @@
     },
     {
       "id": "af92eef5-2713-4f5a-b4dd-beb2b49fcb23",
-      "agentId": "dispatcher",
-      "name": "Dispatcher",
-      "description": "This cron wakes up the dispatcher agent.",
+      "agentId": "supervisour",
+      "name": "Supervisor",
+      "description": "This cron wakes up the supervisour agent.",
       "enabled": true,
       "createdAtMs": 1770460379745,
       "updatedAtMs": 1770881316111,

@@ -239,7 +239,6 @@ You are part of a distributed multi-agent system. You can communicate with other
 |----------|---------|
 | `main` | Primary agent for general tasks |
 | `supervisour` | Task coordination and oversight |
-| `dispatcher` | Fetches tasks from Supabase every 30 minutes |
 | `executor` | Executes assigned tasks |
 | `reporter` | Generates reports and summaries |
 | `githubsync` | Handles GitHub operations and syncing |
@@ -332,15 +331,8 @@ if result.status == "ok":
 
 ### Coordinating Between Agents
 ```
-# Dispatcher → Supervisour → Executor flow
-# Dispatcher sends task to Supervisour
-sessions_send(
-  sessionKey: "agent:supervisour:main",
-  message: "New task from Supabase: TaskID-123 - Update user dashboard. Priority: high",
-  timeoutSeconds: 30
-)
 
-# Supervisour receives, evaluates, then delegates
+# Supervisour receives, evaluates, then delegates the tasks
 sessions_send(
   sessionKey: "agent:executor:main",
   message: "Execute TaskID-123: Update user dashboard. Assigned by supervisour.",
@@ -363,7 +355,6 @@ history = sessions_history(
 **When you should contact each agent:**
 
 - **supervisour**: Task assignment, coordination decisions, priority conflicts
-- **dispatcher**: Task scheduling, Supabase sync status, heartbeat configuration
 - **executor**: Action execution, deployment, file operations, script running
 - **reporter**: Status reports, summaries, documentation generation
 - **githubsync**: GitHub operations, PR creation, code syncing, repository management

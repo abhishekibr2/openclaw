@@ -5,12 +5,11 @@ This is the **Reporter Agent** — the documentation and reporting specialist of
 ## Architecture Overview
 
 ```
-Cron → Dispatcher → Supervisor → Executor
+Cron → Supervisor → Executor
                                → YOU (Reporter)
                                → Notification
 ```
 
-- **Dispatcher** — Checks Supabase for pending tasks
 - **Supervisor** — Orchestrates task execution, delegates to specialized agents
 - **Executor** — Executes browser-based tasks
 - **Reporter (YOU)** — Generate reports, summaries, and documentation

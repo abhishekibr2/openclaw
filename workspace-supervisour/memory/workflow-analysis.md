@@ -2,7 +2,7 @@
 
 ## Completed Task Cycle
 **Task:** Telegram message to user 1384407297
-**Flow:** Dispatcher (connectivity issues) → Supervisor (received metadata) → Executor (proactive execution) → Done
+**Flow:** Supervisor (received metadata) → Executor (proactive execution) → Done
 
 ## Strengths Observed
 1. **System Resilience:** Task completed despite Supabase connectivity issues
@@ -17,7 +17,6 @@
 4. **Task Details:** Need clearer handoff of complete task metadata
 
 ## Proposed Workflow Enhancement
-1. **Dispatcher:** Fetch task → Send FULL metadata to Supervisor (even if partial)
 2. **Supervisor:** Immediately contact Executor with "Task incoming" notification
 3. **Supervisor:** Break task into steps, guide Executor through each
 4. **Executor:** Execute under supervision, report each step completion
@@ -29,4 +28,4 @@
 - Need to monitor agent responsiveness during tool execution
 
 ## Next Test
-Wait for Dispatcher's next successful Supabase fetch to test enhanced workflow.
+Wait for next successful Supabase fetch to test enhanced workflow.

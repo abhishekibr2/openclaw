@@ -1,7 +1,7 @@
 {
   "agent:githubsync:cron:dfc66569-ec5c-484b-a4bb-e19af444b09e": {
-    "sessionId": "344a5c38-6f2c-4a9c-b2e3-e07b8296d42e",
-    "updatedAt": 1770881699372,
+    "sessionId": "0e32024a-d227-48f6-a777-9d325dc71a3d",
+    "updatedAt": 1770884675600,
     "systemSent": true,
     "model": "google/gemini-3-flash-preview",
     "contextTokens": 1048576,
@@ -56,10 +56,6 @@
         }
       ],
       "version": 0
-    },
-    "modelProvider": "openrouter",
-    "inputTokens": 1290,
-    "outputTokens": 101,
-    "totalTokens": 10846
+    }
   }
 }

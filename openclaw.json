@@ -125,12 +125,6 @@
         }
       },
       {
-        "id": "dispatcher",
-        "name": "dispatcher",
-        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-dispatcher",
-        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/dispatcher/agent"
-      },
-      {
         "id": "executor",
         "name": "executor",
         "workspace": "/home/ibr-ai-agent/.openclaw/workspace-executor",
@@ -168,7 +162,6 @@
       "allow": [
         "main",
         "supervisour",
-        "dispatcher",
         "executor",
         "reporter",
         "githubsync",

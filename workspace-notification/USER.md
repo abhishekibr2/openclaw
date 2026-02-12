@@ -5,12 +5,11 @@ This is the **Notification Agent** — the communication bridge between the syst
 ## Architecture Overview
 
 ```
-Cron → Dispatcher → Supervisor → Executor
+Cron → Supervisor → Executor
                                → Reporter  
                                → YOU (Notification)
 ```
 
-- **Dispatcher** — Checks Supabase for pending tasks
 - **Supervisor** — Orchestrates task execution, delegates to specialized agents
 - **Executor** — Executes browser-based tasks
 - **Reporter** — Generates reports and summaries

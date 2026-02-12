@@ -25,10 +25,7 @@
 ````mermaid
 graph TD
     User[👤 User] -->|Telegram/CLI| Main[Main Agent]
-    Main -->|Complex Task| Dispatcher[🔄 Dispatcher<br/>Task Router]
-    
-    Dispatcher -->|Poll Tasks| DB[(🗄️ Supabase<br/>Task Queue)]
-    Dispatcher -->|Notify| Supervisor[🧠 Supervisor<br/>Orchestrator]
+    Main -->|Complex Task| Supervisor[🧠 Supervisor<br/>Orchestrator]
     
     Supervisor -->|Delegate| Executor[⚡ Executor<br/>Browser Automation]
     Supervisor -->|Request Report| Reporter[📊 Reporter<br/>Documentation]
@@ -47,7 +44,6 @@ graph TD
     style Supervisor fill:#ff6b6b
     style Executor fill:#51cf66
     style Reporter fill:#ffd43b
-    style Dispatcher fill:#a367f0
     style Notification fill:#fa8072
     style Architect fill:#e67e22
     style DB fill:#4dabf7
@@ -56,7 +52,6 @@ graph TD
 ### System Flow
 
 1. **User submits task** via Telegram or direct chat
-2. **Dispatcher polls** Supabase every 60s for pending tasks
 3. **Supervisor receives** task notification and analyzes requirements
 4. **Supervisor delegates** to specialized agents (Executor, Reporter, etc.)
 5. **Agents execute** their portion and update status
@@ -70,7 +65,6 @@ graph TD
 | Agent | Emoji | Role | Skills |
 |-------|-------|------|--------|
 | **Main** | 🤝 | User interface & conversational AI | General assistance, routing |
-| **Dispatcher** | 🔄 | Task queue router | Polls Supabase, notifies Supervisor |
 | **Supervisor** | 🧠 | Task orchestrator & coordinator | Strategic planning, delegation |
 | **Executor** | ⚡ | Action specialist | Browser automation, web scraping |
 | **Reporter** | 📊 | Documentation specialist | Report generation, metrics |
@@ -104,8 +98,7 @@ Agents don't have hardcoded behaviors. Instead, they read `SKILL.md` files that 
 
 ### 2. **Task Queue with Supabase**
 
-- Tasks are stored in PostgreSQL via Supabase
-- Dispatcher polls every 60 seconds
+- Cron Wakes up the supervisour
 - Priority-based task ordering
 - Full audit trail (created_at, started_at, completed_at)
 - Reports linked to tasks for traceability
@@ -238,8 +231,6 @@ Detailed documentation is available in the [`docs/`](./docs/) directory:
 - **[Skill System](./docs/skills.md)** - How skills work and how to create them
 - **[Deployment Guide](./docs/deployment.md)** - Production deployment instructions
 - **[Development Guide](./docs/development.md)** - Contributing and extending OpenClaw
-- **[Dispatcher Documentation](./docs/dispatcher.md)** - Task routing system details
-
 ---
 
 ## 🛠️ Development

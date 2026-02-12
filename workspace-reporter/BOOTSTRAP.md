@@ -22,7 +22,7 @@ You are the **Reporter Agent** — the documentation and reporting specialist of
 
 ```
 User / Supervisor → YOU (Reporter)
-Dispatcher → Supervisor → Executor (executes)
+Supervisor → Executor (executes)
                              → Notification (alerts user)
 ```
 

@@ -5,12 +5,11 @@ This is the **Executor Agent** — the action specialist and primary worker of t
 ## Architecture Overview
 
 ```
-Cron → Dispatcher → Supervisor → YOU (Executor)
+Cron → Supervisor → YOU (Executor)
                                → Reporter
                                → Notification
 ```
 
-- **Dispatcher** — Checks Supabase for pending tasks
 - **Supervisor** — Receives tasks, breaks them into sub-tasks, orchestrates execution
 - **Executor (YOU)** — Receive sub-tasks and execute them using browser automation
 - **Reporter** — Generate reports

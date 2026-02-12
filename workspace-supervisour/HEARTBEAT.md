@@ -1,19 +1,14 @@
 # HEARTBEAT.md - Task Processing
 
-## When This Agent Runs
-
-Dispatcher sends ONE task to this agent when tasks are available in Supabase.
-
 ## Communication Pattern
 
 **CRITICAL:** Your communication with sub-agents is **SYNCHRONOUS**, not fire-and-forget:
 
-- **Dispatcher → YOU:** Fire and forget (Dispatcher hands off and moves on)
 - **YOU ↔ Executor/Reporter/Notification:** **BACK AND FORTH** — WAIT for their responses!
 
 ## What To Do
 
-1. **Receive task** — Get the task details from Dispatcher (fire and forget from their side)
+1. **Receive task** — Get the task details
 
 2. **Analyze the task** — Understand the objective, context, and requirements
 
@@ -110,7 +105,7 @@ Dispatcher sends ONE task to this agent when tasks are available in Supabase.
 ## Key Behaviors
 
 - **SYNCHRONOUS communication** — ALWAYS wait for sub-agent responses before proceeding
-- **NO fire-and-forget** with Executor/Reporter/Notification — this is not Dispatcher!
+- **NO fire-and-forget** with Executor/Reporter/Notification
 - **Sequential sub-tasks** — Complete sub-task 1, WAIT for confirmation, then sub-task 2
 - **Handle questions** — If Executor asks a question, ANSWER it and resend instructions
 - **Intelligent decomposition** — Simple tasks go straight to Executor with one instruction

@@ -47,7 +47,7 @@ Log format:
 - Only generate reports when explicitly requested (by the user in main chat or by Supervisor)
 - Don't modify or embellish data — report what actually happened
 - Protect sensitive information in reports
-- Store reports securely in designated directories and in the Supabase `reports` table
+- Store reports securely in designated directories
 
 ## Data Sources
 
@@ -60,10 +60,6 @@ You gather data from multiple sources:
 **Notification logs:**
 - `/home/ibr-ai-agent/.openclaw/workspace-notification/memory/YYYY-MM-DD.md`
 - Messages sent to user
-
-**Supabase task table:**
-- Task statuses and metadata
-- Query for task data
 
 **Other agent memory files:**
 - Supervisor orchestration logs
@@ -94,7 +90,7 @@ You do not self-initiate reports without an explicit request.
 1. Receive report request (from user or Supervisor)
 2. See `HEARTBEAT.md` for your generation workflow
 3. Gather data, analyze, generate report
-4. Persist the report to markdown files and to the Supabase `reports` table
+4. Persist the report to markdown files
 5. Return the report content to whoever requested it (user or Supervisor)
 
 **Your Report Generation Cycle:**
@@ -125,8 +121,6 @@ You do not self-initiate reports without an explicit request.
      - `task-report/[task-id].md`
      - `daily-report/YYYY-MM-DD.md`
      - `weekly-report/YYYY-WW.md` (or an appropriate monthly/monthly-like file)
-   - Insert a row into Supabase `reports` using:
-     - `./insert_report.sh <reportType> "<content>" [metadataJson]`
 7. **Respond to the requester** (user or Supervisor) with the report content
 8. **Log** the generation in `memory/YYYY-MM-DD.md`
 

@@ -12,10 +12,9 @@ Use this workflow whenever a report is requested (by the **user** or by the **Su
    - Weekly: start/end of the requested week
    - Monthly: start/end of the requested month
 3. **Gather data**:
+   - **Read Supervisor's report** (Primary Source): `/home/ibr-ai-agent/.openclaw/workspace-supervisour/report/YYYY-MM-DD.md`
    - Read Executor's memory logs (task executions)
    - Read Notification logs (messages sent)
-   - Fetch completed/done tasks from Supabase for the range using:
-     - `./fetch_done_tasks.sh <startIso> <endIso>`
    - Review memory files from agents
 4. **Analyze data**:
    - Calculate success/failure rates
@@ -32,8 +31,6 @@ Use this workflow whenever a report is requested (by the **user** or by the **Su
      - `task-report/[task-id].md`
      - `daily-report/YYYY-MM-DD.md`
      - `weekly-report/YYYY-WW.md` (or similar monthly file)
-   - Insert a row into Supabase `reports` using:
-     - `./insert_report.sh <reportType> "<content>" [metadataJson]`
 7. **Deliver report** — Reply with the report content to whoever requested it (user or Supervisor)
 
 ## Report Templates
@@ -90,8 +87,6 @@ Save reports to:
 - `daily-report/YYYY-MM-DD.md` — Daily summaries
 - `weekly-report/YYYY-WW.md` — Weekly summaries
 - `metrics/performance.json` — Performance metrics
-- Supabase `reports` table — via `./insert_report.sh`
-
 ---
 
 _Document thoroughly. Report clearly._

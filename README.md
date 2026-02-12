@@ -96,7 +96,7 @@ Agents don't have hardcoded behaviors. Instead, they read `SKILL.md` files that 
 
 **Example**: The Executor's browser skill lives in `workspace-executor/browser/SKILL.md` and can be updated by the Architect agent without changing code.
 
-### 2. **Task Queue with Supabase**
+### 2. **Task Queue**
 
 - Cron Wakes up the supervisour
 - Priority-based task ordering
@@ -142,7 +142,6 @@ Each agent maintains:
 
 - **Node.js** 16+ and npm
 - **Google Chrome** (for browser automation)  
-- **Supabase account** (free tier works)
 - **Telegram bot token** (optional, for Telegram integration)
 
 ### Configuration
@@ -164,17 +163,6 @@ Edit `openclaw.json` to configure:
 **Via Telegram:**
 ```
 /task Create a weekly report of all completed tasks
-```
-
-**Via Supabase:**
-```sql
-INSERT INTO tasks (title, description, priority, status)
-VALUES (
-  'Market research on AI tools',
-  'Research top 10 AI productivity tools and create comparison table',
-  8,
-  'pending'
-);
 ```
 
 **Via CLI:**
@@ -310,13 +298,12 @@ openclaw chat -a architect
 - **Token authentication** for HTTP gateway
 - **Agent permissions** controlled via `allowAgents` in config
 - **Sandbox mode** for browser (noSandbox flag for testing only)
-- **Local-first** - All data stays on your machine and Supabase
+- **Local-first** - All data stays on your machine
 
 ### Production Checklist
 
 - [ ] Change default gateway auth token
 - [ ] Enable browser sandbox (`noSandbox: false`)
-- [ ] Rotate Supabase credentials
 - [ ] Use environment variables for all secrets
 - [ ] Enable HTTPS for gateway (via reverse proxy)
 - [ ] Set up Telegram webhook instead of polling (if using Telegram)
@@ -341,7 +328,6 @@ MIT License - see [LICENSE](LICENSE) file for details
 
 ## 🙏 Acknowledgments
 
-- Built with [Supabase](https://supabase.com) for database
 - Browser automation via [Puppeteer](https://pptr.dev)
 - LLM integration via [OpenRouter](https://openrouter.ai)
 - Inspired by multi-agent systems research

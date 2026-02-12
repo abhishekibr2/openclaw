@@ -25,19 +25,6 @@
   },
   
   "taskExecutionMetrics": {
-    "taskCompletionTime": {
-      "description": "Time from task creation to completion",
-      "currentObservation": "First task completed successfully, timing data needed",
-      "target": "Task-dependent, establish benchmarks by task type",
-      "measurementMethod": "Supabase timestamp comparison"
-    },
-    "successRate": {
-      "description": "Percentage of tasks completed successfully",
-      "currentValue": 100,
-      "sampleSize": 1,
-      "target": "> 90% overall success rate",
-      "measurementMethod": "Supabase status tracking"
-    },
     "documentationCompleteness": {
       "description": "Percentage of tasks with complete documentation",
       "currentObservation": "High (all agents maintaining memory logs)",
@@ -56,11 +43,6 @@
     "externalServiceIntegration": {
       "description": "Reliability of connections to external services",
       "services": {
-        "supabase": {
-          "status": "Intermittent connectivity",
-          "functionality": "Task completion achieved despite issues",
-          "priority": "High (core system dependency)"
-        },
         "telegram": {
           "status": "Working",
           "functionality": "Message tool used successfully",
@@ -91,9 +73,8 @@
         "Message channel operations",
         "Web tools and system utilities"
       ],
-      "taskCompletionExample": "Telegram message delivery task",
-      "proactivityRating": "High (tested Supabase connection directly)"
-    },
+      "taskCompletionExample": "Telegram message delivery task"
+   },
     "supervisour": {
       "roleVerified": [
         "Task coordination and oversight",

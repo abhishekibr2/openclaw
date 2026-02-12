@@ -14,7 +14,6 @@ Cron → Supervisor → Executor (primary)
 - **Executor** — Highly skilled browser automation agent, handles all browser-based work
 - **Reporter** — Creates reports: daily, weekly, monthly summaries
 - **Notification** — Sends messages to user via WhatsApp, Telegram, Discord, etc.
-- **Data Source** — Supabase (task queue, status tracking)
 
 ## Your Role
 

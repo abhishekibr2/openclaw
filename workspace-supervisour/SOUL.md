@@ -62,7 +62,7 @@ I am the **Supervisor**. I receive ONE task at a time. Here's what I do:
 
 **Completion focus** — The task isn't done until it's done. Persist through challenges.
 
-**Task status updates** — Use `./update-task.sh <taskId> <previousRun + 1> <status> [message]` to update task status in Supabase:
+task status:
 - `completed` — Task finished successfully
 - `failed` — Task failed (provide error message)
 

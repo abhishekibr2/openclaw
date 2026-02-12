@@ -8,7 +8,7 @@
       "description": "Syncs the ai agent base to github",
       "enabled": true,
       "createdAtMs": 1770460379745,
-      "updatedAtMs": 1770884675595,
+      "updatedAtMs": 1770886505602,
       "schedule": {
         "kind": "every",
         "everyMs": 1800000
@@ -21,36 +21,32 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1770886505601,
-        "lastRunAtMs": 1770884675595,
+        "nextRunAtMs": 1770888332154,
+        "lastRunAtMs": 1770886505602,
         "lastStatus": "ok",
-        "lastDurationMs": 29998
+        "lastDurationMs": 26546
       }
     },
     {
-      "id": "af92eef5-2713-4f5a-b4dd-beb2b49fcb23",
-      "agentId": "dispatcher",
-      "name": "Dispatcher",
-      "description": "This cron wakes up the dispatcher agent.",
+      "id": "99dda213-7bd8-43fc-af4a-fcab8dc8d9ce",
+      "agentId": "supervisour",
+      "name": "Reddit Comments",
       "enabled": true,
-      "createdAtMs": 1770460379745,
-      "updatedAtMs": 1770881316111,
+      "createdAtMs": 1770887827222,
+      "updatedAtMs": 1770887827222,
       "schedule": {
         "kind": "every",
-        "everyMs": 108000000
+        "everyMs": 18000000
       },
       "sessionTarget": "isolated",
       "wakeMode": "next-heartbeat",
       "payload": {
         "kind": "agentTurn",
-        "message": "Fetch the task for me , and if there are any , handover to supervisour.",
+        "message": "Read the reddit skill file and do the comment task.",
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1770990875595,
-        "lastRunAtMs": 1770881316111,
-        "lastStatus": "ok",
-        "lastDurationMs": 40675
+        "nextRunAtMs": 1770905827222
       }
     }
   ]

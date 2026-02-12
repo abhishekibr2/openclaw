@@ -5,8 +5,6 @@ Based on Task ID 27fd3f9b-36f7-42a2-835f-8183f6b20ebf execution
 ## Proven Capabilities
 
 ### ✅ Database Operations
-- Direct Supabase connectivity
-- Query execution: SELECT, UPDATE operations
 - Status management: pending → done transitions
 - Field updates: executor_name, timestamps
 

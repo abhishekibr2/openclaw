@@ -8,7 +8,7 @@
       "description": "Syncs the ai agent base to github",
       "enabled": true,
       "createdAtMs": 1770460379745,
-      "updatedAtMs": 1770896140682,
+      "updatedAtMs": 1770899688860,
       "schedule": {
         "kind": "every",
         "everyMs": 1800000,
@@ -22,10 +22,12 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1770898105302,
-        "lastRunAtMs": 1770896140682,
-        "lastStatus": "ok",
-        "lastDurationMs": 164613
+        "nextRunAtMs": 1770901379745,
+        "lastRunAtMs": 1770899579757,
+        "lastStatus": "error",
+        "lastDurationMs": 109103,
+        "consecutiveErrors": 2,
+        "lastError": "cron delivery target is missing"
       },
       "delivery": {
         "mode": "announce"

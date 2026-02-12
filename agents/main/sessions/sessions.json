@@ -1,7 +1,7 @@
 {
   "agent:main:main": {
     "sessionId": "4d4e891c-bdea-4f94-8314-d8bdeb57ad59",
-    "updatedAt": 1770899382589,
+    "updatedAt": 1770899517192,
     "systemSent": true,
     "abortedLastRun": false,
     "chatType": "direct",
@@ -86,15 +86,15 @@
     "authProfileOverride": "google-gemini-cli:abhishekibr.trainee2@gmail.com",
     "authProfileOverrideSource": "auto",
     "authProfileOverrideCompactionCount": 0,
-    "inputTokens": 12499,
-    "outputTokens": 237,
-    "totalTokens": 12499,
+    "inputTokens": 7653,
+    "outputTokens": 412,
+    "totalTokens": 7653,
     "modelProvider": "google-gemini-cli",
     "model": "gemini-3-flash-preview",
     "contextTokens": 1048576,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1770897858277,
+      "generatedAt": 1770899382784,
       "sessionId": "4d4e891c-bdea-4f94-8314-d8bdeb57ad59",
       "sessionKey": "agent:main:main",
       "provider": "google-gemini-cli",
@@ -106,17 +106,17 @@
         "sandboxed": false
       },
       "systemPrompt": {
-        "chars": 28739,
-        "projectContextChars": 18701,
-        "nonProjectContextChars": 10038
+        "chars": 23427,
+        "projectContextChars": 13365,
+        "nonProjectContextChars": 10062
       },
       "injectedWorkspaceFiles": [
         {
           "name": "AGENTS.md",
           "path": "/home/ibr-ai-agent/.openclaw/workspace/AGENTS.md",
           "missing": false,
-          "rawChars": 13137,
-          "injectedChars": 13137,
+          "rawChars": 7804,
+          "injectedChars": 7804,
           "truncated": false
         },
         {
@@ -139,16 +139,16 @@
           "name": "IDENTITY.md",
           "path": "/home/ibr-ai-agent/.openclaw/workspace/IDENTITY.md",
           "missing": false,
-          "rawChars": 632,
-          "injectedChars": 632,
+          "rawChars": 633,
+          "injectedChars": 633,
           "truncated": false
         },
         {
           "name": "USER.md",
           "path": "/home/ibr-ai-agent/.openclaw/workspace/USER.md",
           "missing": false,
-          "rawChars": 478,
-          "injectedChars": 478,
+          "rawChars": 474,
+          "injectedChars": 474,
           "truncated": false
         },
         {
@@ -195,18 +195,18 @@
       },
       "tools": {
         "listChars": 1507,
-        "schemaChars": 13633,
+        "schemaChars": 14431,
         "entries": [
           {
             "name": "read",
             "summaryChars": 298,
-            "schemaChars": 398,
+            "schemaChars": 392,
             "propertiesCount": 4
           },
           {
             "name": "edit",
             "summaryChars": 129,
-            "schemaChars": 617,
+            "schemaChars": 591,
             "propertiesCount": 6
           },
           {
@@ -241,21 +241,21 @@
           },
           {
             "name": "nodes",
-            "summaryChars": 94,
-            "schemaChars": 1399,
-            "propertiesCount": 31
+            "summaryChars": 101,
+            "schemaChars": 1479,
+            "propertiesCount": 33
           },
           {
             "name": "cron",
-            "summaryChars": 1959,
-            "schemaChars": 530,
-            "propertiesCount": 12
+            "summaryChars": 2444,
+            "schemaChars": 581,
+            "propertiesCount": 13
           },
           {
             "name": "message",
             "summaryChars": 110,
-            "schemaChars": 3222,
-            "propertiesCount": 79
+            "schemaChars": 3921,
+            "propertiesCount": 84
           },
           {
             "name": "tts",

@@ -93,14 +93,17 @@
      ```
      - Wait for announcement (message delivered)
 
-7. **Mark task complete** — Once **ALL** sub-tasks successfully executed and confirmed:
-   ```bash
-   ./update-task.sh <taskId> <previousRun + 1> completed "Task finished successfully: [summary]"
-   ```
-   Or if failed:
-   ```bash
-   ./update-task.sh <taskId> <previousRun + 1> failed "Error message here"
-   ```
+7. **Log to Daily Report** — Before marking complete, log the task:
+   - Determine today's date (DD-MM-YYYY)
+   - Append to `/home/ibr-ai-agent/.openclaw/workspace-supervisour/report/DD-MM-YYYY.md`
+   - Format: `[HH:MM] Task <id>: <status> - <summary>`
+   - Use `run_command` to append:
+     ```bash
+     echo "- [$(date +%H:%M)] Task <id>: <status> - <summary>" >> /home/ibr-ai-agent/.openclaw/workspace-supervisour/report/$(date +%d-%m-%Y).md
+     ```
+     *(Note: Ensure directory exists)*
+
+8. **Mark task complete** — Once **ALL** sub-tasks successfully executed and confirmed:
 
 ## Key Behaviors
 
@@ -199,11 +202,6 @@
       label: "Send karma result",
       runTimeoutSeconds: 60
     )
-    ```
-
-12. **Wait for announcement**, then mark complete:
-    ```bash
-    ./update-task.sh <taskId> <previousRun + 1> completed "Karma retrieved: 1,234"
     ```
 
 **Key Pattern:**

@@ -1,11 +1,11 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.2.1",
-    "lastTouchedAt": "2026-02-12T10:02:02.122Z"
+    "lastTouchedAt": "2026-02-11T07:03:41.725Z"
   },
   "wizard": {
-    "lastRunAt": "2026-02-12T10:02:02.116Z",
-    "lastRunVersion": "2026.2.1",
+    "lastRunAt": "2026-02-10T11:58:44.290Z",
+    "lastRunVersion": "2026.1.29",
     "lastRunCommand": "onboard",
     "lastRunMode": "local"
   },
@@ -37,11 +37,6 @@
       "openrouter:default": {
         "provider": "openrouter",
         "mode": "api_key"
-      },
-      "google-gemini-cli:abhishekibr.trainee2@gmail.com": {
-        "provider": "google-gemini-cli",
-        "mode": "oauth",
-        "email": "abhishekibr.trainee2@gmail.com"
       }
     }
   },
@@ -92,7 +87,7 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "google-gemini-cli/gemini-3-flash-preview"
+        "primary": "openrouter/google/gemini-3-flash-preview"
       },
       "models": {
         "qwen-portal/coder-model": {
@@ -103,9 +98,7 @@
           "alias": "OpenRouter"
         },
         "openrouter/deepseek/deepseek-v3.2": {},
-        "openrouter/google/gemini-3-flash-preview": {},
-        "google-gemini-cli/gemini-3-pro-preview": {},
-        "google-gemini-cli/gemini-3-flash-preview": {}
+        "openrouter/google/gemini-3-flash-preview": {}
       },
       "workspace": "/home/ibr-ai-agent/.openclaw/workspace",
       "compaction": {
@@ -197,9 +190,6 @@
     "port": 18789,
     "mode": "local",
     "bind": "lan",
-    "controlUi": {
-      "allowInsecureAuth": true
-    },
     "auth": {
       "mode": "token",
       "token": "fdb818eb4ee5674a2ceeb3c9ec09b7e6fbadaf09eb89c97d"
@@ -207,6 +197,9 @@
     "tailscale": {
       "mode": "off",
       "resetOnExit": false
+    },
+    "controlUi": {
+      "allowInsecureAuth": true
     }
   },
   "skills": {
@@ -218,17 +211,13 @@
     "allow": [
       "",
       "qwen-portal-auth",
-      "telegram",
-      "google-gemini-cli-auth"
+      "telegram"
     ],
     "entries": {
       "qwen-portal-auth": {
         "enabled": true
       },
       "telegram": {
-        "enabled": true
-      },
-      "google-gemini-cli-auth": {
         "enabled": true
       }
     }

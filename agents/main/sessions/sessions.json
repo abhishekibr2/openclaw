@@ -1,33 +1,29 @@
 {
   "agent:main:main": {
-    "origin": {
-      "label": "Abhishek Sharma id:1384407297",
-      "provider": "telegram",
-      "surface": "telegram",
-      "chatType": "direct",
-      "from": "telegram:1384407297",
-      "to": "telegram:1384407297",
-      "accountId": "default"
-    },
-    "sessionId": "cf658e8d-e068-425d-a348-b88fa780ad23",
-    "updatedAt": 1770796645776,
-    "deliveryContext": {
-      "channel": "telegram",
-      "to": "telegram:1384407297",
-      "accountId": "default"
-    },
-    "lastChannel": "telegram",
-    "lastTo": "telegram:1384407297",
-    "lastAccountId": "default",
+    "sessionId": "4d4e891c-bdea-4f94-8314-d8bdeb57ad59",
+    "updatedAt": 1770890766983,
     "systemSent": true,
     "abortedLastRun": false,
     "chatType": "direct",
-    "sessionFile": "/home/ibr-ai-agent/.openclaw/agents/main/sessions/cf658e8d-e068-425d-a348-b88fa780ad23.jsonl",
+    "deliveryContext": {
+      "channel": "webchat"
+    },
+    "lastChannel": "webchat",
+    "origin": {
+      "provider": "webchat",
+      "surface": "webchat",
+      "chatType": "direct"
+    },
+    "sessionFile": "/home/ibr-ai-agent/.openclaw/agents/main/sessions/4d4e891c-bdea-4f94-8314-d8bdeb57ad59.jsonl",
+    "compactionCount": 0,
     "skillsSnapshot": {
-      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\nWhen a skill file references a relative path, resolve it against the skill directory (parent of SKILL.md / dirname of the path) and use that absolute path in tool commands.\n\n<available_skills>\n  <skill>\n    <name>bluebubbles</name>\n    <description>Build or update the BlueBubbles external channel plugin for OpenClaw (extension package, REST send/probe, webhook inbound).</description>\n    <location>/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/bluebubbles/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>github</name>\n    <description>Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.</description>\n    <location>/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/github/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.</description>\n    <location>/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts (no API key required).</description>\n    <location>/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/weather/SKILL.md</location>\n  </skill>\n</available_skills>",
+      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\nWhen a skill file references a relative path, resolve it against the skill directory (parent of SKILL.md / dirname of the path) and use that absolute path in tool commands.\n\n<available_skills>\n  <skill>\n    <name>bluebubbles</name>\n    <description>Build or update the BlueBubbles external channel plugin for OpenClaw (extension package, REST send/probe, webhook inbound).</description>\n    <location>/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/bluebubbles/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>gemini</name>\n    <description>Gemini CLI for one-shot Q&amp;A, summaries, and generation.</description>\n    <location>/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/gemini/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>github</name>\n    <description>Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.</description>\n    <location>/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/github/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.</description>\n    <location>/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts (no API key required).</description>\n    <location>/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/weather/SKILL.md</location>\n  </skill>\n</available_skills>",
       "skills": [
         {
           "name": "bluebubbles"
+        },
+        {
+          "name": "gemini"
         },
         {
           "name": "github"
@@ -45,6 +41,14 @@
           "description": "Build or update the BlueBubbles external channel plugin for OpenClaw (extension package, REST send/probe, webhook inbound).",
           "filePath": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/bluebubbles/SKILL.md",
           "baseDir": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/bluebubbles",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "gemini",
+          "description": "Gemini CLI for one-shot Q&A, summaries, and generation.",
+          "filePath": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/gemini/SKILL.md",
+          "baseDir": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/gemini",
           "source": "openclaw-bundled",
           "disableModelInvocation": false
         },
@@ -75,22 +79,22 @@
       ],
       "version": 0
     },
-    "authProfileOverride": "openrouter:default",
+    "authProfileOverride": "google-gemini-cli:abhishekibr.trainee2@gmail.com",
     "authProfileOverrideSource": "auto",
     "authProfileOverrideCompactionCount": 0,
-    "inputTokens": 14449,
-    "outputTokens": 114,
-    "totalTokens": 14449,
-    "modelProvider": "openrouter",
-    "model": "google/gemini-3-flash-preview",
+    "inputTokens": 10433,
+    "outputTokens": 725,
+    "totalTokens": 10433,
+    "modelProvider": "google-gemini-cli",
+    "model": "gemini-3-flash-preview",
     "contextTokens": 1048576,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1770796639575,
-      "sessionId": "cf658e8d-e068-425d-a348-b88fa780ad23",
+      "generatedAt": 1770890743978,
+      "sessionId": "4d4e891c-bdea-4f94-8314-d8bdeb57ad59",
       "sessionKey": "agent:main:main",
-      "provider": "openrouter",
-      "model": "google/gemini-3-flash-preview",
+      "provider": "google-gemini-cli",
+      "model": "gemini-3-flash-preview",
       "workspaceDir": "/home/ibr-ai-agent/.openclaw/workspace",
       "bootstrapMaxChars": 20000,
       "sandbox": {
@@ -98,17 +102,17 @@
         "sandboxed": false
       },
       "systemPrompt": {
-        "chars": 28707,
-        "projectContextChars": 19085,
-        "nonProjectContextChars": 9622
+        "chars": 28739,
+        "projectContextChars": 18701,
+        "nonProjectContextChars": 10038
       },
       "injectedWorkspaceFiles": [
         {
           "name": "AGENTS.md",
           "path": "/home/ibr-ai-agent/.openclaw/workspace/AGENTS.md",
           "missing": false,
-          "rawChars": 13521,
-          "injectedChars": 13521,
+          "rawChars": 13137,
+          "injectedChars": 13137,
           "truncated": false
         },
         {
@@ -161,11 +165,15 @@
         }
       ],
       "skills": {
-        "promptChars": 1619,
+        "promptChars": 1876,
         "entries": [
           {
             "name": "bluebubbles",
             "blockChars": 328
+          },
+          {
+            "name": "gemini",
+            "blockChars": 254
           },
           {
             "name": "github",
@@ -241,7 +249,7 @@
           },
           {
             "name": "message",
-            "summaryChars": 118,
+            "summaryChars": 110,
             "schemaChars": 3222,
             "propertiesCount": 79
           },

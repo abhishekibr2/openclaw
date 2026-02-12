@@ -5,16 +5,30 @@
       "type": "api_key",
       "provider": "openrouter",
       "key": "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"
+    },
+    "google-gemini-cli:abhishekibr.trainee2@gmail.com": {
+      "type": "oauth",
+      "provider": "google-gemini-cli",
+      "access": "ya29.a0AUMWg_KrDe9tIWNgB__C-OsL7X2adv5_Y-x4YPM0Hig2Hlr9DNFnlLBusFZeZ3Itmlkgduyr1XIp27_wnjosW2HpU5hA0HVJAgwNRvJPs7VhBdLNx1BdT6XOFDcgLdYzXgN7RvfHxPpxJfyBdWs00HJU0Xmd_mbTmVHwHEVcSXrpQTOVanpGam2ltJJ3nhpJDh1Jhz3gGyGNaCgYKAWUSARISFQHGX2MirILDc2Xa9AaneinlBFB22g0211",
+      "refresh": "1//0gZ8-TsVT3EvtCgYIARAAGBASNwF-L9Ir6VRKCPSM5Y-85jc0ICRYZQb2K917DvOeH2OCIC15qFkMPEkoXS7YcmR6JV40BvXqMWY",
+      "expires": 1770893811817,
+      "email": "abhishekibr.trainee2@gmail.com",
+      "projectId": "spring-cable-5ggp0"
     }
   },
   "lastGood": {
-    "openrouter": "openrouter:default"
+    "openrouter": "openrouter:default",
+    "google-gemini-cli": "google-gemini-cli:abhishekibr.trainee2@gmail.com"
   },
   "usageStats": {
     "openrouter:default": {
-      "lastUsed": 1770888356099,
+      "lastUsed": 1770890259299,
       "errorCount": 0,
-      "lastFailureAt": 1770722853539
+      "lastFailureAt": 1770890259295
+    },
+    "google-gemini-cli:abhishekibr.trainee2@gmail.com": {
+      "lastUsed": 1770891091170,
+      "errorCount": 0
     }
   }
 }

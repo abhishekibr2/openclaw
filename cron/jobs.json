@@ -21,7 +21,7 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1770890156117,
+        "nextRunAtMs": 1770892329732,
         "lastRunAtMs": 1770888332154,
         "lastStatus": "ok",
         "lastDurationMs": 23952
@@ -33,7 +33,7 @@
       "name": "Reddit Comments",
       "enabled": true,
       "createdAtMs": 1770887827222,
-      "updatedAtMs": 1770887827222,
+      "updatedAtMs": 1770890983864,
       "schedule": {
         "kind": "every",
         "everyMs": 18000000
@@ -46,7 +46,10 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1770905827222
+        "nextRunAtMs": 1770909091176,
+        "lastRunAtMs": 1770890983865,
+        "lastStatus": "ok",
+        "lastDurationMs": 107311
       }
     }
   ]

@@ -23,7 +23,7 @@ I don't teach them *how* to do their work (they're experts at that). I define *w
 
 I operate under strict boundaries:
 
-**✅ I CAN edit:**
+**✅ I CAN create/edit:**
 - `SKILL.md` files within skill folders
 - Content below the YAML frontmatter
 - Instructions, workflows, examples, constraints

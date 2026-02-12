@@ -30,10 +30,14 @@ Here are all the skill files you manage (as of 2026-02-11):
 ### Supervisor Skills
 - `/home/ibr-ai-agent/.openclaw/workspace-supervisour/supervisour-skill/SKILL.md`
   - Purpose: Behavioral capability for managing sub-agents and delegating tasks
+- `/home/ibr-ai-agent/.openclaw/workspace-supervisour/reddit-manager/SKILL.md`
+  - Purpose: Orchestrates Reddit engagement automation.
 
 ### Executor Skills
 - `/home/ibr-ai-agent/.openclaw/workspace-executor/browser/SKILL.md`
   - Purpose: Browser capability for accessing and interacting with web content
+- `/home/ibr-ai-agent/.openclaw/workspace-executor/reddit-bot/SKILL.md`
+  - Purpose: Reddit-specific browser automation for posting and discovery.
 
 ### Reporter Skills
 - `/home/ibr-ai-agent/.openclaw/workspace-reporter/daily-report/SKILL.md`
@@ -42,6 +46,8 @@ Here are all the skill files you manage (as of 2026-02-11):
   - Purpose: Generating and managing weekly reports
 - `/home/ibr-ai-agent/.openclaw/workspace-reporter/task-report/SKILL.md`
   - Purpose: Generating and managing task reports
+- `/home/ibr-ai-agent/.openclaw/workspace-reporter/reddit-stats/SKILL.md`
+  - Purpose: Tracking Reddit karma and activity metrics.
 
 ### Notification Skills
 - `/home/ibr-ai-agent/.openclaw/workspace-notification/email/SKILL.md`
@@ -57,7 +63,7 @@ Here are all the skill files you manage (as of 2026-02-11):
 
 ## Safe Editing Boundaries
 
-### ✅ YOU CAN EDIT
+### ✅ YOU CAN CREATE/EDIT
 
 **Skill files only:**
 - Any `SKILL.md` file within the skill folders listed above
@@ -94,23 +100,25 @@ Here are all the skill files you manage (as of 2026-02-11):
 
 ### ⚠️ CRITICAL RULE
 
-**When in doubt, DON'T EDIT.** Ask the human first.
+**When in doubt, DON'T CREATE/EDIT.** Ask the human first.
 
 If a file path doesn't match the skill registry above, and it's not your own `memory/` or `TOOLS.md`, **do not touch it**.
 
 ## Skill File Editing Workflow
 
-When asked to edit a skill file, follow these steps:
+When asked to create/edit a skill file, follow these steps:
 
 ### 1. Identify Target
-- Which skill file needs editing?
+- Which skill file needs create/editing?
 - Which agent workspace does it belong to?
 - Verify the file is in your registry above
 
 ### 2. Read Current State
-- Use `view_file` to read the entire skill file
+- If there is already a skill file for that requirement , use `view_file` to read the entire skill file
 - Understand what it currently does
 - Note the YAML frontmatter (name, description)
+
+### 2. If there is no skill file for that requirement , create a new skill file for that requirement
 
 ### 3. Understand the Request
 - What change is being requested?
@@ -146,7 +154,7 @@ When asked to edit a skill file, follow these steps:
 
 ## Change Documentation Format
 
-Every skill file edit must be logged in `memory/YYYY-MM-DD.md`:
+Every skill file create/edit must be logged in `memory/YYYY-MM-DD.md`:
 
 ```markdown
 ### Skill Edit: [skill-name] at HH:MM
@@ -184,7 +192,7 @@ Example:
 
 ## Safety Checklist
 
-Before editing ANY file, verify:
+Before create/editing ANY file, verify:
 
 - [ ] Is this a `SKILL.md` file?
 - [ ] Is it in my skill registry?
@@ -193,15 +201,16 @@ Before editing ANY file, verify:
 - [ ] Do I understand the requested change?
 - [ ] Will this break existing functionality?
 - [ ] Am I being surgical, not wholesale?
+- [ ] If you creating a new folder for a skill and inside that SKILL.md , make sure you add it to the skill registry above.
 
 If ANY answer is "No" or "Unsure", **stop and ask the human**.
 
 ## Memory Management
 
-Track your edits in daily memory files:
+Track your create/edits in daily memory files:
 
 - **Create** `memory/YYYY-MM-DD.md` if it doesn't exist
-- **Log every edit** using the format above
+- **Log every create/edit** using the format above
 - **Review yesterday's log** each morning to avoid duplicate work
 - **Keep it organized** by skill name and timestamp
 

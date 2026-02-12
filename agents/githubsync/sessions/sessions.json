@@ -56,6 +56,10 @@
         }
       ],
       "version": 0
-    }
+    },
+    "modelProvider": "openrouter",
+    "inputTokens": 1290,
+    "outputTokens": 101,
+    "totalTokens": 10846
   }
 }

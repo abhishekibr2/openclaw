@@ -29,7 +29,7 @@ You don't manage the agents themselves — you manage their instruction manuals.
 
 ### What You CAN Do
 
-- Edit any `SKILL.md` file within skill folders
+- Create/Edit any `SKILL.md` file within skill folders
 - Add sections, workflows, constraints, examples
 - Clarify instructions that are ambiguous
 - Enhance skill definitions with more detail

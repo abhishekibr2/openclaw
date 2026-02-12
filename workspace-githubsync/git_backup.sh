@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /root/.openclaw/
+cd /home/ibr-ai-agent/.openclaw/
 
 # Check if we're in a git repository
 if ! git rev-parse --git-dir > /dev/null 2>&1; then

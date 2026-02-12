@@ -1,7 +1,7 @@
 {
   "agent:executor:subagent:08cab147-7c35-4f43-ada5-a3e2f2568af2": {
     "sessionId": "1cb8ca2a-b9cc-4f26-a631-8208368fb863",
-    "updatedAt": 1770899858515,
+    "updatedAt": 1770900116574,
     "deliveryContext": {
       "channel": "webchat"
     },
@@ -71,6 +71,13 @@
         }
       ],
       "version": 0
-    }
+    },
+    "modelProvider": "google-gemini-cli",
+    "model": "gemini-3-flash-preview",
+    "contextTokens": 1048576,
+    "abortedLastRun": false,
+    "inputTokens": 100815,
+    "outputTokens": 1138,
+    "totalTokens": 100815
   }
 }

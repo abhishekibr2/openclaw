@@ -27,7 +27,7 @@
         "lastStatus": "error",
         "lastDurationMs": 109103,
         "consecutiveErrors": 2,
-        "lastError": "cron delivery target is missing"
+        "runningAtMs": 1770901379753
       },
       "delivery": {
         "mode": "announce"

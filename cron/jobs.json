@@ -8,7 +8,7 @@
       "description": "Syncs the ai agent base to github",
       "enabled": true,
       "createdAtMs": 1770460379745,
-      "updatedAtMs": 1770811682251,
+      "updatedAtMs": 1770815259057,
       "schedule": {
         "kind": "every",
         "everyMs": 1800000
@@ -21,10 +21,36 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1770815259056,
-        "lastRunAtMs": 1770811682251,
+        "nextRunAtMs": 1770874741481,
+        "lastRunAtMs": 1770815259057,
         "lastStatus": "ok",
-        "lastDurationMs": 34001
+        "lastDurationMs": 25341
+      }
+    },
+    {
+      "id": "af92eef5-2713-4f5a-b4dd-beb2b49fcb23",
+      "agentId": "dispatcher",
+      "name": "Dispatcher",
+      "description": "This cron wakes up the dispatcher agent.",
+      "enabled": true,
+      "createdAtMs": 1770460379745,
+      "updatedAtMs": 1770734078184,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 108000000
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "next-heartbeat",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Fetch the task for me , and if there are any , handover to supervisour.",
+        "channel": "last"
+      },
+      "state": {
+        "nextRunAtMs": 1770980941481,
+        "lastRunAtMs": 1770734078184,
+        "lastStatus": "ok",
+        "lastDurationMs": 46316
       }
     }
   ]

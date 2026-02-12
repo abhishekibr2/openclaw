@@ -11,7 +11,8 @@
       "updatedAtMs": 1770896140682,
       "schedule": {
         "kind": "every",
-        "everyMs": 1800000
+        "everyMs": 1800000,
+        "anchorMs": 1770460379745
       },
       "sessionTarget": "isolated",
       "wakeMode": "next-heartbeat",
@@ -25,6 +26,9 @@
         "lastRunAtMs": 1770896140682,
         "lastStatus": "ok",
         "lastDurationMs": 164613
+      },
+      "delivery": {
+        "mode": "announce"
       }
     },
     {
@@ -36,7 +40,8 @@
       "updatedAtMs": 1770890983864,
       "schedule": {
         "kind": "every",
-        "everyMs": 18000000
+        "everyMs": 18000000,
+        "anchorMs": 1770887827222
       },
       "sessionTarget": "isolated",
       "wakeMode": "next-heartbeat",
@@ -50,6 +55,9 @@
         "lastRunAtMs": 1770890983865,
         "lastStatus": "ok",
         "lastDurationMs": 107311
+      },
+      "delivery": {
+        "mode": "announce"
       }
     }
   ]

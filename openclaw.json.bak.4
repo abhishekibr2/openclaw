@@ -1,10 +1,10 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.2.1",
-    "lastTouchedAt": "2026-02-12T10:02:02.122Z"
+    "lastTouchedAt": "2026-02-12T07:59:29.259Z"
   },
   "wizard": {
-    "lastRunAt": "2026-02-12T10:02:02.116Z",
+    "lastRunAt": "2026-02-12T07:50:33.852Z",
     "lastRunVersion": "2026.2.1",
     "lastRunCommand": "onboard",
     "lastRunMode": "local"
@@ -18,6 +18,7 @@
     "profiles": {
       "openclaw": {
         "cdpPort": 18800,
+        "driver": "openclaw",
         "color": "#0088FF"
       },
       "my-chrome": {
@@ -36,11 +37,6 @@
       "openrouter:default": {
         "provider": "openrouter",
         "mode": "api_key"
-      },
-      "google-gemini-cli:abhishekibr.trainee2@gmail.com": {
-        "provider": "google-gemini-cli",
-        "mode": "oauth",
-        "email": "abhishekibr.trainee2@gmail.com"
       }
     }
   },
@@ -91,7 +87,7 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "google-gemini-cli/gemini-3-flash-preview"
+        "primary": "openrouter/google/gemini-3-flash-preview"
       },
       "models": {
         "qwen-portal/coder-model": {
@@ -102,14 +98,9 @@
           "alias": "OpenRouter"
         },
         "openrouter/deepseek/deepseek-v3.2": {},
-        "openrouter/google/gemini-3-flash-preview": {},
-        "google-gemini-cli/gemini-3-pro-preview": {},
-        "google-gemini-cli/gemini-3-flash-preview": {}
+        "openrouter/google/gemini-3-flash-preview": {}
       },
-      "workspace": "/home/ibr-ai-agent/.openclaw/workspace",
-      "compaction": {
-        "mode": "safeguard"
-      },
+      "workspace": "/home/root/.openclaw/workspace",
       "maxConcurrent": 4,
       "subagents": {
         "maxConcurrent": 8
@@ -122,8 +113,8 @@
       {
         "id": "supervisour",
         "name": "supervisour",
-        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-supervisour",
-        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/supervisour/agent",
+        "workspace": "/home/root/.openclaw/workspace-supervisour",
+        "agentDir": "/home/root/.openclaw/agents/supervisour/agent",
         "subagents": {
           "allowAgents": [
             "*"
@@ -131,34 +122,40 @@
         }
       },
       {
+        "id": "dispatcher",
+        "name": "dispatcher",
+        "workspace": "/home/root/.openclaw/workspace-dispatcher",
+        "agentDir": "/home/root/.openclaw/agents/dispatcher/agent"
+      },
+      {
         "id": "executor",
         "name": "executor",
-        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-executor",
-        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/executor/agent"
+        "workspace": "/home/root/.openclaw/workspace-executor",
+        "agentDir": "/home/root/.openclaw/agents/executor/agent"
       },
       {
         "id": "reporter",
         "name": "reporter",
-        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-reporter",
-        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/reporter/agent"
+        "workspace": "/home/root/.openclaw/workspace-reporter",
+        "agentDir": "/home/root/.openclaw/agents/reporter/agent"
       },
       {
         "id": "githubsync",
         "name": "githubsync",
-        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-githubsync",
-        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/githubsync/agent"
+        "workspace": "/home/root/.openclaw/workspace-githubsync",
+        "agentDir": "/home/root/.openclaw/agents/githubsync/agent"
       },
       {
         "id": "notification",
         "name": "notification",
-        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-notification",
-        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/notification/agent"
+        "workspace": "/home/root/.openclaw/workspace-notification",
+        "agentDir": "/home/root/.openclaw/agents/notification/agent"
       },
       {
-        "id": "architect",
-        "name": "architect",
-        "workspace": "/home/ibr-ai-agent/.openclaw/workspace-architect",
-        "agentDir": "/home/ibr-ai-agent/.openclaw/agents/architect/agent"
+        "id": "slack-handler",
+        "name": "slack-handler",
+        "workspace": "/home/root/.openclaw/workspace-slack-handler",
+        "agentDir": "/home/root/.openclaw/agents/slack-handler/agent"
       }
     ]
   },
@@ -168,10 +165,12 @@
       "allow": [
         "main",
         "supervisour",
+        "dispatcher",
         "executor",
         "reporter",
         "githubsync",
-        "notification"
+        "notification",
+        "slack-handler"
       ]
     }
   },
@@ -189,16 +188,27 @@
       "dmPolicy": "pairing",
       "botToken": "8405762156:AAFHNmFnATS6wcAkbcY6wfKYZlAhDbiFPys",
       "groupPolicy": "allowlist",
-      "streamMode": "block"
+      "streamMode": "partial"
+    },
+    "slack": {
+      "mode": "socket",
+      "webhookPath": "/slack/events",
+      "enabled": true,
+      "botToken": "xoxb-10501418775009-10488584270178-VvNt3D7Pc2n8RV1tig18lHY2",
+      "appToken": "xapp-1-A0AERD4NW49-10498925868372-c1a19de055091a5fcfb8227fa62e443f249541a467c31ed96d4c6801070224d0",
+      "userTokenReadOnly": true,
+      "groupPolicy": "allowlist",
+      "channels": {
+        "C0AE6GFG3C3": {
+          "allow": true
+        }
+      }
     }
   },
   "gateway": {
     "port": 18789,
     "mode": "local",
-    "bind": "lan",
-    "controlUi": {
-      "allowInsecureAuth": true
-    },
+    "bind": "loopback",
     "auth": {
       "mode": "token",
       "token": "fdb818eb4ee5674a2ceeb3c9ec09b7e6fbadaf09eb89c97d"
@@ -211,6 +221,11 @@
   "skills": {
     "install": {
       "nodeManager": "npm"
+    },
+    "entries": {
+      "slack": {
+        "enabled": true
+      }
     }
   },
   "plugins": {
@@ -218,7 +233,7 @@
       "",
       "qwen-portal-auth",
       "telegram",
-      "google-gemini-cli-auth"
+      "slack"
     ],
     "entries": {
       "qwen-portal-auth": {
@@ -227,7 +242,7 @@
       "telegram": {
         "enabled": true
       },
-      "google-gemini-cli-auth": {
+      "slack": {
         "enabled": true
       }
     }

@@ -1,18 +1,22 @@
 {
   "agent:main:main": {
     "sessionId": "4d4e891c-bdea-4f94-8314-d8bdeb57ad59",
-    "updatedAt": 1770897907042,
+    "updatedAt": 1770899382589,
     "systemSent": true,
     "abortedLastRun": false,
     "chatType": "direct",
     "deliveryContext": {
-      "channel": "webchat"
+      "channel": "webchat",
+      "to": "heartbeat"
     },
     "lastChannel": "webchat",
     "origin": {
-      "provider": "webchat",
+      "provider": "heartbeat",
       "surface": "webchat",
-      "chatType": "direct"
+      "chatType": "direct",
+      "label": "heartbeat",
+      "from": "heartbeat",
+      "to": "heartbeat"
     },
     "sessionFile": "/home/ibr-ai-agent/.openclaw/agents/main/sessions/4d4e891c-bdea-4f94-8314-d8bdeb57ad59.jsonl",
     "compactionCount": 0,
@@ -315,6 +319,7 @@
           }
         ]
       }
-    }
+    },
+    "lastTo": "heartbeat"
   }
 }

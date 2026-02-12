@@ -8,7 +8,7 @@
       "description": "Syncs the ai agent base to github",
       "enabled": true,
       "createdAtMs": 1770460379745,
-      "updatedAtMs": 1770903288860,
+      "updatedAtMs": 1770914811423,
       "schedule": {
         "kind": "every",
         "everyMs": 1800000,
@@ -22,12 +22,12 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1770904979745,
-        "lastRunAtMs": 1770903179752,
+        "nextRunAtMs": 1770918411423,
+        "lastRunAtMs": 1770914397065,
         "lastStatus": "error",
-        "lastDurationMs": 109108,
-        "consecutiveErrors": 4,
-        "runningAtMs": 1770904979748
+        "lastDurationMs": 414358,
+        "consecutiveErrors": 7,
+        "runningAtMs": 1770918411429
       },
       "delivery": {
         "mode": "announce"
@@ -39,7 +39,7 @@
       "name": "Reddit Comments",
       "enabled": true,
       "createdAtMs": 1770887827222,
-      "updatedAtMs": 1770890983864,
+      "updatedAtMs": 1770909691197,
       "schedule": {
         "kind": "every",
         "everyMs": 18000000,
@@ -53,10 +53,12 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1770909091176,
-        "lastRunAtMs": 1770890983865,
-        "lastStatus": "ok",
-        "lastDurationMs": 107311
+        "nextRunAtMs": 1770923827222,
+        "lastRunAtMs": 1770909091182,
+        "lastStatus": "error",
+        "lastDurationMs": 600015,
+        "lastError": "Error: cron: job execution timed out",
+        "consecutiveErrors": 1
       },
       "delivery": {
         "mode": "announce"

@@ -1,7 +1,7 @@
 {
   "agent:githubsync:cron:dfc66569-ec5c-484b-a4bb-e19af444b09e": {
-    "sessionId": "3e719261-49cb-403c-bafc-a9c594aae034",
-    "updatedAt": 1770904979780,
+    "sessionId": "4d4d78ad-a5e8-454e-a50b-fda1421bfe5f",
+    "updatedAt": 1770918411468,
     "systemSent": true,
     "model": "gemini-3-flash-preview",
     "contextTokens": 1048576,
@@ -438,6 +438,198 @@
   "agent:githubsync:cron:dfc66569-ec5c-484b-a4bb-e19af444b09e:run:3e719261-49cb-403c-bafc-a9c594aae034": {
     "sessionId": "3e719261-49cb-403c-bafc-a9c594aae034",
     "updatedAt": 1770904979780,
+    "systemSent": true,
+    "model": "gemini-3-flash-preview",
+    "contextTokens": 1048576,
+    "label": "Cron: github sync",
+    "skillsSnapshot": {
+      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\nWhen a skill file references a relative path, resolve it against the skill directory (parent of SKILL.md / dirname of the path) and use that absolute path in tool commands.\n\n<available_skills>\n  <skill>\n    <name>bluebubbles</name>\n    <description>Build or update the BlueBubbles external channel plugin for OpenClaw (extension package, REST send/probe, webhook inbound).</description>\n    <location>/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/bluebubbles/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>github</name>\n    <description>Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.</description>\n    <location>/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/github/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.</description>\n    <location>/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts (no API key required).</description>\n    <location>/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/weather/SKILL.md</location>\n  </skill>\n</available_skills>",
+      "skills": [
+        {
+          "name": "bluebubbles"
+        },
+        {
+          "name": "github"
+        },
+        {
+          "name": "skill-creator"
+        },
+        {
+          "name": "weather"
+        }
+      ],
+      "resolvedSkills": [
+        {
+          "name": "bluebubbles",
+          "description": "Build or update the BlueBubbles external channel plugin for OpenClaw (extension package, REST send/probe, webhook inbound).",
+          "filePath": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/bluebubbles/SKILL.md",
+          "baseDir": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/bluebubbles",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "github",
+          "description": "Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.",
+          "filePath": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/github/SKILL.md",
+          "baseDir": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/github",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "skill-creator",
+          "description": "Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.",
+          "filePath": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/skill-creator/SKILL.md",
+          "baseDir": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/skill-creator",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "weather",
+          "description": "Get current weather and forecasts (no API key required).",
+          "filePath": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/weather/SKILL.md",
+          "baseDir": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/weather",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        }
+      ],
+      "version": 0
+    },
+    "modelProvider": "google-gemini-cli",
+    "inputTokens": 527979,
+    "outputTokens": 1247,
+    "totalTokens": 527979
+  },
+  "agent:githubsync:cron:dfc66569-ec5c-484b-a4bb-e19af444b09e:run:98f1ef9c-8566-4789-8ac7-0f2c2e181d5f": {
+    "sessionId": "98f1ef9c-8566-4789-8ac7-0f2c2e181d5f",
+    "updatedAt": 1770910379773,
+    "systemSent": true,
+    "model": "gemini-3-flash-preview",
+    "contextTokens": 1048576,
+    "label": "Cron: github sync",
+    "skillsSnapshot": {
+      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\nWhen a skill file references a relative path, resolve it against the skill directory (parent of SKILL.md / dirname of the path) and use that absolute path in tool commands.\n\n<available_skills>\n  <skill>\n    <name>bluebubbles</name>\n    <description>Build or update the BlueBubbles external channel plugin for OpenClaw (extension package, REST send/probe, webhook inbound).</description>\n    <location>/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/bluebubbles/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>github</name>\n    <description>Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.</description>\n    <location>/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/github/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.</description>\n    <location>/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts (no API key required).</description>\n    <location>/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/weather/SKILL.md</location>\n  </skill>\n</available_skills>",
+      "skills": [
+        {
+          "name": "bluebubbles"
+        },
+        {
+          "name": "github"
+        },
+        {
+          "name": "skill-creator"
+        },
+        {
+          "name": "weather"
+        }
+      ],
+      "resolvedSkills": [
+        {
+          "name": "bluebubbles",
+          "description": "Build or update the BlueBubbles external channel plugin for OpenClaw (extension package, REST send/probe, webhook inbound).",
+          "filePath": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/bluebubbles/SKILL.md",
+          "baseDir": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/bluebubbles",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "github",
+          "description": "Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.",
+          "filePath": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/github/SKILL.md",
+          "baseDir": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/github",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "skill-creator",
+          "description": "Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.",
+          "filePath": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/skill-creator/SKILL.md",
+          "baseDir": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/skill-creator",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "weather",
+          "description": "Get current weather and forecasts (no API key required).",
+          "filePath": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/weather/SKILL.md",
+          "baseDir": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/weather",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        }
+      ],
+      "version": 0
+    },
+    "modelProvider": "google-gemini-cli",
+    "inputTokens": 98269,
+    "outputTokens": 458,
+    "totalTokens": 98269
+  },
+  "agent:githubsync:cron:dfc66569-ec5c-484b-a4bb-e19af444b09e:run:c9b831e8-f9d0-4179-84a5-c6bae7768ccb": {
+    "sessionId": "c9b831e8-f9d0-4179-84a5-c6bae7768ccb",
+    "updatedAt": 1770914397095,
+    "systemSent": true,
+    "model": "gemini-3-flash-preview",
+    "contextTokens": 1048576,
+    "label": "Cron: github sync",
+    "skillsSnapshot": {
+      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\nWhen a skill file references a relative path, resolve it against the skill directory (parent of SKILL.md / dirname of the path) and use that absolute path in tool commands.\n\n<available_skills>\n  <skill>\n    <name>bluebubbles</name>\n    <description>Build or update the BlueBubbles external channel plugin for OpenClaw (extension package, REST send/probe, webhook inbound).</description>\n    <location>/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/bluebubbles/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>github</name>\n    <description>Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.</description>\n    <location>/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/github/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.</description>\n    <location>/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts (no API key required).</description>\n    <location>/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/weather/SKILL.md</location>\n  </skill>\n</available_skills>",
+      "skills": [
+        {
+          "name": "bluebubbles"
+        },
+        {
+          "name": "github"
+        },
+        {
+          "name": "skill-creator"
+        },
+        {
+          "name": "weather"
+        }
+      ],
+      "resolvedSkills": [
+        {
+          "name": "bluebubbles",
+          "description": "Build or update the BlueBubbles external channel plugin for OpenClaw (extension package, REST send/probe, webhook inbound).",
+          "filePath": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/bluebubbles/SKILL.md",
+          "baseDir": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/bluebubbles",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "github",
+          "description": "Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.",
+          "filePath": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/github/SKILL.md",
+          "baseDir": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/github",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "skill-creator",
+          "description": "Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.",
+          "filePath": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/skill-creator/SKILL.md",
+          "baseDir": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/skill-creator",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "weather",
+          "description": "Get current weather and forecasts (no API key required).",
+          "filePath": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/weather/SKILL.md",
+          "baseDir": "/home/ibr-ai-agent/.nvm/versions/node/v24.13.0/lib/node_modules/openclaw/skills/weather",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        }
+      ],
+      "version": 0
+    },
+    "modelProvider": "google-gemini-cli",
+    "inputTokens": 114644,
+    "outputTokens": 407,
+    "totalTokens": 114644
+  },
+  "agent:githubsync:cron:dfc66569-ec5c-484b-a4bb-e19af444b09e:run:4d4d78ad-a5e8-454e-a50b-fda1421bfe5f": {
+    "sessionId": "4d4d78ad-a5e8-454e-a50b-fda1421bfe5f",
+    "updatedAt": 1770918411468,
     "systemSent": true,
     "model": "gemini-3-flash-preview",
     "contextTokens": 1048576,

@@ -1,10 +1,11 @@
 #!/bin/bash
 
-cd /home/ibr-ai-agent/.openclaw/
+# Navigate to the target repository
+cd /root/.openclaw/
 
 # Check if we're in a git repository
 if ! git rev-parse --git-dir > /dev/null 2>&1; then
-    echo "Error: Not in a git repository"
+    echo "Error: Not in a git repository at $(pwd)"
     exit 1
 fi
 
@@ -15,7 +16,7 @@ if [[ -n $(git status --porcelain) ]]; then
     # Remove any nested .git directories (convert submodules to regular directories)
     find . -mindepth 2 -name ".git" -type d ! -path "./.git/*" -exec rm -rf {} + 2>/dev/null
     
-    # Add all changes (including new files and deletions)
+    # Add all changes
     git add -A
     
     # Get current date and time for commit message
@@ -30,11 +31,9 @@ if [[ -n $(git status --porcelain) ]]; then
             echo "Backup completed successfully at ${datetime}"
         else
             echo "Git push failed"
-            
             # Get the error details
             error_details=$(git push origin main 2>&1)
             echo "ERROR: $error_details"
-            
             exit 1
         fi
     else

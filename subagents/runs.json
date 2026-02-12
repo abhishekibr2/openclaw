@@ -1,26 +1,4 @@
 {
   "version": 2,
-  "runs": {
-    "4d5dfd5f-5504-4091-8c02-f50a5410eb2f": {
-      "runId": "4d5dfd5f-5504-4091-8c02-f50a5410eb2f",
-      "childSessionKey": "agent:executor:subagent:08cab147-7c35-4f43-ada5-a3e2f2568af2",
-      "requesterSessionKey": "agent:supervisour:main",
-      "requesterOrigin": {
-        "channel": "webchat"
-      },
-      "requesterDisplayKey": "agent:supervisour:main",
-      "task": "Search Reddit for 'ibr infotech.com' or 'IBR Infotech LLP'. Find any discussions, reviews, or mentions of what they do and summarize the findings. If direct access to Reddit is blocked, try searching via alternative search engines or archives.",
-      "cleanup": "keep",
-      "label": "Reddit Search IBR Infotech",
-      "createdAt": 1770899858314,
-      "startedAt": 1770899858612,
-      "archiveAtMs": 1770903458314,
-      "cleanupHandled": true,
-      "endedAt": 1770900064486,
-      "outcome": {
-        "status": "ok"
-      },
-      "cleanupCompletedAt": 1770900116576
-    }
-  }
+  "runs": {}
 }

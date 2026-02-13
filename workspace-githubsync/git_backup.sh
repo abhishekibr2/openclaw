@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Navigate to the target repository
-cd /root/.openclaw/
+cd /home/ibr-ai-agent/.openclaw/
 
 # Check if we're in a git repository
 if ! git rev-parse --git-dir > /dev/null 2>&1; then
@@ -25,6 +25,10 @@ if [[ -n $(git status --porcelain) ]]; then
     # Commit with timestamp
     if git commit -m "Backup commit ${datetime}"; then
         echo "Committed changes at ${datetime}"
+        
+        # Pull before pushing to ensure we have latest remote changes
+        echo "Attempting to pull latest changes..."
+        git pull origin main --rebase
         
         # Push to main branch
         if git push origin main; then

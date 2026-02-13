@@ -1,12 +1,12 @@
 {
-  "agent:executor:subagent:baa1a088-e487-4174-a7ed-9f3237275e03": {
-    "sessionId": "f9e66ea4-b171-4362-b4a4-f6c425bb52cc",
-    "updatedAt": 1770978285772,
+  "agent:executor:subagent:7eba3d21-b95a-45d4-a06e-b3867eb1698f": {
+    "sessionId": "6f2e5042-e404-4956-ac39-6cdc831b93bd",
+    "updatedAt": 1770984882662,
     "deliveryContext": {
       "channel": "telegram"
     },
     "lastChannel": "telegram",
-    "label": "Reddit Comment Task - Discovery & Engagement",
+    "label": "Reddit Post Discovery",
     "spawnedBy": "agent:supervisour:cron:99dda213-7bd8-43fc-af4a-fcab8dc8d9ce",
     "channel": "telegram",
     "skillsSnapshot": {
@@ -71,6 +71,13 @@
         }
       ],
       "version": 0
-    }
+    },
+    "modelProvider": "google-gemini-cli",
+    "model": "gemini-3-flash-preview",
+    "contextTokens": 1048576,
+    "abortedLastRun": false,
+    "inputTokens": 277831,
+    "outputTokens": 2977,
+    "totalTokens": 1006449
   }
 }

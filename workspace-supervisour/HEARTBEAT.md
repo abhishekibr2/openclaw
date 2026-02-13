@@ -26,7 +26,8 @@
        task: "Navigate to reddit.com and check if logged in",
        agentId: "executor",
        label: "Check Reddit login status",
-       runTimeoutSeconds: 300  // 5 minutes max
+       runTimeoutSeconds: 300,  // 5 minutes max
+       thinking : off
      )
      ```
    - Returns immediately: `{ status: "accepted", runId, childSessionKey }`
@@ -47,7 +48,8 @@
        task: "Notify user via Telegram: Login required for Reddit. Please provide credentials.",
        agentId: "notification",
        label: "Alert: login required",
-       runTimeoutSeconds: 60
+       runTimeoutSeconds: 60,
+       thinking : off
      )
      ```
      - Wait for announcement (message delivered)
@@ -60,7 +62,8 @@
        task: "Notify user via Telegram: Captcha detected. Manual intervention required.",
        agentId: "notification",
        label: "Alert: captcha",
-       runTimeoutSeconds: 60
+       runTimeoutSeconds: 60,
+       thinking : off
      )
      ```
      - Mark task as failed (captcha requires manual intervention)
@@ -76,7 +79,8 @@
        task: "Generate daily report for 2026-02-10",
        agentId: "reporter",
        label: "Daily report",
-       runTimeoutSeconds: 180
+       runTimeoutSeconds: 180,
+       thinking : off
      )
      ```
      - Wait for announcement with report
@@ -88,7 +92,8 @@
        task: "Notify user via Telegram: Your Reddit karma is 1,234",
        agentId: "notification",
        label: "Send karma result",
-       runTimeoutSeconds: 60
+       runTimeoutSeconds: 60,
+       thinking : off
      )
      ```
      - Wait for announcement (message delivered)
@@ -139,7 +144,8 @@
      task: "Navigate to reddit.com and check if logged in",
      agentId: "executor",
      label: "Check Reddit login",
-     runTimeoutSeconds: 300
+     runTimeoutSeconds: 300,
+     thinking : off
    )
    ```
    Returns: `{ status: "accepted", runId: "...", childSessionKey: "..." }`
@@ -158,7 +164,8 @@
      task: "Notify user via Telegram: Reddit login required. Please provide credentials.",
      agentId: "notification",
      label: "Alert: login required",
-     runTimeoutSeconds: 60
+     runTimeoutSeconds: 60,
+     thinking : off
    )
    ```
 
@@ -179,7 +186,8 @@
      task: "Login to Reddit with username: [user] password: [pass], then navigate to profile",
      agentId: "executor",
      label: "Login and go to profile",
-     runTimeoutSeconds: 300
+     runTimeoutSeconds: 300,
+     thinking : off
    )
    ```
 
@@ -196,7 +204,8 @@
      task: "Extract karma count from profile page",
      agentId: "executor",
      label: "Get karma count",
-     runTimeoutSeconds: 120
+     runTimeoutSeconds: 120,
+     thinking : off
    )
    ```
 
@@ -213,7 +222,8 @@
       task: "Notify user via Telegram: Your Reddit karma is 1,234",
       agentId: "notification",
       label: "Send karma result",
-      runTimeoutSeconds: 60
+      runTimeoutSeconds: 60,
+      thinking : off
     )
     ```
 

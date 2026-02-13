@@ -208,7 +208,8 @@ sessions_spawn(
   task: "Your clear task instruction here",
   agentId: "executor",  // or "reporter" or "notification"
   label: "Brief description for logs",
-  runTimeoutSeconds: 300  // 5 minutes max
+  runTimeoutSeconds: 300,  // 5 minutes max
+  thinking : off // we dont want agent to think
 )
 ```
 
@@ -226,7 +227,8 @@ result = sessions_spawn(
   task: "Navigate to reddit.com, login if needed, then go to your profile and extract karma count",
   agentId: "executor",
   label: "Reddit karma check",
-  runTimeoutSeconds: 300
+  runTimeoutSeconds: 300,
+  thinking : off // we dont want agent to think
 )
 
 # Returns immediately: { status: "accepted", runId: "...", childSessionKey: "..." }
@@ -244,7 +246,8 @@ sessions_spawn(
   task: "Notify user via Telegram: Login required for Reddit. Please provide credentials.",
   agentId: "notification",
   label: "Alert user: login required",
-  runTimeoutSeconds: 60
+  runTimeoutSeconds: 60,
+  thinking : off // we dont want agent to think
 )
 # Notification will deliver message and report back
 ```
@@ -255,7 +258,8 @@ sessions_spawn(
   task: "Generate daily report for 2026-02-10",
   agentId: "reporter",
   label: "Daily report generation",
-  runTimeoutSeconds: 180
+  runTimeoutSeconds: 180,
+  thinking : off // we dont want agent to think
 )
 # Reporter will generate report and send it back
 ```
@@ -274,7 +278,8 @@ sessions_spawn(
 sessions_send(
   sessionKey: "agent:executor:main",
   message: "Quick question: Are you currently logged into Reddit?",
-  timeoutSeconds: 15
+  timeoutSeconds: 15,
+  thinking : off // we dont want agent to think
 )
 ```
 
@@ -304,7 +309,8 @@ sessions_spawn(
   task: "Navigate to reddit.com and extract karma count",
   agentId: "executor",
   label: "Reddit karma extraction",
-  runTimeoutSeconds: 300
+  runTimeoutSeconds: 300,
+  thinking : off
 )
 ```
 
@@ -319,6 +325,7 @@ sessions_spawn(
 
 **Why sessions_spawn is better:**
 - Non-blocking (you don't wait)
+- thinking : off (we dont want agent to think)
 - Isolated context (clean slate for sub-agent)
 - Auto-announcement (result comes back automatically)
 - Timeout protection (auto-abort after 5 mins)
@@ -368,7 +375,8 @@ sessions_spawn(
   task: "Notify user via Telegram: Your Reddit karma is 1,234",
   agentId: "notification",
   label: "Send karma result",
-  runTimeoutSeconds: 60
+  runTimeoutSeconds: 60,
+  thinking : off
 )
 ```
 

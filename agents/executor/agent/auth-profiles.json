@@ -1,51 +1,22 @@
 {
   "version": 1,
   "profiles": {
-    "openrouter:default": {
-      "type": "api_key",
-      "provider": "openrouter",
-      "key": "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"
-    },
-    "google-gemini-cli:abhishekibr.trainee2@gmail.com": {
+    "google-gemini-cli:as9262989@gmail.com": {
       "type": "oauth",
       "provider": "google-gemini-cli",
-      "access": "ya29.a0AUMWg_ItGumy0w-ubveG5Gu103Jyu3H_mgXI0U07awqq-NHTVupcmimaTAV97qo7hGCbS188af8aOVhwCfH-_mpDhySf24VJcQNKmZv001olSakwMYI2RxwH-wLIXYL8zXb700fUpxH3XnAyBTIBL1jP0S_4wMEc_EAPfzzZfqWlib3VWQK0wqy55JpE5ep6zpqD__Ivnb2EKQaCgYKATASARISFQHGX2MiuoCFKgbX18ENPbvKPiuKkg0213",
-      "refresh": "1//0gZ8-TsVT3EvtCgYIARAAGBASNwF-L9Ir6VRKCPSM5Y-85jc0ICRYZQb2K917DvOeH2OCIC15qFkMPEkoXS7YcmR6JV40BvXqMWY",
-      "expires": 1770981439497,
-      "email": "abhishekibr.trainee2@gmail.com",
-      "projectId": "spring-cable-5ggp0"
-    },
-    "google-gemini-cli:abhishekibr.trainee@gmail.com": {
-      "type": "oauth",
-      "provider": "google-gemini-cli",
-      "access": "ya29.a0AUMWg_JLAF9E9S8I_TdWOLvJRCyaKYQunnrMtOsz1P4d8SW4NQTU8UeZVmjQYko5PXiiaF2RsAth3geiKao36QRNMLwrHhDFaxW56TiLDXMPRU7woHZ0CdlxpU_NIkBRAmbI2tqPsKzrq3MR_qnX-64LZ7pUvjh98cPDEaIfjlOn97IiFPauXPbf8VAHD7wME-CzCv9xklDiaCgYKAagSARYSFQHGX2MikZ-u3FHWipjI3jXqTrSKQw0211",
-      "refresh": "1//0gEy_lYKmx2ggCgYIARAAGBASNwF-L9Ir-pELFFrC5L9emiYUsVUEHVriottrZozKyGr4tfoY2hm9tYNx4vcy6RDgcFBcJvNehos",
-      "expires": 1770980909335,
-      "email": "abhishekibr.trainee@gmail.com",
-      "projectId": "handy-hook-mc9nx"
+      "access": "ya29.a0AUMWg_LnA7hrvGGKO1IyGwzv_lWAGnM5nWEHpgjh7yj22T-7v-0mP-Ne2GhDQZOgYiGLOYuX9sUOW7MK2kCcNMM1kHcWGxfiDPHS4S-Ko49AcYh1VEAteCKVXZ1ddY7rYd4Z3jDFjCHTZeOOdYDiC9HsJlj4YVJdo4Al3TlZ-j9lJD88dmdhHfNVU6XBe1CbKLx-wUxJO9uFaCgYKAR4SARESFQHGX2Miv3ZfjvJPEhbPPHx1W4rFrQ0211",
+      "refresh": "1//0goQ3yTxAouqrCgYIARAAGBASNwF-L9Ir8rGA2nbgysj31DSZvgK3cMI5CfBXCMLbdsDiQAilpo_xYcGjhUwYv7yUbdbkkk6ImJY",
+      "expires": 1770988026640,
+      "email": "as9262989@gmail.com",
+      "projectId": "voltaic-cat-4fvtg"
     }
   },
   "lastGood": {
-    "openrouter": "openrouter:default",
-    "google-gemini-cli": "google-gemini-cli:abhishekibr.trainee2@gmail.com"
+    "google-gemini-cli": "google-gemini-cli:as9262989@gmail.com"
   },
   "usageStats": {
-    "openrouter:default": {
-      "lastUsed": 1770888830569,
-      "errorCount": 0,
-      "lastFailureAt": 1770888830495
-    },
-    "google-gemini-cli:abhishekibr.trainee2@gmail.com": {
-      "lastUsed": 1770891382740,
-      "errorCount": 1,
-      "lastFailureAt": 1770978270720,
-      "failureCounts": {
-        "rate_limit": 1
-      },
-      "cooldownUntil": 1770978330720
-    },
-    "google-gemini-cli:abhishekibr.trainee@gmail.com": {
-      "lastUsed": 1770977694553,
+    "google-gemini-cli:as9262989@gmail.com": {
+      "lastUsed": 1770984839400,
       "errorCount": 0
     }
   }

@@ -8,7 +8,7 @@
       "description": "Syncs the ai agent base to github",
       "enabled": true,
       "createdAtMs": 1770460379745,
-      "updatedAtMs": 1770977694581,
+      "updatedAtMs": 1770981373253,
       "schedule": {
         "kind": "every",
         "everyMs": 1800000,
@@ -22,12 +22,12 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1770981294581,
-        "lastRunAtMs": 1770977390374,
+        "nextRunAtMs": 1770984973253,
+        "lastRunAtMs": 1770981294583,
         "lastStatus": "error",
-        "lastDurationMs": 304207,
-        "consecutiveErrors": 23,
-        "runningAtMs": 1770981294582
+        "lastDurationMs": 78670,
+        "consecutiveErrors": 24,
+        "runningAtMs": 1770984973257
       },
       "delivery": {
         "mode": "announce"
@@ -39,7 +39,7 @@
       "name": "Reddit Comments",
       "enabled": true,
       "createdAtMs": 1770887827222,
-      "updatedAtMs": 1770978146246,
+      "updatedAtMs": 1770984731683,
       "schedule": {
         "kind": "every",
         "everyMs": 18000000,
@@ -54,10 +54,10 @@
       },
       "state": {
         "nextRunAtMs": 1770995827222,
-        "lastRunAtMs": 1770977827225,
+        "lastRunAtMs": 1770984686217,
         "lastStatus": "error",
-        "lastDurationMs": 319021,
-        "consecutiveErrors": 5,
+        "lastDurationMs": 45466,
+        "consecutiveErrors": 7,
         "lastError": "cron delivery target is missing"
       },
       "delivery": {

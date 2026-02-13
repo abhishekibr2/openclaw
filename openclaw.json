@@ -1,12 +1,12 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.2.9",
-    "lastTouchedAt": "2026-02-13T11:01:21.493Z"
+    "lastTouchedAt": "2026-02-13T11:48:14.826Z"
   },
   "wizard": {
-    "lastRunAt": "2026-02-13T11:01:21.485Z",
+    "lastRunAt": "2026-02-13T11:48:14.818Z",
     "lastRunVersion": "2026.2.9",
-    "lastRunCommand": "onboard",
+    "lastRunCommand": "doctor",
     "lastRunMode": "local"
   },
   "browser": {
@@ -104,16 +104,6 @@
         "primary": "google-gemini-cli/gemini-3-flash-preview"
       },
       "models": {
-        "qwen-portal/coder-model": {
-          "alias": "qwen"
-        },
-        "qwen-portal/vision-model": {},
-        "openrouter/auto": {
-          "alias": "OpenRouter"
-        },
-        "openrouter/deepseek/deepseek-v3.2": {},
-        "openrouter/google/gemini-3-flash-preview": {},
-        "google-gemini-cli/gemini-3-pro-preview": {},
         "google-gemini-cli/gemini-3-flash-preview": {}
       },
       "workspace": "/home/ibr-ai-agent/.openclaw/workspace",

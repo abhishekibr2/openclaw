@@ -1,20 +1,23 @@
 {
   "version": 1,
   "profiles": {
-    "openrouter:default": {
-      "type": "api_key",
-      "provider": "openrouter",
-      "key": "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"
+    "google-gemini-cli:as9262989@gmail.com": {
+      "type": "oauth",
+      "provider": "google-gemini-cli",
+      "access": "ya29.a0AUMWg_L0gDfP5rDnfgaFrAU38uN9GTPPz4dEbgLMolmsqKrf8e08qKtMCNTY2Bo4heEbDxI7nhKcLPmKlrXNaqW6mjCMLT-0FdwqW0-81GoEzbC0tiRMm7fMatFTUDNuQ5tUkIuGxmGuyFkjCa8PjNMrcuW1ri4y6rUAM6f32uoeMkvJ-ZdoQlSN1r4ZLT--SPYT07HHQt_caCgYKAUwSARESFQHGX2Mi4FDeb9FDFmN8xCm21QO2jw0211",
+      "refresh": "1//0goQ3yTxAouqrCgYIARAAGBASNwF-L9Ir8rGA2nbgysj31DSZvgK3cMI5CfBXCMLbdsDiQAilpo_xYcGjhUwYv7yUbdbkkk6ImJY",
+      "expires": 1770983772954,
+      "email": "as9262989@gmail.com",
+      "projectId": "voltaic-cat-4fvtg"
     }
   },
   "lastGood": {
-    "openrouter": "openrouter:default"
+    "google-gemini-cli": "google-gemini-cli:as9262989@gmail.com"
   },
   "usageStats": {
-    "openrouter:default": {
-      "lastUsed": 1770723451059,
-      "errorCount": 0,
-      "lastFailureAt": 1770722853539
+    "google-gemini-cli:as9262989@gmail.com": {
+      "lastUsed": 1770981275270,
+      "errorCount": 0
     }
   }
 }

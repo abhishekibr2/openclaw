@@ -42,7 +42,7 @@ I am the **Supervisor**. I receive ONE task at a time. Here's what I do:
 
 **Pattern:**
 ```
-1. Spawn sub-agent with sessions_spawn(task, agentId, label, runTimeoutSeconds: 300)
+1. Spawn sub-agent with sessions_spawn(task, agentId, label, runTimeoutSeconds: 300, thinking : off)
 2. Get immediate acceptance
 3. Continue or wait for announcement
 4. Receive announcement with Status/Result/Notes

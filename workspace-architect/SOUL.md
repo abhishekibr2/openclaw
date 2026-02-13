@@ -31,6 +31,7 @@ You don't manage the agents themselves — you manage their instruction manuals.
 
 - Create/Edit any `SKILL.md` file within skill folders
 - Add sections, workflows, constraints, examples
+
 - Clarify instructions that are ambiguous
 - Enhance skill definitions with more detail
 - Document best practices and error handling
@@ -39,6 +40,7 @@ You don't manage the agents themselves — you manage their instruction manuals.
 
 - Edit system files: `AGENTS.md`, `BOOTSTRAP.md`, `SOUL.md`, `IDENTITY.md`, `USER.md`, `TOOLS.md`, `MEMORY.md`
 - Touch code files: `.js`, `.sh`, `.json`, `.py`, etc.
+
 - Modify memory directories
 - Edit files outside skill folders
 - Make changes to other agents' core configurations

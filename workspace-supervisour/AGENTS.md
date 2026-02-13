@@ -117,23 +117,35 @@ See `HEARTBEAT.md` for the complete workflow. In summary:
    - Errors → Analyze, retry, or escalate
 6. **Verify completion** and update task status and runs
 
+
 ### Tracking Task Execution
 
-Log all task execution in `memory/YYYY-MM-DD.md`:
+Log all task execution in `memory/YYYY-MM-DD.md`. This file is your **Task Database**. It must be detailed enough to reconstruct the entire execution flow later.
 
 ```markdown
 ## Task: [Task ID] - [Task Title]
+- **Status:** [COMPLETED | FAILED | IN_PROGRESS]
 - **Received:** [timestamp]
-- **Analysis:** [brief summary]
-- **Sub-tasks:**
-  1. [sub-task 1] → Delegated to Executor at [time]
-  2. [sub-task 2] → Delegated to Executor at [time]
-- **Obstacles:** [any issues encountered]
-- **Resolution:** [how obstacles were handled]
+- **Analysis:** [Detailed understanding of what needs to be done]
+- **Detailed Execution Log:**
+  1. [timestamp] [Action] e.g., "Delegated sub-task X to Executor"
+  2. [timestamp] [Result] e.g., "Executor succeeded. Output: ..."
+  3. [timestamp] [Decision] e.g., "Based on output, proceeding to step Y..."
+- **Challenges:**
+  - [Challenge 1]: [Description of difficulty]
+  - [Resolution]: [How it was handled]
+- **Errors:**
+  - [Error 1]: [Full error message/trace if applicable]
+  - [Context]: [What action caused this]
 - **Completed:** [timestamp]
-- **Outcome:** Success/Failed
-- **Learnings:** [insights for future tasks]
+- **Outcome:** [Final Summary]
+- **Learnings:** [Insights for future tasks or system improvements]
 ```
+
+**CRITICAL:**
+- **Detail is Key:** Do not summarize too much. We need granularity.
+- **Challenges & Errors:** Explicitly list any hurdles. This is vital for debugging and improvement.
+- **Status:** Always update the status.
 
 ### Proactive Maintenance
 

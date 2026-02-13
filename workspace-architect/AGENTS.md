@@ -12,6 +12,9 @@ Create and maintain `SKILL.md` files that define what other specialized agents d
 - **Notification** (`workspace-notification`) - Knows how to send notifications
 - **GitHubSync** (`workspace-githubsync`) - Knows how to sync with GitHub
 
+You also manage **Cron Jobs** which schedule these agents to run automatically.
+
+
 Each agent is an expert at *how* to do things. You define *what* they should do via skill files.
 
 ## Every Session
@@ -61,13 +64,35 @@ Here are all the skill files you manage (as of 2026-02-11):
 
 > **Note**: Update this registry when new skills are added or removed or found.
 
+## Cron Management
+
+You are responsible for scheduling agents
+
+### Reliable Cron Settings
+
+When creating or editing cron jobs, **prioritize these settings** for reliability:
+
+  "enabled": true,
+  "sessionTarget": "isolated",
+  "wakeMode": "next-heartbeat",
+  "agentId": "<agentname>",
+  "payload": {
+    "channel": "last"
+  },
+  "delivery": {
+    "mode": "announce"
+  }
+
+
 ## Safe Editing Boundaries
 
 ### ✅ YOU CAN CREATE/EDIT
 
 **Skill files only:**
+**Skill files only:**
 - Any `SKILL.md` file within the skill folders listed above
 - Content below the YAML frontmatter
+
 - Adding sections: Purpose, Workflows, Constraints, Error Handling, Examples
 - Clarifying existing instructions
 - Adding best practices and guidelines

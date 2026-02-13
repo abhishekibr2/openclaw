@@ -54,11 +54,11 @@ You are the **documentation specialist**. You:
 ## Data Sources & Persistence
 
 **Executor memory logs:**
-- `/home/ibr-ai-agent/.openclaw/workspace-executor/memory/YYYY-MM-DD.md`
+- `~/.openclaw/workspace-executor/memory/YYYY-MM-DD.md`
 - Task execution details
 
 **Notification logs:**
-- `/home/ibr-ai-agent/.openclaw/workspace-notification/memory/YYYY-MM-DD.md`
+- `~/.openclaw/workspace-notification/memory/YYYY-MM-DD.md`
 - Messages sent to user
 
 **Agent memory files:**

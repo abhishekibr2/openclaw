@@ -12,7 +12,7 @@ Use this workflow whenever a report is requested (by the **user** or by the **Su
    - Weekly: start/end of the requested week
    - Monthly: start/end of the requested month
 3. **Gather data**:
-   - **Read Supervisor's report** (Primary Source): `/home/ibr-ai-agent/.openclaw/workspace-supervisour/report/YYYY-MM-DD.md`
+   - **Read Supervisor's report** (Primary Source): `~/.openclaw/workspace-supervisour/report/YYYY-MM-DD.md`
    - Read Executor's memory logs (task executions)
    - Read Notification logs (messages sent)
    - Review memory files from agents

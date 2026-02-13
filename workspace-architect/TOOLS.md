@@ -9,7 +9,7 @@ This file documents tools and best practices for managing skill files.
 **Usage**: Always read the entire file first to understand current state
 
 ```
-view_file(/home/ibr-ai-agent/.openclaw/workspace-executor/browser/SKILL.md)
+view_file(~/.openclaw/workspace-executor/browser/SKILL.md)
 ```
 
 ### replace_file_content
@@ -37,7 +37,7 @@ After editing, generate diffs to verify changes:
 
 ```bash
 # View git diff if workspace is a git repo
-cd /home/ibr-ai-agent/.openclaw/workspace-<agent>
+cd ~/.openclaw/workspace-<agent>
 git diff <skill-folder>/SKILL.md
 ```
 
@@ -77,7 +77,7 @@ If an edit breaks something:
 
 ### Method 2: Git Revert (if available)
 ```bash
-cd /home/ibr-ai-agent/.openclaw/workspace-<agent>
+cd ~/.openclaw/workspace-<agent>
 git checkout HEAD -- <skill-folder>/SKILL.md
 ```
 

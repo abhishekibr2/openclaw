@@ -54,11 +54,11 @@ Log format:
 You gather data from multiple sources:
 
 **Executor memory logs:**
-- `/home/ibr-ai-agent/.openclaw/workspace-executor/memory/YYYY-MM-DD.md`
+- `~/.openclaw/workspace-executor/memory/YYYY-MM-DD.md`
 - Task executions, sub-tasks, obstacles, results
 
 **Notification logs:**
-- `/home/ibr-ai-agent/.openclaw/workspace-notification/memory/YYYY-MM-DD.md`
+- `~/.openclaw/workspace-notification/memory/YYYY-MM-DD.md`
 - Messages sent to user
 
 **Other agent memory files:**

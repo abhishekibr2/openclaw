@@ -1,4 +1,4 @@
-{"type":"session","version":3,"id":"6f2e5042-e404-4956-ac39-6cdc831b93bd","timestamp":"2026-02-13T12:12:07.663Z","cwd":"/home/ibr-ai-agent/.openclaw/workspace-executor"}
+{"type":"session","version":3,"id":"6f2e5042-e404-4956-ac39-6cdc831b93bd","timestamp":"2026-02-13T12:12:07.663Z","cwd":"~/.openclaw/workspace-executor"}
 {"type":"model_change","id":"bf2fbdda","parentId":null,"timestamp":"2026-02-13T12:12:07.663Z","provider":"google-gemini-cli","modelId":"gemini-3-flash-preview"}
 {"type":"thinking_level_change","id":"d5c7b943","parentId":"bf2fbdda","timestamp":"2026-02-13T12:12:07.663Z","thinkingLevel":"off"}
 {"type":"custom","customType":"model-snapshot","data":{"timestamp":1770984727664,"provider":"google-gemini-cli","modelApi":"google-gemini-cli","modelId":"gemini-3-flash-preview"},"id":"0b0223df","parentId":"d5c7b943","timestamp":"2026-02-13T12:12:07.664Z"}

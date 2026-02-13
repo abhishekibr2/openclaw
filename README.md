@@ -193,7 +193,7 @@ openclaw agent list
 openclaw agent status supervisor
 
 # View agent workspace
-cd /home/ibr-ai-agent/.openclaw/workspace-supervisor
+cd ~/.openclaw/workspace-supervisor
 cat IDENTITY.md
 ```
 

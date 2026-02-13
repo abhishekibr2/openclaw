@@ -8,7 +8,7 @@
       "description": "Syncs the ai agent base to github",
       "enabled": true,
       "createdAtMs": 1770460379745,
-      "updatedAtMs": 1770981373253,
+      "updatedAtMs": 1770985008110,
       "schedule": {
         "kind": "every",
         "everyMs": 1800000,
@@ -22,12 +22,11 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1770984973253,
-        "lastRunAtMs": 1770981294583,
+        "nextRunAtMs": 1770989579745,
+        "lastRunAtMs": 1770984973258,
         "lastStatus": "error",
-        "lastDurationMs": 78670,
-        "consecutiveErrors": 24,
-        "runningAtMs": 1770984973257
+        "lastDurationMs": 34852,
+        "consecutiveErrors": 25
       },
       "delivery": {
         "mode": "announce"
@@ -62,6 +61,37 @@
       },
       "delivery": {
         "mode": "announce"
+      }
+    },
+    {
+      "id": "593c46e6-6b35-4664-9e79-539d5f9bb33a",
+      "agentId": "supervisour",
+      "name": "Daily SEO Ranking Check - Ibrinfotech",
+      "enabled": true,
+      "createdAtMs": 1770985534229,
+      "updatedAtMs": 1770985912603,
+      "schedule": {
+        "expr": "0 0 * * *",
+        "tz": "Asia/Calcutta",
+        "kind": "cron"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Check SEO rankings for Ibrinfotech.com using the seo-ranking skill and report the results. Use the reporter agent.",
+        "channel": "last"
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1771007400000,
+        "lastError": "cron delivery target is missing",
+        "lastRunAtMs": 1770985646188,
+        "lastStatus": "error",
+        "lastDurationMs": 266415,
+        "consecutiveErrors": 1
       }
     }
   ]

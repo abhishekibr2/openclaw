@@ -59,15 +59,15 @@ Supervisor → Executor (executes)
 ## Data Sources
 
 **Supervisor Reports (PRIMARY):**
-- `/home/ibr-ai-agent/.openclaw/workspace-supervisour/report/YYYY-MM-DD.md`
+- `~/.openclaw/workspace-supervisour/report/YYYY-MM-DD.md`
 - High-level task status, daily summaries, and dates.
 
 **Executor memory logs:**
-- `/home/ibr-ai-agent/.openclaw/workspace-executor/memory/YYYY-MM-DD.md`
+- `~/.openclaw/workspace-executor/memory/YYYY-MM-DD.md`
 - Task execution details, sub-tasks, obstacles
 
 **Notification logs:**
-- `/home/ibr-ai-agent/.openclaw/workspace-notification/memory/YYYY-MM-DD.md`
+- `~/.openclaw/workspace-notification/memory/YYYY-MM-DD.md`
 - Messages sent to user
 
 **Other agent memory files:**
@@ -80,7 +80,7 @@ When the user or Supervisor requests a report:
 1. **Receive**: Get report type and scope (task/daily/weekly/monthly/metrics)
 2. **Determine time range** for time-based reports (day/week/month)
 3. **Gather**:
-   - **Read Supervisor's report** for the target date(s): `/home/ibr-ai-agent/.openclaw/workspace-supervisour/report/YYYY-MM-DD.md`
+   - **Read Supervisor's report** for the target date(s): `~/.openclaw/workspace-supervisour/report/YYYY-MM-DD.md`
    - Read relevant memory files (Executor, Notification, other agents) for details
    - Fetch completed/done tasks for the range using:
      - `./fetch_done_tasks.sh <startIso> <endIso>`

@@ -100,7 +100,7 @@
 
 7. **Log to Daily Report** — Before marking complete, log the task:
    - Determine today's date (DD-MM-YYYY)
-   - Append to `/home/ibr-ai-agent/.openclaw/workspace-supervisour/report/DD-MM-YYYY.md`
+   - Append to `~/.openclaw/workspace-supervisour/report/DD-MM-YYYY.md`
    - **Format:** Create a detailed Markdown block.
    - Use `run_command` to append a multi-line string (structured for readability):
 

@@ -4,9 +4,9 @@
     "google-gemini-cli:as9262989@gmail.com": {
       "type": "oauth",
       "provider": "google-gemini-cli",
-      "access": "ya29.a0AUMWg_L0gDfP5rDnfgaFrAU38uN9GTPPz4dEbgLMolmsqKrf8e08qKtMCNTY2Bo4heEbDxI7nhKcLPmKlrXNaqW6mjCMLT-0FdwqW0-81GoEzbC0tiRMm7fMatFTUDNuQ5tUkIuGxmGuyFkjCa8PjNMrcuW1ri4y6rUAM6f32uoeMkvJ-ZdoQlSN1r4ZLT--SPYT07HHQt_caCgYKAUwSARESFQHGX2Mi4FDeb9FDFmN8xCm21QO2jw0211",
+      "access": "ya29.a0AUMWg_IR_ItZP6oGXKEd2AtRl3eRrg23gl63kkyALk8S0GLIBE1Ez8q-l4Yzs1P8kgYP5LJSp8zEWBHZ7TQzRFF0SC-VNMQZOUW8Tm2vJg2cUg-f3nt5SETuFMvY8pgbepNCjx426PXCUpyeevUl7hc60slTnrVxLRWKuNHE5sSOE04Gk-1JNRW2E9zF0qo8C9p7w7iFqk7NaCgYKAXcSARESFQHGX2Mi-1bcL1NuFNKoaAPfuHfCXA0211",
       "refresh": "1//0goQ3yTxAouqrCgYIARAAGBASNwF-L9Ir8rGA2nbgysj31DSZvgK3cMI5CfBXCMLbdsDiQAilpo_xYcGjhUwYv7yUbdbkkk6ImJY",
-      "expires": 1770983772954,
+      "expires": 1770988346908,
       "email": "as9262989@gmail.com",
       "projectId": "voltaic-cat-4fvtg"
     }
@@ -16,7 +16,7 @@
   },
   "usageStats": {
     "google-gemini-cli:as9262989@gmail.com": {
-      "lastUsed": 1770981275270,
+      "lastUsed": 1770986134589,
       "errorCount": 0
     }
   }

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Navigate to the target repository
-cd /home/ibr-ai-agent/.openclaw/
+cd ~/.openclaw/
 
 # Check if we're in a git repository
 if ! git rev-parse --git-dir > /dev/null 2>&1; then

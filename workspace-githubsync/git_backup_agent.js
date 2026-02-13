@@ -7,23 +7,23 @@ async function runGitBackup() {
         const { exec } = require('child_process');
         const { promisify } = require('util');
         const execAsync = promisify(exec);
-        
+
         console.log('Starting git backup operation...');
-        
+
         // Use absolute path for the script with bash
-        const result = await execAsync('bash /home/ibr-ai-agent/.openclaw/workspace-githubsync/git_backup.sh');
-        
+        const result = await execAsync('bash ~/.openclaw/workspace-githubsync/git_backup.sh');
+
         if (result.stdout) {
             console.log(result.stdout);
         }
-        
+
         if (result.stderr) {
             console.error(result.stderr);
         }
-        
+
         // Return success status
         return { success: true, output: result.stdout };
-        
+
     } catch (error) {
         // Handle error case - the bash script will output error details
         if (error.stdout) {
@@ -32,7 +32,7 @@ async function runGitBackup() {
         if (error.stderr) {
             console.error(error.stderr);
         }
-        
+
         // Return failure with error information
         return { success: false, error: error.message, stderr: error.stderr };
     }

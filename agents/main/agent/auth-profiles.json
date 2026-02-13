@@ -9,9 +9,9 @@
     "google-gemini-cli:abhishekibr.trainee2@gmail.com": {
       "type": "oauth",
       "provider": "google-gemini-cli",
-      "access": "ya29.a0AUMWg_KhBzGUhQkSlsHfkkXPRHoidsG90IEo_1nzo7SdfWMf_uP_-Sk6gVy-VScsM0bfnA0IPXrvmFhe2ffxXq6Gy2WHp9BRyQemRb9h2Mc9PAzaUrUyK9607f1xt9QV13joSXyiHGpV9x8hp0h5fJnCWEBxI_RdZaXKKjfM2zF0mq960r-t5DO4vQGqoBkQYT6n6trcjUiVxAaCgYKAZsSARISFQHGX2MiucdFfRa301q6vxQPRR3RJg0213",
+      "access": "ya29.a0AUMWg_Kw80GjOl4LAh-eOrdnZqg2Qj0WGf7MXZmmDhqXIMn8XaAr6a_Q23-gZAW3qIrA6SZqEqIqRYj9vZabR_CDfqub48gOKFmkIneZ8B4miQtgw-wlFYMV73dgISGJakU_A0Ewuse91GzRHn7m5PpjbqQwSxBFlWdTZyjIG8CPyPH0B7FOcV_GviEYoHxCARflmSmQ8WdBWwaCgYKAbcSARISFQHGX2MirRcYT2oxPG_nB3dqmxHLJQ0213",
       "refresh": "1//0gZ8-TsVT3EvtCgYIARAAGBASNwF-L9Ir6VRKCPSM5Y-85jc0ICRYZQb2K917DvOeH2OCIC15qFkMPEkoXS7YcmR6JV40BvXqMWY",
-      "expires": 1770941106699,
+      "expires": 1770948822117,
       "email": "abhishekibr.trainee2@gmail.com",
       "projectId": "spring-cable-5ggp0"
     }
@@ -27,7 +27,7 @@
       "lastFailureAt": 1770890259295
     },
     "google-gemini-cli:abhishekibr.trainee2@gmail.com": {
-      "lastUsed": 1770934207390,
+      "lastUsed": 1770941922829,
       "errorCount": 0,
       "lastFailureAt": 1770926544782
     }

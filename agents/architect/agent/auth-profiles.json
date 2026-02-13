@@ -9,16 +9,25 @@
     "google-gemini-cli:abhishekibr.trainee2@gmail.com": {
       "type": "oauth",
       "provider": "google-gemini-cli",
-      "access": "ya29.a0AUMWg_KZStjJED813eDOUVbsfvnweNOxuROjG0p_aQkwliW3rNm4VUwiUHb5dXXj9hYk_fSk3Ae6cOS-CP87Z7CbRkE95FLtH5Uj7neI4_cuORaNan3eJx77fimhK9MZbYHFicV02Ui-kOrv3rQQTHGc9VzqNiV8lmu5V_wL3_KAZpF8r-oy6S1CS1Qhvf1adeRjIgFrHvrNzwaCgYKAbcSARISFQHGX2MiGUep7pIozctXscSDvAQRYA0213",
+      "access": "ya29.a0AUMWg_KnxZAWTd6a4yEPulIKMtxBbRaO9SohWuQQXJ3cL_aa_H184mAaug6SNrXW8mrpetAZ13UaYkydRjlYuExO5ObWJZrXxNTyHTK6SwKLiVQ7nWxjm-G1_0G_zs7rFyxZ2jkWswB7q3KCukvXgZrRidCD2xash5N1Od5Of8h1Tbft7BydvZ9xytLY6iLnP-VpFaNexu81swaCgYKARQSARISFQHGX2MilAyT7-tv52L7U7wDkcSiEQ0213",
       "refresh": "1//0gZ8-TsVT3EvtCgYIARAAGBASNwF-L9Ir6VRKCPSM5Y-85jc0ICRYZQb2K917DvOeH2OCIC15qFkMPEkoXS7YcmR6JV40BvXqMWY",
-      "expires": 1770972688138,
+      "expires": 1770983272462,
       "email": "abhishekibr.trainee2@gmail.com",
       "projectId": "spring-cable-5ggp0"
+    },
+    "google-gemini-cli:abhishekibr.trainee@gmail.com": {
+      "type": "oauth",
+      "provider": "google-gemini-cli",
+      "access": "ya29.a0AUMWg_JLAF9E9S8I_TdWOLvJRCyaKYQunnrMtOsz1P4d8SW4NQTU8UeZVmjQYko5PXiiaF2RsAth3geiKao36QRNMLwrHhDFaxW56TiLDXMPRU7woHZ0CdlxpU_NIkBRAmbI2tqPsKzrq3MR_qnX-64LZ7pUvjh98cPDEaIfjlOn97IiFPauXPbf8VAHD7wME-CzCv9xklDiaCgYKAagSARYSFQHGX2MikZ-u3FHWipjI3jXqTrSKQw0211",
+      "refresh": "1//0gEy_lYKmx2ggCgYIARAAGBASNwF-L9Ir-pELFFrC5L9emiYUsVUEHVriottrZozKyGr4tfoY2hm9tYNx4vcy6RDgcFBcJvNehos",
+      "expires": 1770980909335,
+      "email": "abhishekibr.trainee@gmail.com",
+      "projectId": "handy-hook-mc9nx"
     }
   },
   "lastGood": {
     "openrouter": "openrouter:default",
-    "google-gemini-cli": "google-gemini-cli:abhishekibr.trainee2@gmail.com"
+    "google-gemini-cli": "google-gemini-cli:abhishekibr.trainee@gmail.com"
   },
   "usageStats": {
     "openrouter:default": {
@@ -28,8 +37,16 @@
     },
     "google-gemini-cli:abhishekibr.trainee2@gmail.com": {
       "lastUsed": 1770969421657,
-      "errorCount": 0,
-      "lastFailureAt": 1770961991645
+      "errorCount": 1,
+      "lastFailureAt": 1770980031072,
+      "failureCounts": {
+        "rate_limit": 1
+      },
+      "cooldownUntil": 1770980091072
+    },
+    "google-gemini-cli:abhishekibr.trainee@gmail.com": {
+      "lastUsed": 1770980052332,
+      "errorCount": 0
     }
   }
 }

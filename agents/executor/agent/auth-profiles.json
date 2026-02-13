@@ -9,11 +9,20 @@
     "google-gemini-cli:abhishekibr.trainee2@gmail.com": {
       "type": "oauth",
       "provider": "google-gemini-cli",
-      "access": "ya29.a0AUMWg_KrDe9tIWNgB__C-OsL7X2adv5_Y-x4YPM0Hig2Hlr9DNFnlLBusFZeZ3Itmlkgduyr1XIp27_wnjosW2HpU5hA0HVJAgwNRvJPs7VhBdLNx1BdT6XOFDcgLdYzXgN7RvfHxPpxJfyBdWs00HJU0Xmd_mbTmVHwHEVcSXrpQTOVanpGam2ltJJ3nhpJDh1Jhz3gGyGNaCgYKAWUSARISFQHGX2MirILDc2Xa9AaneinlBFB22g0211",
+      "access": "ya29.a0AUMWg_ItGumy0w-ubveG5Gu103Jyu3H_mgXI0U07awqq-NHTVupcmimaTAV97qo7hGCbS188af8aOVhwCfH-_mpDhySf24VJcQNKmZv001olSakwMYI2RxwH-wLIXYL8zXb700fUpxH3XnAyBTIBL1jP0S_4wMEc_EAPfzzZfqWlib3VWQK0wqy55JpE5ep6zpqD__Ivnb2EKQaCgYKATASARISFQHGX2MiuoCFKgbX18ENPbvKPiuKkg0213",
       "refresh": "1//0gZ8-TsVT3EvtCgYIARAAGBASNwF-L9Ir6VRKCPSM5Y-85jc0ICRYZQb2K917DvOeH2OCIC15qFkMPEkoXS7YcmR6JV40BvXqMWY",
-      "expires": 1770893811817,
+      "expires": 1770981439497,
       "email": "abhishekibr.trainee2@gmail.com",
       "projectId": "spring-cable-5ggp0"
+    },
+    "google-gemini-cli:abhishekibr.trainee@gmail.com": {
+      "type": "oauth",
+      "provider": "google-gemini-cli",
+      "access": "ya29.a0AUMWg_JLAF9E9S8I_TdWOLvJRCyaKYQunnrMtOsz1P4d8SW4NQTU8UeZVmjQYko5PXiiaF2RsAth3geiKao36QRNMLwrHhDFaxW56TiLDXMPRU7woHZ0CdlxpU_NIkBRAmbI2tqPsKzrq3MR_qnX-64LZ7pUvjh98cPDEaIfjlOn97IiFPauXPbf8VAHD7wME-CzCv9xklDiaCgYKAagSARYSFQHGX2MikZ-u3FHWipjI3jXqTrSKQw0211",
+      "refresh": "1//0gEy_lYKmx2ggCgYIARAAGBASNwF-L9Ir-pELFFrC5L9emiYUsVUEHVriottrZozKyGr4tfoY2hm9tYNx4vcy6RDgcFBcJvNehos",
+      "expires": 1770980909335,
+      "email": "abhishekibr.trainee@gmail.com",
+      "projectId": "handy-hook-mc9nx"
     }
   },
   "lastGood": {
@@ -28,8 +37,16 @@
     },
     "google-gemini-cli:abhishekibr.trainee2@gmail.com": {
       "lastUsed": 1770891382740,
-      "errorCount": 0,
-      "lastFailureAt": 1770891382733
+      "errorCount": 1,
+      "lastFailureAt": 1770978270720,
+      "failureCounts": {
+        "rate_limit": 1
+      },
+      "cooldownUntil": 1770978330720
+    },
+    "google-gemini-cli:abhishekibr.trainee@gmail.com": {
+      "lastUsed": 1770977694553,
+      "errorCount": 0
     }
   }
 }

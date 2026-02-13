@@ -22,12 +22,12 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1770973612418,
+        "nextRunAtMs": 1770975179745,
         "lastRunAtMs": 1770969979019,
         "lastStatus": "error",
         "lastDurationMs": 33399,
         "consecutiveErrors": 21,
-        "lastError": "cron delivery target is missing"
+        "runningAtMs": 1770973612420
       },
       "delivery": {
         "mode": "announce"

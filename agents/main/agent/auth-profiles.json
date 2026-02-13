@@ -14,6 +14,15 @@
       "expires": 1770973278294,
       "email": "abhishekibr.trainee2@gmail.com",
       "projectId": "spring-cable-5ggp0"
+    },
+    "google-gemini-cli:abhishekibr.trainee@gmail.com": {
+      "type": "oauth",
+      "provider": "google-gemini-cli",
+      "access": "ya29.a0AUMWg_JZvwHFJN-Am4puEOirowwpwX7GsFjvR4l7x6Qyr0UG_yu-yR3ANj8oOYnavZxaxbz419mVzP-ogGEdw-d5QHgCBaUEfia2gbs0GJbN3cz-mrlj7-QCLo1SGoGnVNFrF1G63XBFHxVSNgM5fnSRd0VnIiyKvXhblcJNY_UFAoK3BvlXSj6VDTeO221sczNAePJjQlHvaCgYKAYESARYSFQHGX2MiMP-xwdMFWGcNixyGl4Bisg0211",
+      "refresh": "1//0gEy_lYKmx2ggCgYIARAAGBASNwF-L9Ir-pELFFrC5L9emiYUsVUEHVriottrZozKyGr4tfoY2hm9tYNx4vcy6RDgcFBcJvNehos",
+      "expires": 1770973909894,
+      "email": "abhishekibr.trainee@gmail.com",
+      "projectId": "handy-hook-mc9nx"
     }
   },
   "lastGood": {

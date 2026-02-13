@@ -10,8 +10,8 @@ async function runGitBackup() {
         
         console.log('Starting git backup operation...');
         
-        // Use absolute path for the script
-        const result = await execAsync('/root/.openclaw/workspace-githubsync/git_backup.sh');
+        // Use absolute path for the script with bash
+        const result = await execAsync('bash /home/ibr-ai-agent/.openclaw/workspace-githubsync/git_backup.sh');
         
         if (result.stdout) {
             console.log(result.stdout);

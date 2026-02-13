@@ -9,25 +9,25 @@
     "google-gemini-cli:abhishekibr.trainee2@gmail.com": {
       "type": "oauth",
       "provider": "google-gemini-cli",
-      "access": "ya29.a0AUMWg_IMw5gBjdGqW7DHhIJiXB2K7KQ26Gc-bIqACZU08pvzTUQld6ElNmUQhzf_zuu_j3uzK_R7HLtAdvNTIYkKFYH58W0TXP1WVIeI2FmSlGHa2ktH1Q8-bz-MJeF0g5Sh_LG-ku9faKeQOeFgFycnU-4qRHwK18fN2iwd-xotsNxfe2geAe_sFrRnFWfNZogCxQuKeGPiJwaCgYKASgSARISFQHGX2MiQLBqMNz45GlOA8wTLjmU7w0213",
+      "access": "ya29.a0AUMWg_Lo8qvXqaXgdHE-fpagApAZrByyIQGjLMOhAOLzAOQU4pzOnBJBYCyCq8DeqvxZu3AU1mE8z0zX9-30oY0ilSnLnlLv3PqSv5insUDQil5EVLMVFrtRKnXUKFTEcqN70urgAUXtOlL-dVYFm1NtiQXmWBsApo4NSZslsd6JiqFoMrIVGoudvXmbRjVUpgjTs-KEJaeW0QaCgYKAZwSARISFQHGX2MiuJYXI59qzy9FL-lP7nJ7gQ0213",
       "refresh": "1//0gZ8-TsVT3EvtCgYIARAAGBASNwF-L9Ir6VRKCPSM5Y-85jc0ICRYZQb2K917DvOeH2OCIC15qFkMPEkoXS7YcmR6JV40BvXqMWY",
-      "expires": 1770973278294,
+      "expires": 1770980689690,
       "email": "abhishekibr.trainee2@gmail.com",
       "projectId": "spring-cable-5ggp0"
     },
     "google-gemini-cli:abhishekibr.trainee@gmail.com": {
       "type": "oauth",
       "provider": "google-gemini-cli",
-      "access": "ya29.a0AUMWg_JZvwHFJN-Am4puEOirowwpwX7GsFjvR4l7x6Qyr0UG_yu-yR3ANj8oOYnavZxaxbz419mVzP-ogGEdw-d5QHgCBaUEfia2gbs0GJbN3cz-mrlj7-QCLo1SGoGnVNFrF1G63XBFHxVSNgM5fnSRd0VnIiyKvXhblcJNY_UFAoK3BvlXSj6VDTeO221sczNAePJjQlHvaCgYKAYESARYSFQHGX2MiMP-xwdMFWGcNixyGl4Bisg0211",
+      "access": "ya29.a0AUMWg_JLAF9E9S8I_TdWOLvJRCyaKYQunnrMtOsz1P4d8SW4NQTU8UeZVmjQYko5PXiiaF2RsAth3geiKao36QRNMLwrHhDFaxW56TiLDXMPRU7woHZ0CdlxpU_NIkBRAmbI2tqPsKzrq3MR_qnX-64LZ7pUvjh98cPDEaIfjlOn97IiFPauXPbf8VAHD7wME-CzCv9xklDiaCgYKAagSARYSFQHGX2MikZ-u3FHWipjI3jXqTrSKQw0211",
       "refresh": "1//0gEy_lYKmx2ggCgYIARAAGBASNwF-L9Ir-pELFFrC5L9emiYUsVUEHVriottrZozKyGr4tfoY2hm9tYNx4vcy6RDgcFBcJvNehos",
-      "expires": 1770973909894,
+      "expires": 1770980909335,
       "email": "abhishekibr.trainee@gmail.com",
       "projectId": "handy-hook-mc9nx"
     }
   },
   "lastGood": {
     "openrouter": "openrouter:default",
-    "google-gemini-cli": "google-gemini-cli:abhishekibr.trainee2@gmail.com"
+    "google-gemini-cli": "google-gemini-cli:abhishekibr.trainee@gmail.com"
   },
   "usageStats": {
     "openrouter:default": {
@@ -37,8 +37,16 @@
     },
     "google-gemini-cli:abhishekibr.trainee2@gmail.com": {
       "lastUsed": 1770970399802,
-      "errorCount": 0,
-      "lastFailureAt": 1770970399795
+      "errorCount": 1,
+      "lastFailureAt": 1770977610149,
+      "failureCounts": {
+        "rate_limit": 1
+      },
+      "cooldownUntil": 1770977670149
+    },
+    "google-gemini-cli:abhishekibr.trainee@gmail.com": {
+      "lastUsed": 1770973790337,
+      "errorCount": 0
     }
   }
 }

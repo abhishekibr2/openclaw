@@ -1,26 +1,4 @@
 {
   "version": 2,
-  "runs": {
-    "421d3bfd-1225-4707-b943-8b43a13791ac": {
-      "runId": "421d3bfd-1225-4707-b943-8b43a13791ac",
-      "childSessionKey": "agent:executor:subagent:853a4c1f-13c1-4876-9182-f73510aabb72",
-      "requesterSessionKey": "agent:supervisour:cron:99dda213-7bd8-43fc-af4a-fcab8dc8d9ce:run:482fa31f-229f-489f-ae5e-8135fb19fa00",
-      "requesterOrigin": {
-        "channel": "webchat"
-      },
-      "requesterDisplayKey": "agent:supervisour:cron:99dda213-7bd8-43fc-af4a-fcab8dc8d9ce:run:482fa31f-229f-489f-ae5e-8135fb19fa00",
-      "task": "Navigate to the following Reddit posts and post the generated comments:\n\n1. https://www.reddit.com/r/AskReddit/comments/1r3ngmh/what_are_the_social_perceptions_around_using_a/\nComment: It often depends on the context and the specific language involved. A helpful tip is to aim for a balance—using the correct pronunciation shows respect, while keeping it natural avoids sounding overly performative. I personally find that most people appreciate the effort to get it right even if it feels a bit awkward at first!\n\n2. https://www.reddit.com/r/AskReddit/comments/1r3ngfk/what_you_all_doing_for_valentines/\nComment: It’s a great time to just relax and treat yourself to something nice. A good tip is to plan something low-key, like a favorite movie marathon or ordering from a spot you’ve been meaning to try. I’m actually looking forward to a quiet night in with some good snacks this year!\n\n3. https://www.reddit.com/r/AskReddit/comments/1r3nf6j/astronauts_of_reddit_what_was_your_first_time_in/\nComment: While I'm not an astronaut, the accounts of the 'Overview Effect' are always so fascinating to read about. A pro tip for anyone curious is to check out some of the high-res footage from the ISS to get a tiny glimpse of that perspective. It truly makes you realize how interconnected everything on Earth really is!",
-      "cleanup": "keep",
-      "label": "Post Reddit Comments",
-      "createdAt": 1770985371697,
-      "startedAt": 1770985541785,
-      "archiveAtMs": 1770988971697,
-      "cleanupHandled": true,
-      "endedAt": 1770985539765,
-      "outcome": {
-        "status": "ok"
-      },
-      "cleanupCompletedAt": 1770985581834
-    }
-  }
+  "runs": {}
 }

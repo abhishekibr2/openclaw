@@ -26,7 +26,8 @@
         "lastRunAtMs": 1770984973258,
         "lastStatus": "error",
         "lastDurationMs": 34852,
-        "consecutiveErrors": 25
+        "consecutiveErrors": 25,
+        "runningAtMs": 1770989579750
       },
       "delivery": {
         "mode": "announce"

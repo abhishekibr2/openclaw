@@ -57,7 +57,11 @@
         }
       ],
       "version": 0
-    }
+    },
+    "modelProvider": "google-gemini-cli",
+    "inputTokens": 18835,
+    "outputTokens": 194,
+    "totalTokens": 34283
   },
   "agent:githubsync:cron:dfc66569-ec5c-484b-a4bb-e19af444b09e:run:eb033142-10f3-4b23-a879-965967ee9ad2": {
     "sessionId": "eb033142-10f3-4b23-a879-965967ee9ad2",
@@ -1577,6 +1581,10 @@
         }
       ],
       "version": 0
-    }
+    },
+    "modelProvider": "google-gemini-cli",
+    "inputTokens": 18835,
+    "outputTokens": 194,
+    "totalTokens": 34283
   }
 }

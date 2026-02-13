@@ -96,12 +96,25 @@
 7. **Log to Daily Report** — Before marking complete, log the task:
    - Determine today's date (DD-MM-YYYY)
    - Append to `/home/ibr-ai-agent/.openclaw/workspace-supervisour/report/DD-MM-YYYY.md`
-   - Format: `[HH:MM] Task <id>: <status> - <summary>`
-   - Use `run_command` to append:
+   - **Format:** Create a detailed Markdown block.
+   - Use `run_command` to append a multi-line string (structured for readability):
+
      ```bash
-     echo "- [$(date +%H:%M)] Task <id>: <status> - <summary>" >> /home/ibr-ai-agent/.openclaw/workspace-supervisour/report/$(date +%d-%m-%Y).md
+     # Example logical flow (implement with echo or cat)
+     echo "" >> .../report/$(date +%d-%m-%Y).md
+     echo "## Task <id>: <status>" >> .../report/$(date +%d-%m-%Y).md
+     echo "**Time:** $(date +%H:%M)" >> .../report/$(date +%d-%m-%Y).md
+     echo "**Summary:** <brief_description>" >> .../report/$(date +%d-%m-%Y).md
+     echo "**Actions:**" >> .../report/$(date +%d-%m-%Y).md
+     echo "- [Action 1]" >> .../report/$(date +%d-%m-%Y).md
+     echo "- [Action 2]" >> .../report/$(date +%d-%m-%Y).md
+     echo "**Challenges:**" >> .../report/$(date +%d-%m-%Y).md
+     echo "- [Challenge descriptions...]" >> .../report/$(date +%d-%m-%Y).md
+     echo "**Errors:**" >> .../report/$(date +%d-%m-%Y).md
+     echo "- [Error logs...]" >> .../report/$(date +%d-%m-%Y).md
+     echo "---" >> .../report/$(date +%d-%m-%Y).md
      ```
-     *(Note: Ensure directory exists)*
+     *(Note: Ensure directory exists. Use a single detailed block per task.)*
 
 8. **Mark task complete** — Once **ALL** sub-tasks successfully executed and confirmed:
 
